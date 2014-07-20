@@ -1,0 +1,85 @@
+/*!
+Theme Name: TRLF_s Custom Theme
+Theme URI: http://underscores.me/
+Author: Wickwood Marketing
+Author URI: http://www.wickwoodmarketing.com/wp/themes/trlf_s
+Description: A custom theme for The Randall Law Firm based Underscores (_s), Sass and Compass
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: trlf_s
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ TRLF_s Custom Theme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+00.0 - Variables
+01.0 - Reset
+02.0 - Mixins
+03.0 - Global
+04.0 - Typography
+05.0 - Elements
+06.0 - Forms
+07.0 - Layout
+08.0 - Links
+09.0 - Menus
+10.0 - Accessibility
+11.0 - Alignments
+12.0 - Clearings
+13.0 - Widgets
+14.0 - Content (Posts and Pages)
+15.0 - Asides
+16.0 - Comments
+17.0 - Infinite scroll
+18.0 - Media
+19.0 - Captions
+20.0 - Galleries
+--------------------------------------------------------------*/
+
+// Import external libraries.
+// @import "compass";
+//@import "breakpoint";
+//@import "singularitygs";
+//@import "toolkit-no-css";
+
+// Name Sass Variables
+@import 'variables';
+
+// Reset Styles
+@import 'reset';
+
+// Establish Mixins
+@import 'mixins';
+
+// Import All Other Styles
+@import 'global';
+@import 'typography';
+@import 'elements';
+@import 'forms';
+@import 'layout';
+@import 'links';
+@import 'menus';
+@import 'accessibility';
+@import 'alignments';
+@import 'clearings';
+@import 'widgets';
+@import 'content';
+@import 'asides';
+@import 'comments';
+@import 'scroll';
+@import 'media';
+@import 'captions';
+@import 'galleries';
+
