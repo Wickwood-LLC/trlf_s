@@ -1,0 +1,20 @@
+/*--------------------------------------------------------------
+00.0 Variables
+--------------------------------------------------------------*/
+
+// Font Variables
+$base-font: Tahoma, Arial, Helvetica, Sans-Serif;
+$header-font: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+$base-font-size: 17px;
+$base-line-height: 120%;
+
+
+// Color Variables
+$body-background: #FEFEEC;
+$text-color: #404040;
+$link-color: royalblue;
+$link-visited: purple;
+
+// Layout Variables
+$layout: null !default;  // Supported Values for $layout: null | content-sidebar | sidebar-content
+$vspacing: 1.5em;
