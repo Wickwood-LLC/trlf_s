@@ -2,6 +2,10 @@
 04.0 Typography
 --------------------------------------------------------------*/
 
+// "Establish Vertical Rythym"
+@include establish-baseline(); // which establishes a font baseline for the given font-size.
+
+/* Commenting out Styles provided by _s base theme
 body,
 button,
 input,
@@ -73,3 +77,4 @@ small {
 big {
 	font-size: 125%;
 }
+*/
