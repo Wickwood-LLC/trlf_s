@@ -46,12 +46,11 @@ $breakpoint580: (min-width 580px);
 // $desktop_large_width: (min-width 1921px);
 
 // Layout Variables
-// $grids: 1 3;               // Mobile First
-// $grids: add-grid(2 at )
-// $gutters: 1/3;           // Singlularity Gutters only between columns
-@include add-grid(3);
-@include add-gutter(1/9);
+// Singlularity Grid (Gutters only between columns)
+// @include add-grid(3);
+// @include add-gutter(1/9);
 // @include sgs-change('output', 'float');
+
 $layout: null !default;  // Supported Values for $layout: null | content-sidebar | sidebar-content
 $vspacing: 1.5em;
 
