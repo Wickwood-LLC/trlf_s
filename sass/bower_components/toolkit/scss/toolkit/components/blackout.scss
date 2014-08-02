@@ -1,0 +1,29 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+
+@import "../common";
+
+.#{$vendor-prefix}blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: $blackout-zindex;
+    opacity: 0;
+    visibility: hidden;
+    background: black($blackout-opacity);
+    transition: all $blackout-transition;
+
+    .#{$vendor-prefix}loader {
+        opacity: 1;
+        color: #fff;
+        @include position-center;
+
+        > span,
+        .spinner > span { background: #fff !important; }
+    }
+}

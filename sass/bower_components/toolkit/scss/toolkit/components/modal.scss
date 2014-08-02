@@ -1,0 +1,155 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+
+@import "../common";
+
+.#{$vendor-prefix}modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: $modal-zindex;
+    overflow: auto;
+    transition: opacity $modal-transition, visibility $modal-transition;
+    pointer-events: none; // fall through to blackout
+    -webkit-overflow-scrolling: touch;
+
+    &.is-loading {
+        .#{$vendor-prefix}modal-close { display: none; }
+    }
+
+    &.is-draggable {
+        .#{$vendor-prefix}modal-inner { cursor: default; }
+        .#{$vendor-prefix}modal-head { cursor: move; }
+    }
+}
+
+.#{$vendor-prefix}modal-close {
+    position: absolute;
+    background: none;
+    border: 0;
+    top: $padding;
+    right: $padding;
+    line-height: 1rem;
+    opacity: $default-opacity;
+    padding: 5px;
+
+    &:hover { opacity: 1; }
+}
+
+.#{$vendor-prefix}modal-outer {
+    position: relative;
+    margin: $margin;
+    pointer-events: auto; // allow within modal
+    transition: transform $modal-transition;
+
+    @include if-min($modal-mobile-breakpoint) {
+        width: 50%;
+        margin: $margin auto;
+    }
+}
+
+.#{$vendor-prefix}modal-inner {
+    position: relative;
+}
+
+.#{$vendor-prefix}modal-head,
+.#{$vendor-prefix}modal-body,
+.#{$vendor-prefix}modal-foot {
+    padding: $padding;
+}
+
+//-------------------- Modifiers --------------------//
+
+.#{$vendor-prefix}modal.is-fullscreen .#{$vendor-prefix}modal-outer {
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 0;
+    transform: translate(0, 0);
+}
+
+//-------------------- Animations --------------------//
+
+.#{$vendor-prefix}modal {
+    @if index($modal-animation, "from-above") {
+        &.from-above {
+            .#{$vendor-prefix}modal-outer {
+                transform: scale(1.3);
+            }
+
+            &.show .#{$vendor-prefix}modal-outer {
+                transform: scale(1);
+            }
+        }
+    }
+
+    @if index($modal-animation, "from-below") {
+        &.from-below {
+            .#{$vendor-prefix}modal-outer {
+                transform: scale(0.7);
+            }
+
+            &.show .#{$vendor-prefix}modal-outer {
+                transform: scale(1);
+            }
+        }
+    }
+
+    @if index($modal-animation, "slide-in-top") {
+        &.slide-in-top {
+            .#{$vendor-prefix}modal-outer {
+                transform: translateY(-50%);
+            }
+
+            &.show .#{$vendor-prefix}modal-outer {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @if index($modal-animation, "slide-in-bottom") {
+        &.slide-in-bottom {
+            .#{$vendor-prefix}modal-outer {
+                transform: translateY(50%);
+            }
+
+            &.show .#{$vendor-prefix}modal-outer {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @if index($modal-animation, "slide-in-left") {
+        &.slide-in-left {
+            .#{$vendor-prefix}modal-outer {
+                transform: translateX(-25%);
+            }
+
+            &.show .#{$vendor-prefix}modal-outer {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    @if index($modal-animation, "slide-in-right") {
+        &.slide-in-right {
+            .#{$vendor-prefix}modal-outer {
+                transform: translateX(25%);
+            }
+
+            &.show .#{$vendor-prefix}modal-outer {
+                transform: translateX(0);
+            }
+        }
+    }
+}

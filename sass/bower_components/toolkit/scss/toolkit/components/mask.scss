@@ -1,0 +1,38 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+
+@import "../common";
+
+.#{$vendor-prefix}mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: $mask-zindex;
+    opacity: 0;
+    visibility: hidden;
+    background: black($mask-opacity);
+    transition: all $mask-transition;
+    color: #fff;
+    user-select: none;
+}
+
+.#{$vendor-prefix}mask-message {
+    text-align: center;
+    max-width: 80%;
+    @include position-center;
+
+    &:empty { display: none; }
+}
+
+.#{$vendor-prefix}mask-target {
+    overflow: hidden;
+
+    // Fixes issues where mask does not display in iOS
+    // Kind of hacky? Other solutions?
+    -webkit-backface-visibility: hidden;
+}

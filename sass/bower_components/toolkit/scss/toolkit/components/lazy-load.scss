@@ -1,0 +1,12 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+
+@import "../common";
+
+.#{$vendor-prefix}lazy-load {
+    background-image: none !important;
+    transition: background-image $lazyLoad-transition;
+}

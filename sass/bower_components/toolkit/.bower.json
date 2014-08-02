@@ -1,0 +1,60 @@
+{
+  "version": "1.5.0",
+  "name": "toolkit",
+  "description": "A collection of extensible front-end UI components for the responsive and mobile web.",
+  "keywords": [
+    "titon",
+    "toolkit",
+    "css",
+    "sass",
+    "scss",
+    "mootools",
+    "jquery",
+    "javascript",
+    "ui",
+    "interface",
+    "framework",
+    "bootstrap",
+    "modular",
+    "component",
+    "responsive",
+    "fluid",
+    "mobile"
+  ],
+  "copyright": "Copyright 2010-2014, The Titon Project",
+  "homepage": "http://titon.io",
+  "licenses": "https://github.com/titon/toolkit/blob/master/license.md",
+  "author": [
+    "Miles Johnson"
+  ],
+  "main": [
+    "dist/toolkit.min.css",
+    "dist/toolkit-jquery.min.js",
+    "dist/toolkit-mootools.min.js"
+  ],
+  "ignore": [
+    ".*",
+    "build/",
+    "css/",
+    "docs/",
+    "demo/",
+    "img/",
+    "js/",
+    "lib/",
+    "config.rb",
+    "Gruntfile.js",
+    "manifest.json",
+    "package.json",
+    "toolkit.gemspec"
+  ],
+  "_release": "1.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.5.0",
+    "commit": "5858cc54a3cc0c7b6d11d8ae5c0076b0cb9ff116"
+  },
+  "_source": "git://github.com/titon/toolkit.git",
+  "_target": "~1.5.0",
+  "_originalSource": "toolkit",
+  "_direct": true
+}
