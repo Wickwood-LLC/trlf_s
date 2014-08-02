@@ -1,0 +1,137 @@
+/*--------------------------------------------------------------
+07.1 Header Layout Styles
+--------------------------------------------------------------*/
+// @import "breakpoint580-images/*.png";
+// @include all-breakpoint580-images-sprites;
+
+// @import "desktop-images/*.png";
+// @include all-desktop-images-sprites;
+
+#masthead {
+	border-bottom:2px solid $border-color;
+	@include linear-gradient(to bottom, $top-gradient-color, $bottom-gradient-color);
+}
+
+#masthead-inner {
+	width: 96%;
+	margin: 5px auto;
+}
+
+.site-branding {
+	border: 1px solid green;
+	@include display-flex();
+	@include align-items(space-around);
+	@include justify-content(center);
+	// @include box(horizontal, center, space-around)
+	// @include display(flex);
+ //  @include align-items(space-around);
+ //  @include flex-direction(row);
+ //  @include justify-content(space-around);
+	// overflow: hidden;
+}
+
+.logo-container {
+	background-color: #c5c1b4;
+	// @include flex(1);
+	// @include grid-span(1,1);
+	// margin-right: 1px;
+	@include align-self(center);
+}
+
+.site-title-container {
+	background-color: #375f99;
+	// @include flex(2);
+	@include flex(1);
+}
+
+.logo {
+	// @include flex(1);
+	$logos: sprite-map("logos/*.png");
+  border: 1px solid red;
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
+  	$logo: logo#{$breakpoint-name};
+  	@include breakpoint($breakpoint-size) {
+  		background: sprite($logos, $logo) no-repeat;
+			@include sprite-dimensions($logos, $logo);
+
+			// margin-left: auto;
+  	// 	margin-right: auto;
+  		
+		}
+  }
+}
+
+.header-image {
+
+}
+
+// .logo {
+// 	// width: 82px;
+// 	// height: 100px;
+// 	display: block;
+// 	border: 1px solid red;
+// 	
+// 	// @extend .breakpoint580-images-logo;
+// 	@include breakpoint($breakpoint580) {
+// 		border: 1px solid green;
+// 		// @extend .desktop-images-logo;
+// 		// & {      
+//     //@include desktop-images-sprite("logo");
+//   //   }
+// 	}
+// }
+
+// @include breakpoint($breakpoint580) {
+//   .logo {
+//      // background-image: inline-sprite($desktop-images-sprites)
+//      // @include desktop-images-sprites(logo);
+//   }
+// }
+
+.site-title-line1,
+.site-title-line2,
+.site-description {
+	// @include grid-span(2,2)
+
+}
+.header-image,
+.site-contact-info,
+.site-header-attorney {
+	// display: block;
+	// @include grid-span(3,1);
+	// clear: both;
+}
+
+
+span.site-header-address {
+  &:after { 
+		content: " ";
+		display: block;
+		// @include breakpoint($breakpoint580) {
+	 //    content: " • ";
+		// 	display: inline;
+	 //  }
+	}
+}
+
+span.site-header-phone {
+	&:after { content: " • ";}
+}
+
+.header-image {
+	// @extend .desktop-images-logo;
+  width: 201px;
+	height: 183px;
+	margin-left: auto;
+  margin-right: auto;
+  border: 1px solid green;
+}
+// .breakpoint580-images-randalls,
+// .desktop-images-randalls { 
+// // 	display: block;
+// 	width: 201px;
+// 	height: 183px;
+// 	margin-left: auto;
+//   margin-right: auto;
+// //   clear: both;
+// }

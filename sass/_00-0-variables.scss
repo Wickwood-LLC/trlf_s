@@ -6,16 +6,56 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic); //Import Google Font
 $base-font: Tahoma, Arial, Helvetica, Sans-Serif;
 $header-font: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-$base-font-size: 17px;
+$base-font-size: 16px;
 $base-line-height: 120%;
 
-
 // Color Variables
-$body-background: #FEFEEC;
+$background-color: #FEFEEC;
 $text-color: #404040;
-$link-color: royalblue;
-$link-visited: purple;
+$link-color: #A25039;
+$link-hover-color: #2E81AD;
+$top-gradient-color: #A6D1E8;
+$bottom-gradient-color: #D3E8F4;
+$border-color: #56A7D2;
+
+// $breakpoint variables for screen widths
+$breakpoints: (
+  "430"  : (0px 430px),
+  "580"  : (431px 580px),
+  "900"  : (581px)
+);
+// $breakpoints: (
+//   "breakpoint430"  : (min-width 430px),
+//   "breakpoint580"  : (min-width 430px),
+//   "breakpoint900"  : (min-width 430px)
+// );
+$breakpoint430: (min-width 430px);
+$breakpoint580: (min-width 580px);
+// $mobile_medium_width: (min-width 321px);
+// $mobile_large_width: (min-width 641px);
+// $mobile_xlarge_width: (min-width 961px);
+// $desktop_small_width: (min-width 1281px);
+// $desktop_medium_width:(min-width 1601px);
+// $desktop_large_width: (min-width 1921px);
+// $mobile_small_width: (max-width 320px);
+// $mobile_medium_width: (min-width 321px);
+// $mobile_large_width: (min-width 641px);
+// $mobile_xlarge_width: (min-width 961px);
+// $desktop_small_width: (min-width 1281px);
+// $desktop_medium_width:(min-width 1601px);
+// $desktop_large_width: (min-width 1921px);
 
 // Layout Variables
+// $grids: 1 3;               // Mobile First
+// $grids: add-grid(2 at )
+// $gutters: 1/3;           // Singlularity Gutters only between columns
+@include add-grid(3);
+@include add-gutter(1/9);
+// @include sgs-change('output', 'float');
 $layout: null !default;  // Supported Values for $layout: null | content-sidebar | sidebar-content
 $vspacing: 1.5em;
+
+* {
+  @include box-sizing('border-box');
+}
+

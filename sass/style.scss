@@ -33,6 +33,7 @@ and Blueprint http://www.blueprintcss.org/
 05.0 - Elements
 06.0 - Forms
 07.0 - Layout
+07.1 - Layout - Header
 08.0 - Links
 09.0 - Menus
 10.0 - Accessibility
@@ -51,8 +52,8 @@ and Blueprint http://www.blueprintcss.org/
 // Import external libraries.
 @import "compass";
 @import "bourbon";
-//@import "breakpoint";
-//@import "singularitygs";
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "bower_components/singularity/stylesheets/singularitygs";
 //@import "toolkit-no-css";
 
 // Name Sass Variables
@@ -70,6 +71,7 @@ and Blueprint http://www.blueprintcss.org/
 @import '05-0-elements';
 @import '06-0-forms';
 @import '07-0-layout';
+@import '07-1-layout-header';
 @import '08-0-links';
 @import '09-0-menus';
 @import '10-0-accessibility';

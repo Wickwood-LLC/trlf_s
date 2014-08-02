@@ -1,14 +1,20 @@
 /*--------------------------------------------------------------
 08.0 Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-a:visited {
-	color: purple;
-}
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
+
+
+// a {
+// 	color: royalblue;
+// }
+// a:visited {
+// 	color: purple;
+// }
+// a:hover,
+// a:focus,
+// a:active {
+// 	color: midnightblue;
+// }
+
+.site-header a { 
+	text-decoration: none;
 }
