@@ -14,10 +14,6 @@
 	@include linear-gradient(to bottom, $top-gradient-color, $bottom-gradient-color);
 }
 
-#masthead-inner {
-
-}
-
 .site-branding {
 	border: 1px solid green;
 	
@@ -31,24 +27,37 @@
 	background-color: #1f1;
 	
 	@include align-self(center);
+	@include order(1);
 }
 
 .site-title-container {
 	background-color: #2EE;
 	
 	@include flex(1);
+	@include order(1);
 }
 
 .site-contact-container {
 	background-color: #3a3;
 	
 	width: 100%;
+	@include order(3);
+	@include breakpoint(531px 580px) {
+		@include order(4);
+	}
 }
 
 .header-image-container {
 	background-color: #4dd;
 	
 	width: 100%;
+	@include align-self(center);
+	@include order(4);
+	@include breakpoint(531px 580px) {
+		@include order(3);
+		@include flex(.5);
+		@include flex-shrink(1);
+	}
 }
 
 .logo {
@@ -67,14 +76,22 @@
 
 .header-image {
 	border: 1px solid chocolate;
-	margin-left: auto;
-	margin-right: auto;
+
+	// $header-image: "header-images/header-image430.png";
+	// display: block;
+	// background: image-url("header-image.png") no-repeat;
+	// width: 	image-width("header-image.png");
+	// height: image-height("header-image.png");
+	// margin-left: auto;
+	// margin-right: auto;
 	$header-images: sprite-map("header-images/*.png");
   @each $breakpoint-name, $breakpoint-size in $breakpoints {
   	$header-image: header-image#{$breakpoint-name};
   	@include breakpoint($breakpoint-size) {
   		background: sprite($header-images, $header-image) no-repeat;
-			@include sprite-dimensions($header-images, $header-image);  		
+			@include sprite-dimensions($header-images, $header-image);
+			margin-left: auto;
+			margin-right: auto;  		
 		}
   }
 }
