@@ -21,7 +21,8 @@ $border-color: #56A7D2;
 // $breakpoint variables for screen widths
 $breakpoints: (
   "430"  : (0px 430px),
-  "580"  : (431px 580px),
+  "530"  : (431px 530px),
+  "580"  : (531px 580px),
   "900"  : (581px)
 );
 // $breakpoints: (
@@ -53,8 +54,4 @@ $breakpoint580: (min-width 580px);
 
 $layout: null !default;  // Supported Values for $layout: null | content-sidebar | sidebar-content
 $vspacing: 1.5em;
-
-* {
-  @include box-sizing('border-box');
-}
 
