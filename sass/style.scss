@@ -51,7 +51,9 @@ and Blueprint http://www.blueprintcss.org/
 
 // Import external libraries.
 @import "compass";
-@import "bourbon", "neat";
+@import "bourbon";
+@import 'grid-settings';
+@import "neat";
 @import "bower_components/breakpoint-sass/stylesheets/breakpoint";
 //@import "bower_components/singularity/stylesheets/singularitygs";
 //@import "toolkit-no-css";

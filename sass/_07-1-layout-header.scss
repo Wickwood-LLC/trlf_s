@@ -9,60 +9,82 @@
 
 #masthead {
 	border-bottom:2px solid $border-color;
+	width: 96%;
+	margin: 5px auto;
 	@include linear-gradient(to bottom, $top-gradient-color, $bottom-gradient-color);
+	@include outer-container;
 }
 
 #masthead-inner {
-	width: 96%;
-	margin: 5px auto;
+	// width: 96%;
+	// margin: 5px auto;
+	@include span-columns(12);
 }
 
 .site-branding {
 	border: 1px solid green;
-	@include display-flex();
-	@include align-items(space-around);
-	@include justify-content(center);
-	// @include box(horizontal, center, space-around)
-	// @include display(flex);
- //  @include align-items(space-around);
- //  @include flex-direction(row);
- //  @include justify-content(space-around);
-	// overflow: hidden;
+	
+	// The following code worked to have vertically centered logo and site-title container
+	// @include display-flex();
+	// @include align-items(space-around);
+	// @include justify-content(center);
+	// flex-wrap: wrap;
 }
 
 .logo-container {
-	background-color: #c5c1b4;
-	// @include flex(1);
-	// @include grid-span(1,1);
-	// margin-right: 1px;
-	@include align-self(center);
+	background-color: #1f1;
+	@include span-columns(4 of 12);
+	@include pad();
+	// The following code worked to have vertically centered logo and site-title container
+	// @include align-self(center);
 }
 
 .site-title-container {
-	background-color: #375f99;
-	// @include flex(2);
-	@include flex(1);
+	background-color: #2EE;
+	@include span-columns(8 of 12);
+	@include omega();
+	// The following code worked to have vertically centered logo and site-title container
+	// @include flex(1);
+}
+
+.site-contact-container {
+	background-color: #3a3;
+	@include span-columns(12);
+	// width: 100%;
+}
+
+.header-image-container {
+	background-color: #4dd;
+	@include span-columns(12);
+	// width: 100%;
 }
 
 .logo {
-	// @include flex(1);
+	border: 1px solid red;
+	margin-left: auto;
+	margin-right: auto;
 	$logos: sprite-map("logos/*.png");
-  border: 1px solid red;
   @each $breakpoint-name, $breakpoint-size in $breakpoints {
   	$logo: logo#{$breakpoint-name};
   	@include breakpoint($breakpoint-size) {
   		background: sprite($logos, $logo) no-repeat;
-			@include sprite-dimensions($logos, $logo);
-
-			// margin-left: auto;
-  	// 	margin-right: auto;
-  		
+			@include sprite-dimensions($logos, $logo);  		
 		}
   }
 }
 
 .header-image {
-
+	border: 1px solid chocolate;
+	margin-left: auto;
+	margin-right: auto;
+	$header-images: sprite-map("header-images/*.png");
+  @each $breakpoint-name, $breakpoint-size in $breakpoints {
+  	$header-image: header-image#{$breakpoint-name};
+  	@include breakpoint($breakpoint-size) {
+  		background: sprite($header-images, $header-image) no-repeat;
+			@include sprite-dimensions($header-images, $header-image);  		
+		}
+  }
 }
 
 // .logo {
@@ -88,19 +110,19 @@
 //   }
 // }
 
-.site-title-line1,
-.site-title-line2,
-.site-description {
-	// @include grid-span(2,2)
+// .site-title-line1,
+// .site-title-line2,
+// .site-description {
+// 	// @include grid-span(2,2)
 
-}
-.header-image,
-.site-contact-info,
-.site-header-attorney {
-	// display: block;
-	// @include grid-span(3,1);
-	// clear: both;
-}
+// }
+// .header-image,
+// .site-contact-info,
+// .site-header-attorney {
+// 	// display: block;
+// 	// @include grid-span(3,1);
+// 	// clear: both;
+// }
 
 
 span.site-header-address {
@@ -118,14 +140,14 @@ span.site-header-phone {
 	&:after { content: " • ";}
 }
 
-.header-image {
-	// @extend .desktop-images-logo;
-  width: 201px;
-	height: 183px;
-	margin-left: auto;
-  margin-right: auto;
-  border: 1px solid green;
-}
+// .header-image {
+// 	// @extend .desktop-images-logo;
+//   width: 201px;
+// 	height: 183px;
+// 	margin-left: auto;
+//   margin-right: auto;
+//   border: 1px solid green;
+// }
 // .breakpoint580-images-randalls,
 // .desktop-images-randalls { 
 // // 	display: block;
