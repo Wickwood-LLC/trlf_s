@@ -12,51 +12,43 @@
 	width: 96%;
 	margin: 5px auto;
 	@include linear-gradient(to bottom, $top-gradient-color, $bottom-gradient-color);
-	@include outer-container;
 }
 
 #masthead-inner {
-	// width: 96%;
-	// margin: 5px auto;
-	@include span-columns(12);
+
 }
 
 .site-branding {
 	border: 1px solid green;
 	
-	// The following code worked to have vertically centered logo and site-title container
-	// @include display-flex();
-	// @include align-items(space-around);
-	// @include justify-content(center);
-	// flex-wrap: wrap;
+	@include display-flex();
+	@include align-items(space-around);
+	@include justify-content(center);
+	flex-wrap: wrap;
 }
 
 .logo-container {
 	background-color: #1f1;
-	@include span-columns(4 of 12);
-	@include pad();
-	// The following code worked to have vertically centered logo and site-title container
-	// @include align-self(center);
+	
+	@include align-self(center);
 }
 
 .site-title-container {
 	background-color: #2EE;
-	@include span-columns(8 of 12);
-	@include omega();
-	// The following code worked to have vertically centered logo and site-title container
-	// @include flex(1);
+	
+	@include flex(1);
 }
 
 .site-contact-container {
 	background-color: #3a3;
-	@include span-columns(12);
-	// width: 100%;
+	
+	width: 100%;
 }
 
 .header-image-container {
 	background-color: #4dd;
-	@include span-columns(12);
-	// width: 100%;
+	
+	width: 100%;
 }
 
 .logo {
