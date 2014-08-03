@@ -20,7 +20,7 @@
 	@include display-flex();
 	@include align-items(space-around);
 	@include justify-content(center);
-	flex-wrap: wrap;
+	@include flex-wrap(wrap);
 }
 
 .logo-container {
