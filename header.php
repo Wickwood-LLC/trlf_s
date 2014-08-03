@@ -24,8 +24,22 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<a class="logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<div class="logo"></div>
+			</a>
+			<div class="site-title-container">
+				<h1 class="site-title-line1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">The</a></h1>
+				<h1 class="site-title-line2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Randall Law Firm</a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</div>
+			<div class="site-contact-container">
+				<h3><span class="site-header-address">1777 Western Ave. Albany, NY 12203</span><span class="site-header-phone">Phone: 518-869-1205</span><span class="site-header-fax">Fax: 518-452-2145</span></h3>
+				<h3 class="site-header-attorney">Denise McCarthy</h3> 
+				<h3 class="site-header-attorney">RandallRobert G. Randall</h3>
+			</div>
+			<div class="header-image-container">
+				<div class="header-image"></div>
+			<div>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
