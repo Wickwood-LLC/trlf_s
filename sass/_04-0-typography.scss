@@ -11,34 +11,93 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $header-font;
 	text-align: center;
 }
+
+.site-title-line1,
+.site-title-line2 {
+	// text-shadow: 1.4px 1.4px 3px ;
+	@include single-text-shadow(rgba(23, 23, 23, 0.5), 1px, 1px, .5px);
+
+	@include breakpoint(430px) {
+		@include single-text-shadow(rgba(23, 23, 23, 0.5), 1.4px, 1.4px, 3px)
+	}
+	
+	a {
+		@include link-colors($text-color);
+		@include unstyled-link();
+	}
+
+}
+
+
 .site-title-line1 {
-	@include adjust-font-size-to(5.3vw, 1);
-	// @include breakpoint($breakpoint430) {
-	// 	@include adjust-font-size-to(24px, 1);
-	// }
-	// @include breakpoint($breakpoint580) {
-	// 	@include adjust-font-size-to(24px, 1);
-	// }
+	@include adjust-font-size-to(20px, 1);
+	
+	@include breakpoint(430px) {
+		@include adjust-font-size-to(30px, 1);
+	}
+	@include breakpoint(840px) {
+		@include adjust-font-size-to(34px, 1);
+	}
+	@include breakpoint(900px) {
+		@include adjust-font-size-to(40px, 1);
+	}
+	@include breakpoint(960px) {
+		@include adjust-font-size-to(50px, 1);
+	}
 }
 .site-title-line2 {
-	text-color: $text-color;
-	@include adjust-font-size-to(6vw, 1);
-	// @include breakpoint($breakpoint430) {
-	// 	@include adjust-font-size-to(36px, 1);
-	// }
-	// @include breakpoint($breakpoint580) {
-	// 	@include adjust-font-size-to(36px, 1);
-	// }
+	@include adjust-font-size-to(22px, 1);
+	
+	@include breakpoint(430px) {
+		@include adjust-font-size-to(36px, 1);
+	}
+	@include breakpoint(840px) {
+		@include adjust-font-size-to(40px, 1);
+	}
+	@include breakpoint(900px) {
+		@include adjust-font-size-to(50px, 1);
+	}
+	@include breakpoint(960px) {
+		@include adjust-font-size-to(60px, 1);
+	}
 }
 
 .site-description,
 .site-header-address,
-.site-header-attorney,
 .site-header-phone,
-.site-header-fax
- {
-	text-color: $text-color;
-	@include adjust-font-size-to(14px, 1);
+.site-header-fax {
+	// font-style: bold;
+	font-variant: small-caps;
+	@include adjust-font-size-to(13px, 1.2);
+
+	@include breakpoint(430px) {
+		@include adjust-font-size-to(14px, 1);
+	}
+	@include breakpoint(530px) {
+		@include adjust-font-size-to(16px, 1);
+	}
+}
+.site-header-address,
+.site-header-phone,
+.site-header-fax {
+	@include breakpoint(840px) {
+		@include adjust-font-size-to(18px, 1);
+	}
+}
+
+.site-header-attorney {
+	font-variant: small-caps;
+	@include adjust-font-size-to(15px, 1.2);
+
+	@include breakpoint(430px) {
+		@include adjust-font-size-to(16px, 1);
+	}
+	@include breakpoint(530px) {
+		@include adjust-font-size-to(18px, 1);
+	}
+	@include breakpoint(840px) {
+		@include adjust-font-size-to(22px, 1);
+	}
 }
 
 

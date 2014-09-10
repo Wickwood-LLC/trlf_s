@@ -1,6 +1,8 @@
 /*--------------------------------------------------------------
 00.0 Variables
 --------------------------------------------------------------*/
+// Image Variables
+$header-image: "header-image.png";
 
 // Font Variables
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic); //Import Google Font
@@ -20,13 +22,15 @@ $border-color: #56A7D2;
 
 // $breakpoint variables for screen widths
 $breakpoints: (
-  "430"  : (0px 430px),
-  "530"  : (431px 530px),
-  "580"  : (531px 580px),
-  "900"  : (581px)
+  "0"  : (0px 429px),
+  "430"  : (430px 529px),
+  "530"  : (530px 699px),
+  "700"  : (700px 899px),
+  "900"  : (900px)
 );
 // $breakpoints: (
 //   "breakpoint430"  : (min-width 430px),
+//   "breakpoint530"  : (min-width 530px),
 //   "breakpoint580"  : (min-width 430px),
 //   "breakpoint900"  : (min-width 430px)
 // );
