@@ -1,0 +1,110 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 11, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  margin: 1.25rem;
+  padding: 0.5rem;
+  z-index: 700;
+  max-width: 200px;
+  visibility: hidden;
+  background: #000;
+  color: #fff;
+  box-sizing: content-box;
+}
+/* line 25, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.center-left .tooltip-arrow, .tooltip.center-right .tooltip-arrow {
+  top: 50%;
+  margin-top: -6px;
+}
+/* line 31, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.center-left .tooltip-arrow {
+  border-left-color: #000;
+  right: -12px;
+}
+/* line 36, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.center-right .tooltip-arrow {
+  border-right-color: #000;
+  left: -12px;
+}
+/* line 41, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.top-center .tooltip-arrow, .tooltip.bottom-center .tooltip-arrow {
+  left: 50%;
+  margin-left: -6px;
+}
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.top-center .tooltip-arrow {
+  border-top-color: #000;
+  bottom: -12px;
+}
+/* line 52, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.bottom-center .tooltip-arrow {
+  border-bottom-color: #000;
+  top: -12px;
+}
+
+/* line 58, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip-arrow,
+.popover-arrow {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  position: absolute;
+}
+/* line 65, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip-arrow:after,
+.popover-arrow:after {
+  content: "";
+  border: 4px solid transparent;
+  position: absolute;
+}
+
+/* line 76, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.fade, .tooltip.from-above, .tooltip.from-below, .tooltip.flip-rotate,
+.popover.fade,
+.popover.from-above,
+.popover.from-below,
+.popover.flip-rotate {
+  transition: opacity 0.15s, visibility 0.15s, transform 0.15s;
+}
+/* line 81, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.fade,
+.popover.fade {
+  opacity: 0;
+}
+/* line 87, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.from-above,
+.popover.from-above {
+  transform: scale(1.2);
+}
+/* line 90, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.from-above.show,
+.popover.from-above.show {
+  transform: scale(1);
+}
+/* line 97, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.from-below,
+.popover.from-below {
+  transform: scale(0.8);
+}
+/* line 100, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.from-below.show,
+.popover.from-below.show {
+  transform: scale(1);
+}
+/* line 107, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.flip-rotate,
+.popover.flip-rotate {
+  transform: rotate(-15deg);
+}
+/* line 110, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tooltip.scss */
+.tooltip.flip-rotate.show,
+.popover.flip-rotate.show {
+  transform: rotate(0deg);
+}

@@ -6,3 +6,20 @@ html, body
 {
   height: 100%;
 }
+
+#content {
+	margin-top: 10px;
+	@include flexbox((
+		display: flex,
+		flex-flow: row wrap));
+}
+#primary {
+	@include flexbox((
+		flex: 9 0px,
+		order: 2));
+}
+#secondary {
+	@include flexbox((
+		flex: 3 0px,
+		order: 1));
+}

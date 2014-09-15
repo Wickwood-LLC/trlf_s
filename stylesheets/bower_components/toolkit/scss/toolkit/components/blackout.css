@@ -1,0 +1,32 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/blackout.scss */
+.blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 600;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.3s;
+}
+/* line 21, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/blackout.scss */
+.blackout .loader {
+  opacity: 1;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 26, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/blackout.scss */
+.blackout .loader > span,
+.blackout .loader .spinner > span {
+  background: #fff !important;
+}

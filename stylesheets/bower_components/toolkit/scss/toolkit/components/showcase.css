@@ -1,0 +1,120 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 610;
+  visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s, visibility 0.3s;
+}
+/* line 26, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase.is-loading .showcase-prev,
+.showcase.is-loading .showcase-next,
+.showcase.is-loading .showcase-tabs, .showcase.is-single .showcase-prev,
+.showcase.is-single .showcase-next,
+.showcase.is-single .showcase-tabs {
+  display: none !important;
+}
+/* line 34, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase.is-loading .showcase-close {
+  display: none !important;
+}
+
+/* line 40, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-close {
+  float: right;
+  line-height: 1rem;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+/* line 49, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-caption {
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* line 54, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-inner {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+/* line 59, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.3s, height 0.3s;
+}
+/* line 67, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-items > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+/* line 74, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-items > li > img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 83, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-prev,
+.showcase-next {
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  background: none;
+  padding: 0;
+  border: 0;
+  transform: translateY(-50%);
+}
+/* line 94, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-prev:focus,
+.showcase-next:focus {
+  outline: none;
+}
+
+/* line 97, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-prev {
+  left: 0.75rem;
+}
+
+/* line 98, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-next {
+  right: 0.75rem;
+}
+
+/* line 100, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/showcase.scss */
+.showcase-tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
+}

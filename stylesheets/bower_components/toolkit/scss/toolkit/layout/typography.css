@@ -1,0 +1,112 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+html {
+  font-size: 14px;
+  line-height: 1.25em;
+}
+
+/* line 14, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h1 {
+  font-size: 3rem;
+}
+
+/* line 15, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h2 {
+  font-size: 2.5rem;
+}
+
+/* line 16, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h3 {
+  font-size: 2.1rem;
+}
+
+/* line 17, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h4 {
+  font-size: 1.8rem;
+}
+
+/* line 18, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h5 {
+  font-size: 1.5rem;
+}
+
+/* line 19, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h6 {
+  font-size: 1.2rem;
+}
+
+/* line 21, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.25em;
+  font-weight: normal;
+}
+
+/* line 28, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+p, ul, ol {
+  margin: 1.25rem 0 0 0;
+}
+/* line 31, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+p ul, p ol, ul ul, ul ol, ol ul, ol ol {
+  margin: 0;
+}
+
+/* line 36, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+hr {
+  margin: 1.25rem 0;
+}
+
+/* line 40, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+blockquote {
+  margin: 1.25rem;
+  padding: 0 0.75rem;
+  border-left: 5px solid #f5f5f5;
+}
+/* line 45, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+blockquote cite {
+  display: block;
+  font-size: 0.7rem;
+}
+/* line 46, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+blockquote cite:before {
+  content: "\2014 \00A0";
+  /* em dash */
+}
+
+/* line 49, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+mark {
+  display: inline-block;
+  background: #e5e5e5;
+  border-radius: 0.2rem;
+  padding: 0 .3em;
+}
+
+/* line 56, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+.text-muted {
+  color: #929497;
+}
+
+/* line 57, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+.text-info {
+  color: #16a3cd;
+}
+
+/* line 58, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+.text-error {
+  color: #e91a1a;
+}
+
+/* line 59, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+.text-warning {
+  color: #f6ba04;
+}
+
+/* line 60, ../../../../../../sass/bower_components/toolkit/scss/toolkit/layout/typography.scss */
+.text-success {
+  color: #6fae3f;
+}

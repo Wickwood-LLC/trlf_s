@@ -7,3 +7,9 @@
 	font-size: $font-size;
 	font-size: ($font-size / $base-font-size )*1rem;
 }
+@mixin widget-title-styles{
+	background: #BFDDEE;
+	@include border-radius(3px);
+	padding: 10px 0;
+	margin: 0 auto 7px;
+}

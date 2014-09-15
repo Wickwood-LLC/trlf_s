@@ -1,0 +1,29 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/matrix.scss */
+.matrix {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* line 13, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/matrix.scss */
+.matrix > li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  transition: top 0.3s, left 0.3s, bottom 0.3s, right 0.3s, opacity 0.3s;
+}
+/* line 20, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/matrix.scss */
+.matrix.has-no-columns > li {
+  position: relative !important;
+}
+/* line 4, ../../../../../../sass/bower_components/toolkit/scss/toolkit/mixins/_layout.scss */
+.matrix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

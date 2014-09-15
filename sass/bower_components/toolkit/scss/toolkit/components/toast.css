@@ -1,0 +1,67 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.toasts {
+  position: fixed;
+  margin: 1.25rem;
+  width: 20%;
+  z-index: 500; }
+  .toasts.top-left {
+    top: 0;
+    left: 0; }
+  .toasts.top-center {
+    top: 0;
+    left: 50%; }
+  .toasts.top-right {
+    top: 0;
+    right: 0; }
+  .toasts.center-left {
+    top: 50%;
+    left: 0; }
+  .toasts.center-right {
+    top: 50%;
+    right: 0; }
+  .toasts.bottom-left {
+    bottom: 0;
+    left: 0; }
+  .toasts.bottom-center {
+    bottom: 0;
+    left: 50%; }
+  .toasts.bottom-right {
+    bottom: 0;
+    right: 0; }
+  .toasts.top-center, .toasts.bottom-center {
+    transform: translateX(-50%); }
+  .toasts.center-left, .toasts.center-right {
+    transform: translateY(-50%); }
+
+.toast {
+  margin-top: 1rem;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  opacity: 0;
+  visibility: hidden; }
+  .toast.show {
+    opacity: 1; }
+  .toast:first-child {
+    margin-top: 0; }
+
+.toast.slide-up {
+  transform: translateY(50%); }
+  .toast.slide-up.show {
+    transform: translateY(0); }
+.toast.slide-down {
+  transform: translateY(-50%); }
+  .toast.slide-down.show {
+    transform: translateY(0); }
+.toast.slide-left {
+  transform: translateX(25%); }
+  .toast.slide-left.show {
+    transform: translateX(0); }
+.toast.slide-right {
+  transform: translateX(-25%); }
+  .toast.slide-right.show {
+    transform: translateX(0); }
+
+/*# sourceMappingURL=toast.css.map */

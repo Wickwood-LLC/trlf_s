@@ -1,0 +1,23 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.matrix {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+  .matrix > li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    transition: top 0.3s, left 0.3s, bottom 0.3s, right 0.3s, opacity 0.3s; }
+  .matrix.has-no-columns > li {
+    position: relative !important; }
+  .matrix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/*# sourceMappingURL=matrix.css.map */

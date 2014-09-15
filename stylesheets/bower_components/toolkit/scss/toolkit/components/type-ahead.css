@@ -1,0 +1,68 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  -webkit-backface-visibility: hidden;
+}
+/* line 22, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+}
+/* line 28, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead li > a {
+  padding: 0.5rem;
+  line-height: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 40, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead-heading {
+  padding: 0.5rem;
+  line-height: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead-highlight {
+  background: #fff;
+  padding: 0;
+}
+
+/* line 52, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead-desc {
+  display: block;
+  font-size: .7rem;
+}
+
+/* line 57, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead-shadow {
+  position: relative;
+}
+/* line 60, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead-shadow .is-shadow {
+  color: gray;
+}
+/* line 64, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/type-ahead.scss */
+.type-ahead-shadow .not-shadow {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  zoom: 1;
+}

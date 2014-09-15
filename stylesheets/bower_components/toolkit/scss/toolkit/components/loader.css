@@ -1,0 +1,167 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 12, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 17, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader > span {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+/* line 23, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader-message {
+  margin-top: 1rem;
+}
+
+@keyframes bar-wave {
+  0%, 50%, 100% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(2);
+  }
+}
+/* line 40, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bar-wave > span {
+  background: #000;
+  height: 2.5rem;
+  width: 0.65rem;
+  animation: bar-wave 1.2s infinite ease-in-out;
+}
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bar-wave > span:nth-child(2) {
+  animation-delay: -1.1s;
+}
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bar-wave > span:nth-child(3) {
+  animation-delay: -1s;
+}
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bar-wave > span:nth-child(4) {
+  animation-delay: -0.9s;
+}
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bar-wave > span:nth-child(5) {
+  animation-delay: -0.8s;
+}
+/* line 51, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bar-wave .loader-message {
+  margin-top: 1.5rem;
+}
+
+@keyframes bubble-wave {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1);
+  }
+}
+/* line 70, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-wave > span {
+  background: #000;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  animation: bubble-wave 1.5s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+/* line 79, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-wave > span:nth-child(2) {
+  animation-delay: -1.4s;
+}
+/* line 79, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-wave > span:nth-child(3) {
+  animation-delay: -1.3s;
+}
+/* line 79, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-wave > span:nth-child(4) {
+  animation-delay: -1.2s;
+}
+/* line 79, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-wave > span:nth-child(5) {
+  animation-delay: -1.1s;
+}
+
+@keyframes bubble-spinner {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+}
+/* line 98, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 104, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span {
+  background: #000;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  border-radius: 100%;
+  animation: bubble-spinner 1.6s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+/* line 113, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(1) {
+  top: 0;
+  left: 43px;
+  animation-delay: -1.4s;
+}
+/* line 119, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(2) {
+  top: 12px;
+  right: 12px;
+  animation-delay: -1.2s;
+}
+/* line 125, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(3) {
+  top: 43px;
+  right: 0;
+  animation-delay: -1.0s;
+}
+/* line 131, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(4) {
+  bottom: 12px;
+  right: 12px;
+  animation-delay: -0.8s;
+}
+/* line 137, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(5) {
+  bottom: 0;
+  left: 43px;
+  animation-delay: -0.6s;
+}
+/* line 143, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(6) {
+  bottom: 12px;
+  left: 12px;
+  animation-delay: -0.4s;
+}
+/* line 149, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(7) {
+  top: 43px;
+  left: 0;
+  animation-delay: -0.2s;
+}
+/* line 155, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/loader.scss */
+.loader.bubble-spinner .loader-spinner > span:nth-child(8) {
+  top: 12px;
+  left: 12px;
+  animation-delay: -0.0s;
+}

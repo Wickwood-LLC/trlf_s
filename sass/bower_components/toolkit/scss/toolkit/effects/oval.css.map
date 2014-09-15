@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;AAUA,YAA8C;EAC1C,aAAa,EAAE,cAAuB;;AAMtC,4BAAG;EACC,aAAa,EAAE,cAAuB;AAG1C,0CAAiB;EACb,aAAa,EAAE,mCAAqD;AAGxE,yCAAgB;EACZ,aAAa,EAAE,iCAAqD;;AAM5E,wBAA0D;EACtD,KAAK,EAAE,GAAG;EACV,IAAI,EAAE,IAAI;EACV,aAAa,EAAE,iDAAiD",
+"sources": ["oval.scss"],
+"names": [],
+"file": "oval.css"
+}

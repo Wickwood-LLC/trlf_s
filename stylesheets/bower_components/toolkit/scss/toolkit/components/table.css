@@ -1,0 +1,116 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table {
+  width: 100%;
+  margin-top: 1.25rem;
+  background: #fbfbfb;
+  border-collapse: collapse;
+}
+/* line 15, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table th, .table td {
+  padding: 0.75rem;
+  line-height: 110%;
+  vertical-align: top;
+  border: 1px solid #e5e5e5;
+}
+/* line 23, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table thead th {
+  vertical-align: bottom;
+  text-align: left;
+}
+/* line 27, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table thead th .sorter {
+  margin: -.5rem .25rem;
+}
+/* line 33, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table tbody + tbody {
+  border-top-width: 2px;
+}
+/* line 36, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table thead tr,
+.table tfoot tr {
+  background: #e5e5e5;
+}
+/* line 40, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table thead tr th,
+.table tfoot tr th {
+  border-color: #c2c2c2;
+}
+/* line 44, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table tbody tr.table-divider {
+  background: #e5e5e5 !important;
+}
+
+/* line 47, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* line 56, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.has-hover tbody tr:not(.table-divider):hover {
+  background: #fff;
+}
+
+/* line 59, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.is-striped tbody tr {
+  background: #f5f5f5;
+}
+/* line 62, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.is-striped tbody tr:nth-child(odd) {
+  background: #fbfbfb;
+}
+
+/* line 66, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.is-sortable thead th {
+  padding: 0;
+}
+/* line 69, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.is-sortable thead th > a,
+.table.is-sortable thead th > span {
+  padding: 0.75rem;
+  display: block;
+}
+/* line 75, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.is-sortable thead th > a {
+  background: #e5e5e5;
+}
+/* line 78, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.is-sortable thead th > a:hover {
+  background: #c2c2c2;
+}
+
+/* line 86, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.small thead th,
+.table.small tbody td {
+  padding: 0.5rem;
+}
+/* line 90, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.small.is-sortable thead th {
+  padding: 0;
+}
+/* line 93, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.small.is-sortable thead th > a,
+.table.small.is-sortable thead th > span {
+  padding: 0.5rem;
+}
+
+/* line 100, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.large thead th,
+.table.large tbody td {
+  padding: 1rem;
+}
+/* line 104, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.large.is-sortable thead th {
+  padding: 0;
+}
+/* line 107, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/table.scss */
+.table.large.is-sortable thead th > a,
+.table.large.is-sortable thead th > span {
+  padding: 1rem;
+}

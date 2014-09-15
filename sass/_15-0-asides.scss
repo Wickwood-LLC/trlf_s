@@ -6,3 +6,29 @@
 // .archive .format-aside .entry-title {
 // 	display: none;
 // }
+#secondary .aside{
+	background: #EDEDED;
+	background: rgba(237, 237, 237, 0.4);
+	@include border-radius(6px);
+	border: 1px solid rgba(199, 199, 199, 0.4);
+	padding: 7px;
+}
+.aside .widget-title{
+	@include widget-title-styles();
+}
+#menu-services a{
+	background: #E0E0E0;
+	@include border-radius(6px);
+	@include box-shadow(0 0 2px 1px rgba(0, 0, 0, 0.2));
+	border: 1px solid #A6A6A6;
+	padding: 0 10px;
+	margin: 0 auto;
+	font-size: 17px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	color: #000000;
+	min-height: 30px;
+	line-height: 30px;
+}

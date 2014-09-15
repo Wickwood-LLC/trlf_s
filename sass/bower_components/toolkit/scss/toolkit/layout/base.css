@@ -1,0 +1,188 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-justify {
+  text-align: justify; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.float-none {
+  float: none; }
+
+.show {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+.hide {
+  opacity: 0 !important;
+  visibility: hidden !important; }
+
+.shown {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+.no-scroll {
+  overflow: hidden !important; }
+
+.no-transition {
+  transition: none !important; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+  .sr-only.is-focusable:active, .sr-only.is-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto; }
+
+.vertical-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.clear-fix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.round {
+  border-radius: 0.2rem; }
+
+.is-draggable {
+  cursor: move; }
+
+.is-dragging {
+  cursor: grabbing; }
+
+.is-disabled,
+[disabled] {
+  cursor: not-allowed !important; }
+
+.caret-up,
+.caret-down,
+.caret-left,
+.caret-right {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  border: 5px solid transparent;
+  content: "";
+  height: 0;
+  width: 0; }
+
+.caret-up {
+  border-bottom-color: inherit;
+  top: -2px; }
+
+.caret-down {
+  border-top-color: inherit;
+  bottom: -2px; }
+
+.caret-left {
+  border-right-color: inherit; }
+
+.caret-right {
+  border-left-color: inherit; }
+
+.x,
+.arrow-up,
+.arrow-down,
+.arrow-left,
+.arrow-right {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  font: bold 1.5rem/1rem Arial, sans-serif;
+  text-transform: uppercase; }
+
+.x:before {
+  content: "\00D7";
+  /* times */ }
+
+.arrow-up:before,
+.arrow-left:before,
+.arrow-down:before,
+.arrow-right:before {
+  display: inline-block;
+  position: relative;
+  content: "\025B4";
+  /* blacktriangle */ }
+
+.arrow-right:before {
+  transform: rotate(90deg); }
+
+.arrow-left:before {
+  transform: rotate(-90deg); }
+
+.arrow-down:before {
+  transform: rotate(180deg); }
+
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 100%; }
+  .bullets li {
+    display: inline-block;
+    margin: 0 3px; }
+  .bullets a {
+    display: inline-block;
+    border: 3px solid #fff;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+    background: transparent; }
+    .bullets a:hover {
+      opacity: 1;
+      border-width: 2px; }
+    .is-active > .bullets a, .is-active > li > .bullets a, .bullets a.is-active, .bullets a.is-active:hover {
+      background: #fff; }
+  .bullets:empty {
+    display: none; }
+
+.sorter {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  max-width: 10px;
+  line-height: 5px;
+  top: -1px;
+  margin: 0 .25rem; }
+  .sorter .caret-up,
+  .sorter .caret-down {
+    opacity: .25; }
+  .sorter.desc .caret-up, .sorter.asc .caret-down {
+    opacity: 1; }
+
+/*# sourceMappingURL=base.css.map */

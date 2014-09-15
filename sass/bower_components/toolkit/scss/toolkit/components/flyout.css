@@ -1,0 +1,58 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.flyout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: content-box;
+  transition: opacity 0.3s, visibility 0.3s; }
+  .flyout ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 200px; }
+  .flyout li {
+    position: relative; }
+    .flyout li > a {
+      padding: 0.5rem;
+      line-height: 100%;
+      display: block;
+      text-decoration: none; }
+      .flyout li > a .caret-right {
+        display: none; }
+    .flyout li.has-children > a .caret-right {
+      float: right;
+      display: inline-block;
+      margin-top: 3px; }
+    .flyout li > .flyout {
+      left: 90%;
+      transition: left 0.3s, right 0.3s, opacity 0.3s, visibility 0.3s; }
+      .flyout li > .flyout.push-left {
+        left: auto;
+        right: 90%; }
+    .flyout li.is-open > .flyout {
+      opacity: 1;
+      visibility: visible;
+      left: 100%; }
+      .flyout li.is-open > .flyout.push-left {
+        left: auto;
+        right: 100%; }
+  .flyout:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.flyout-heading {
+  padding: 0.5rem;
+  line-height: 100%;
+  display: block;
+  text-decoration: none; }
+
+/*# sourceMappingURL=flyout.css.map */

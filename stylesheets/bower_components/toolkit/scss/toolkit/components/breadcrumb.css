@@ -1,0 +1,65 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 9, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb {
+  text-align: left;
+  margin: 1.25rem 0;
+}
+/* line 13, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb ul, .breadcrumb ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 4, ../../../../../../sass/bower_components/toolkit/scss/toolkit/mixins/_layout.scss */
+.breadcrumb ul:after, .breadcrumb ol:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 18, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb li {
+  position: relative;
+  float: left;
+}
+/* line 23, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb li:last-child .caret {
+  display: none;
+}
+/* line 27, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb a {
+  font-size: 1rem;
+  padding: 0.75rem;
+  display: block;
+  line-height: 100%;
+  padding-right: 0;
+}
+/* line 33, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb a .caret {
+  margin-left: 0.75rem;
+  position: relative;
+  left: -1px;
+}
+/* line 41, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb.small a {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  padding-right: 0;
+}
+/* line 45, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb.small a .caret {
+  margin-left: 0.5rem;
+}
+/* line 50, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb.large a {
+  font-size: 1.3rem;
+  padding: 1rem;
+  padding-right: 0;
+}
+/* line 54, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/breadcrumb.scss */
+.breadcrumb.large a .caret {
+  margin-left: 1rem;
+}

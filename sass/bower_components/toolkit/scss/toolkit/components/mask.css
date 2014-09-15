@@ -1,0 +1,34 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.85);
+  transition: all 0.3s;
+  color: #fff;
+  user-select: none; }
+
+.mask-message {
+  text-align: center;
+  max-width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+  .mask-message:empty {
+    display: none; }
+
+.mask-target {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden; }
+
+/*# sourceMappingURL=mask.css.map */

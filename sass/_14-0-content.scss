@@ -24,3 +24,18 @@
 // 	clear: both;
 // 	margin: 0 0 1.5em;
 // }
+#main .page {
+	background: #EDEDED;
+	background: rgba(237, 237, 237, 0.4);
+	@include border-radius(6px);
+	border: 1px solid rgba(199, 199, 199, 0.4);
+	padding: 5px;
+	margin-left: 5px;
+}
+.entry-header {
+	border-bottom: 1px solid #C7C7C7;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	padding: 1px;
+}

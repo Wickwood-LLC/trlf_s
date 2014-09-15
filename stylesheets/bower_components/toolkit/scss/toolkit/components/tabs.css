@@ -1,0 +1,40 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+/* line 10, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tabs.scss */
+.tabs, .tabs--horizontal {
+  text-align: left;
+}
+
+/* line 14, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tabs.scss */
+.tabs-nav {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+/* line 18, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tabs.scss */
+.tabs-nav ul, .tabs-nav ol, .tabs-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+/* line 4, ../../../../../../sass/bower_components/toolkit/scss/toolkit/mixins/_layout.scss */
+.tabs-nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 27, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tabs.scss */
+.tabs-section.hide {
+  display: none;
+}
+
+/* line 37, ../../../../../../sass/bower_components/toolkit/scss/toolkit/components/tabs.scss */
+.tabs--horizontal .tabs-nav ul, .tabs--horizontal .tabs-nav ol, .tabs--horizontal .tabs-nav li, .tabs--horizontal .tabs-nav a, .tabs--horizontal .tabs-nav button {
+  display: block;
+  float: none;
+  text-align: left;
+}
