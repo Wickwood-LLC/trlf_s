@@ -24,12 +24,12 @@
 // 	clear: both;
 // 	margin: 0 0 1.5em;
 // }
+#content{
+	max-width: 960px;
+	margin: 10px auto 0;
+}
 #main .page {
-	background: #EDEDED;
-	background: rgba(237, 237, 237, 0.4);
-	@include border-radius(6px);
-	border: 1px solid rgba(199, 199, 199, 0.4);
-	padding: 5px;
+	@include region-box-styles;
 	margin-left: 5px;
 }
 .entry-header {
@@ -38,4 +38,56 @@
 	position: relative;
 	z-index: 1;
 	padding: 1px;
+}
+.edit-link {
+	font-size: 14px;
+	text-align: center;
+	display: block;
+
+	a {
+		font-weight: normal;
+		font-style: italic;
+		text-decoration: none;
+		color: #474747;
+
+		&:hover {
+			text-decoration: underline;
+			color: #318AB9;
+		}
+		&::before {
+			content: url('images/postediticon.png');
+			margin-right: 6px;
+		}
+	}
+}
+.entry-content a {
+	color: #A25039;
+
+	&:hover{
+		color: #2E81AD;
+	}
+	&:visited{
+		color: #A25039;
+	}
+
+	&::before{
+		content: url('images/postbullets.png');
+		margin-right: 6px;
+		bottom: 2px;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+		line-height: 0;
+	}
+}
+
+.site-footer {
+	background: #C7C7C7;
+	color: #1A1A1A;
+	font-size: 14px;
+	text-align: center;
+}
+.site-info {
+	padding: 8px;
 }

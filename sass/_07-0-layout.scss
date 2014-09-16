@@ -8,18 +8,30 @@ html, body
 }
 
 #content {
-	margin-top: 10px;
 	@include flexbox((
 		display: flex,
 		flex-flow: row wrap));
 }
 #primary {
+	margin-top: 10px;
 	@include flexbox((
+		order: 0));
+
+	@include breakpoint(48em){
+		@include flexbox((
 		flex: 9 0px,
-		order: 2));
+		order: 1));
+	}
 }
 #secondary {
+	margin-top: 10px;
 	@include flexbox((
-		flex: 3 0px,
+		flex: 1,
 		order: 1));
+
+	@include breakpoint(48em){
+		@include flexbox((
+			flex: 3 0px,
+			order: 0));
+	}
 }
