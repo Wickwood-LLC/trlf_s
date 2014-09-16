@@ -13,3 +13,10 @@
 	padding: 10px 0;
 	margin: 0 auto 7px;
 }
+@mixin region-box-styles{
+	background: #EDEDED;
+	background: rgba(237, 237, 237, 0.4);
+	@include border-radius(6px);
+	border: 1px solid rgba(199, 199, 199, 0.4);
+	padding: 7px;
+}

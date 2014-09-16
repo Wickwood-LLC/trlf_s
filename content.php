@@ -13,6 +13,7 @@
 			<?php trlf_s_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+		<?php edit_post_link( __( 'Edit', 'trlf_s' ), '<span class="edit-link">', '</span>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -51,7 +52,5 @@
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'trlf_s' ), __( '1 Comment', 'trlf_s' ), __( '% Comments', 'trlf_s' ) ); ?></span>
 		<?php endif; ?>
-
-		<?php edit_post_link( __( 'Edit', 'trlf_s' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
