@@ -55,7 +55,7 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 01.0 - Reset
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_01-0-reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -72,9 +72,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   outline: 0;
   padding: 0;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000322}}
+/* line 22, ../sass/_01-0-reset.scss */
 html {
   font-size: 62.5%;
   /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
@@ -83,9 +84,10 @@ html {
   -webkit-text-size-adjust: 100%;
   /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
   -ms-text-size-adjust: 100%;
-  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000328}}
+/* line 28, ../sass/_01-0-reset.scss */
 *,
 *:before,
 *:after {
@@ -94,14 +96,16 @@ html {
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
   -moz-box-sizing: border-box;
   /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000335}}
+/* line 35, ../sass/_01-0-reset.scss */
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000338}}
+/* line 38, ../sass/_01-0-reset.scss */
 article,
 aside,
 details,
@@ -112,44 +116,53 @@ header,
 main,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000350}}
+/* line 50, ../sass/_01-0-reset.scss */
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000353}}
+/* line 53, ../sass/_01-0-reset.scss */
 table {
   /* tables still need 'cellspacing="0"' in the markup */
   border-collapse: separate;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000357}}
+/* line 57, ../sass/_01-0-reset.scss */
 caption, th, td {
   font-weight: normal;
-  text-align: left; }
+  text-align: left;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000361}}
+/* line 61, ../sass/_01-0-reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: ""; }
+  content: "";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000365}}
+/* line 65, ../sass/_01-0-reset.scss */
 blockquote, q {
-  quotes: "" ""; }
+  quotes: "" "";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000368}}
+/* line 68, ../sass/_01-0-reset.scss */
 a:focus {
-  outline: thin dotted; }
+  outline: thin dotted;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000371}}
+/* line 71, ../sass/_01-0-reset.scss */
 a:hover,
 a:active {
-  outline: 0; }
+  outline: 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_01-0-reset\.scss}line{font-family:\0000375}}
+/* line 75, ../sass/_01-0-reset.scss */
 a img {
-  border: 0; }
+  border: 0;
+}
 
 /*--------------------------------------------------------------
 02.0 Mixins
@@ -160,143 +173,199 @@ a img {
 /*--------------------------------------------------------------
 04.0 Typography
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/RailsInstaller\/Ruby1\.9\.3\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\00003106}}
+/* line 106, c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
-  line-height: 1.2em; }
+  line-height: 1.2em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\000039}}
+/* line 9, ../sass/_04-0-typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Droid Serif", Arial, "Arial Unicode MS", Helvetica, Sans-Serif;
-  text-align: center; }
+  text-align: center;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000315}}
+/* line 15, ../sass/_04-0-typography.scss */
+html {
+  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+/* line 21, ../sass/_04-0-typography.scss */
 .site-title-line1,
 .site-title-line2 {
-  text-shadow: 1px 1px 0.5px rgba(23, 23, 23, 0.5); }
-  @media (min-width: 430px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000315}}
-    .site-title-line1,
-    .site-title-line2 {
-      text-shadow: 1.4px 1.4px 3px rgba(23, 23, 23, 0.5); } }
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000324}}
-  .site-title-line1 a,
-  .site-title-line2 a {
-    color: #404040;
-    color: inherit;
-    text-decoration: inherit;
-    cursor: inherit; }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/RailsInstaller\/Ruby1\.9\.3\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.1\/stylesheets\/compass\/typography\/links\/_unstyled-link\.scss}line{font-family:\000036}}
-    .site-title-line1 a:active, .site-title-line1 a:focus,
-    .site-title-line2 a:active,
-    .site-title-line2 a:focus {
-      outline: none; }
+  text-shadow: 1px 1px 0.5px rgba(23, 23, 23, 0.5);
+}
+@media (min-width: 430px) {
+  /* line 21, ../sass/_04-0-typography.scss */
+  .site-title-line1,
+  .site-title-line2 {
+    text-shadow: 1.4px 1.4px 3px rgba(23, 23, 23, 0.5);
+  }
+}
+/* line 30, ../sass/_04-0-typography.scss */
+.site-title-line1 a,
+.site-title-line2 a {
+  color: #404040;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+/* line 6, c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_unstyled-link.scss */
+.site-title-line1 a:active, .site-title-line1 a:focus,
+.site-title-line2 a:active,
+.site-title-line2 a:focus {
+  outline: none;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000332}}
+/* line 38, ../sass/_04-0-typography.scss */
 .site-title-line1 {
   font-size: 1.25em;
-  line-height: 1.2em; }
-  @media (min-width: 430px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000332}}
-    .site-title-line1 {
-      font-size: 1.875em;
-      line-height: 1.2em; } }
-  @media (min-width: 840px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000332}}
-    .site-title-line1 {
-      font-size: 2.125em;
-      line-height: 1.2em; } }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000332}}
-    .site-title-line1 {
-      font-size: 2.5em;
-      line-height: 1.2em; } }
-  @media (min-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000332}}
-    .site-title-line1 {
-      font-size: 3.125em;
-      line-height: 1.2em; } }
+  line-height: 1.2em;
+}
+@media (min-width: 430px) {
+  /* line 38, ../sass/_04-0-typography.scss */
+  .site-title-line1 {
+    font-size: 1.875em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 840px) {
+  /* line 38, ../sass/_04-0-typography.scss */
+  .site-title-line1 {
+    font-size: 2.125em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 900px) {
+  /* line 38, ../sass/_04-0-typography.scss */
+  .site-title-line1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 960px) {
+  /* line 38, ../sass/_04-0-typography.scss */
+  .site-title-line1 {
+    font-size: 3.125em;
+    line-height: 1.2em;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000348}}
+/* line 54, ../sass/_04-0-typography.scss */
 .site-title-line2 {
   font-size: 1.375em;
-  line-height: 1.2em; }
-  @media (min-width: 430px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000348}}
-    .site-title-line2 {
-      font-size: 2.25em;
-      line-height: 1.2em; } }
-  @media (min-width: 840px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000348}}
-    .site-title-line2 {
-      font-size: 2.5em;
-      line-height: 1.2em; } }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000348}}
-    .site-title-line2 {
-      font-size: 3.125em;
-      line-height: 1.2em; } }
-  @media (min-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000348}}
-    .site-title-line2 {
-      font-size: 3.75em;
-      line-height: 1.2em; } }
+  line-height: 1.2em;
+}
+@media (min-width: 430px) {
+  /* line 54, ../sass/_04-0-typography.scss */
+  .site-title-line2 {
+    font-size: 2.25em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 840px) {
+  /* line 54, ../sass/_04-0-typography.scss */
+  .site-title-line2 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 900px) {
+  /* line 54, ../sass/_04-0-typography.scss */
+  .site-title-line2 {
+    font-size: 3.125em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 960px) {
+  /* line 54, ../sass/_04-0-typography.scss */
+  .site-title-line2 {
+    font-size: 3.75em;
+    line-height: 1.2em;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000365}}
+/* line 71, ../sass/_04-0-typography.scss */
 .site-description,
 .site-header-address,
 .site-header-phone,
 .site-header-fax {
   font-variant: small-caps;
   font-size: 0.8125em;
-  line-height: 1.44em; }
-  @media (min-width: 430px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000365}}
-    .site-description,
-    .site-header-address,
-    .site-header-phone,
-    .site-header-fax {
-      font-size: 0.875em;
-      line-height: 1.2em; } }
-  @media (min-width: 530px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000365}}
-    .site-description,
-    .site-header-address,
-    .site-header-phone,
-    .site-header-fax {
-      font-size: 1em;
-      line-height: 1.2em; } }
+  line-height: 1.44em;
+}
+@media (min-width: 430px) {
+  /* line 71, ../sass/_04-0-typography.scss */
+  .site-description,
+  .site-header-address,
+  .site-header-phone,
+  .site-header-fax {
+    font-size: 0.875em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 530px) {
+  /* line 71, ../sass/_04-0-typography.scss */
+  .site-description,
+  .site-header-address,
+  .site-header-phone,
+  .site-header-fax {
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+}
 
 @media (min-width: 840px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000380}}
+  /* line 86, ../sass/_04-0-typography.scss */
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
     font-size: 1.125em;
-    line-height: 1.2em; } }
+    line-height: 1.2em;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000388}}
+/* line 94, ../sass/_04-0-typography.scss */
 .site-header-attorney {
   font-variant: small-caps;
   font-size: 0.9375em;
-  line-height: 1.44em; }
-  @media (min-width: 430px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000388}}
-    .site-header-attorney {
-      font-size: 1em;
-      line-height: 1.2em; } }
-  @media (min-width: 530px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000388}}
-    .site-header-attorney {
-      font-size: 1.125em;
-      line-height: 1.2em; } }
-  @media (min-width: 840px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\0000388}}
-    .site-header-attorney {
-      font-size: 1.375em;
-      line-height: 1.2em; } }
+  line-height: 1.44em;
+}
+@media (min-width: 430px) {
+  /* line 94, ../sass/_04-0-typography.scss */
+  .site-header-attorney {
+    font-size: 1em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 530px) {
+  /* line 94, ../sass/_04-0-typography.scss */
+  .site-header-attorney {
+    font-size: 1.125em;
+    line-height: 1.2em;
+  }
+}
+@media (min-width: 840px) {
+  /* line 94, ../sass/_04-0-typography.scss */
+  .site-header-attorney {
+    font-size: 1.375em;
+    line-height: 1.2em;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_04-0-typography\.scss}line{font-family:\00003173}}
+/* line 122, ../sass/_04-0-typography.scss */
+p {
+  margin: 1.2em 0;
+}
+
+/* line 125, ../sass/_04-0-typography.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 179, ../sass/_04-0-typography.scss */
 .entry-title {
   color: #19455D;
   margin: 5px 0;
@@ -305,14 +374,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal;
   font-variant: small-caps;
-  text-align: center; }
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* line 190, ../sass/_04-0-typography.scss */
+.entry-content {
+  text-align: justify;
+}
 
 /*--------------------------------------------------------------
 05.0 Elements
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_05-0-elements\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_05-0-elements.scss */
 body {
-  background: #FEFEEC; }
+  background: #FEFEEC;
+}
 
 /*--------------------------------------------------------------
 06.0 Forms
@@ -320,52 +397,57 @@ body {
 /*--------------------------------------------------------------
 07.0 Layout
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-0-layout\.scss}line{font-family:\000035}}
+/* line 5, ../sass/_07-0-layout.scss */
 html, body {
-  height: 100%; }
+  height: 100%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-0-layout\.scss}line{font-family:\0000310}}
+/* line 10, ../sass/_07-0-layout.scss */
 #content {
-  margin-top: 10px;
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-0-layout\.scss}line{font-family:\0000316}}
+/* line 15, ../sass/_07-0-layout.scss */
 #primary {
-  -webkit-flex: 9 0px;
-  -webkit-order: 2;
-  -webkit-box-flex: 9;
-  -webkit-flex: 9 0px;
-  -ms-flex: 9 0px;
-  flex: 9 0px;
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2; }
+  margin-top: 10px;
+  -webkit-order: 0;
+  order: 0;
+}
+@media (min-width: 48em) {
+  /* line 15, ../sass/_07-0-layout.scss */
+  #primary {
+    -webkit-flex: 9 0px;
+    -webkit-order: 1;
+    flex: 9 0px;
+    order: 1;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-0-layout\.scss}line{font-family:\0000321}}
+/* line 26, ../sass/_07-0-layout.scss */
 #secondary {
-  -webkit-flex: 3 0px;
+  margin-top: 10px;
+  -webkit-flex: 1;
   -webkit-order: 1;
-  -webkit-box-flex: 3;
-  -webkit-flex: 3 0px;
-  -ms-flex: 3 0px;
-  flex: 3 0px;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1; }
+  flex: 1;
+  order: 1;
+}
+@media (min-width: 48em) {
+  /* line 26, ../sass/_07-0-layout.scss */
+  #secondary {
+    -webkit-flex: 3 0px;
+    -webkit-order: 0;
+    flex: 3 0px;
+    order: 0;
+  }
+}
 
 /*--------------------------------------------------------------
 07.1 Header Layout Styles
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\000035}}
+/* line 5, ../sass/_07-1-layout-header.scss */
 .masthead {
   border-bottom: 2px solid #56A7D2;
   width: 100%;
@@ -373,24 +455,27 @@ html, body {
   padding-bottom: 0px;
   background-color: #A6D1E8;
   background-image: -webkit-linear-gradient(top, #A6D1E8, #D3E8F4);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#A6D1E8), to(#D3E8F4));
-  background-image: linear-gradient(to bottom,#A6D1E8, #D3E8F4); }
+  background-image: linear-gradient(to bottom,#A6D1E8, #D3E8F4);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000313}}
+/* line 13, ../sass/_07-1-layout-header.scss */
 .masthead-inner {
   max-width: 960px;
-  margin: auto; }
+  margin: auto;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000319}}
+/* line 19, ../sass/_07-1-layout-header.scss */
 .site-header-container {
   border: 1px solid red;
   display: -webkit-box;
+  display: -moz-box;
   display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: space-around;
+  -moz-box-align: space-around;
   box-align: space-around;
   -webkit-align-items: space-around;
   -moz-align-items: space-around;
@@ -399,6 +484,7 @@ html, body {
   align-items: space-around;
   -ms-flex-align: space-around;
   -webkit-box-pack: center;
+  -moz-box-pack: center;
   box-pack: center;
   -webkit-justify-content: center;
   -moz-justify-content: center;
@@ -407,55 +493,67 @@ html, body {
   justify-content: center;
   -ms-flex-pack: center;
   -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
   box-orient: vertical;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  -ms-flex-direction: column; }
-  @media (min-width: 630px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000319}}
-    .site-header-container {
-      -webkit-box-orient: horizontal;
-      box-orient: horizontal;
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      flex-direction: row;
-      -ms-flex-direction: row; } }
+  -ms-flex-direction: column;
+}
+@media (min-width: 630px) {
+  /* line 19, ../sass/_07-1-layout-header.scss */
+  .site-header-container {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000334}}
+/* line 34, ../sass/_07-1-layout-header.scss */
 .site-branding {
   -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
   box-ordinal-group: 1;
   -webkit-order: 1;
   -moz-order: 1;
   order: 1;
   -ms-flex-order: 1;
   -webkit-box-flex: 1;
+  -moz-box-flex: 1;
   box-flex: 1;
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-align-self: center;
+  -moz-align-self: center;
   align-self: center;
-  -ms-flex-item-align: center; }
+  -ms-flex-item-align: center;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000340}}
+/* line 40, ../sass/_07-1-layout-header.scss */
 .site-branding-container {
   border: 1px solid orange;
   display: -webkit-box;
+  display: -moz-box;
   display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
   box-orient: horizontal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
   -webkit-box-pack: center;
+  -moz-box-pack: center;
   box-pack: center;
   -webkit-justify-content: center;
   -moz-justify-content: center;
@@ -464,6 +562,7 @@ html, body {
   justify-content: center;
   -ms-flex-pack: center;
   -webkit-box-align: center;
+  -moz-box-align: center;
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -475,171 +574,213 @@ html, body {
   -moz-box-lines: multiple;
   box-lines: multiple;
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000340}}
-    .site-branding-container {
-      height: 233px;
-      -webkit-box-orient: vertical;
-      box-orient: vertical;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      flex-direction: column;
-      -ms-flex-direction: column;
-      -webkit-box-pack: center;
-      box-pack: center;
-      -webkit-justify-content: space-around;
-      -moz-justify-content: space-around;
-      -ms-justify-content: space-around;
-      -o-justify-content: space-around;
-      justify-content: space-around;
-      -ms-flex-pack: center;
-      -webkit-box-align: center;
-      box-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -o-align-items: center;
-      align-items: center;
-      -ms-flex-align: center;
-      -webkit-box-lines: multiple;
-      -moz-box-lines: multiple;
-      box-lines: multiple;
-      -webkit-flex-wrap: wrap-reverse;
-      -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse; } }
+  flex-wrap: wrap;
+}
+@media (min-width: 900px) {
+  /* line 40, ../sass/_07-1-layout-header.scss */
+  .site-branding-container {
+    height: 233px;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap-reverse;
+    -moz-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000360}}
+/* line 60, ../sass/_07-1-layout-header.scss */
 .logo-container {
   border: 1px solid yellow;
   -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
   box-ordinal-group: 0;
   -webkit-order: 0;
   -moz-order: 0;
   order: 0;
   -ms-flex-order: 0;
-  margin: auto; }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000360}}
-    .logo-container {
-      margin: auto;
-      -webkit-box-ordinal-group: 2;
-      box-ordinal-group: 2;
-      -webkit-order: 2;
-      -moz-order: 2;
-      order: 2;
-      -ms-flex-order: 2;
-      height: 183px; } }
+  margin: auto;
+}
+@media (min-width: 900px) {
+  /* line 60, ../sass/_07-1-layout-header.scss */
+  .logo-container {
+    margin: auto;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    order: 2;
+    -ms-flex-order: 2;
+    height: 183px;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000375}}
+/* line 75, ../sass/_07-1-layout-header.scss */
 .logo {
-  margin: auto; }
-  @media (min-width: 0px) and (max-width: 429px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000375}}
-    .logo {
-      background: url('/images/../images/logos/logo0.png') no-repeat;
-      width: 82px;
-      height: 60px; } }
-  @media (min-width: 430px) and (max-width: 529px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000375}}
-    .logo {
-      background: url('/images/../images/logos/logo430.png') no-repeat;
-      width: 137px;
-      height: 100px; } }
-  @media (min-width: 530px) and (max-width: 699px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000375}}
-    .logo {
-      background: url('/images/../images/logos/logo530.png') no-repeat;
-      width: 137px;
-      height: 100px; } }
-  @media (min-width: 700px) and (max-width: 899px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000375}}
-    .logo {
-      background: url('/images/../images/logos/logo700.png') no-repeat;
-      width: 167px;
-      height: 122px; } }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000375}}
-    .logo {
-      background: url('/images/../images/logos/logo900.png') no-repeat;
-      width: 167px;
-      height: 122px; } }
+  margin: auto;
+}
+@media (min-width: 0px) and (max-width: 429px) {
+  /* line 75, ../sass/_07-1-layout-header.scss */
+  .logo {
+    background: url('/images/logos/logo0.png?1410750508') no-repeat;
+    width: 82px;
+    height: 60px;
+  }
+}
+@media (min-width: 430px) and (max-width: 529px) {
+  /* line 75, ../sass/_07-1-layout-header.scss */
+  .logo {
+    background: url('/images/logos/logo430.png?1410750508') no-repeat;
+    width: 137px;
+    height: 100px;
+  }
+}
+@media (min-width: 530px) and (max-width: 699px) {
+  /* line 75, ../sass/_07-1-layout-header.scss */
+  .logo {
+    background: url('/images/logos/logo530.png?1410750508') no-repeat;
+    width: 137px;
+    height: 100px;
+  }
+}
+@media (min-width: 700px) and (max-width: 899px) {
+  /* line 75, ../sass/_07-1-layout-header.scss */
+  .logo {
+    background: url('/images/logos/logo700.png?1410750508') no-repeat;
+    width: 167px;
+    height: 122px;
+  }
+}
+@media (min-width: 900px) {
+  /* line 75, ../sass/_07-1-layout-header.scss */
+  .logo {
+    background: url('/images/logos/logo900.png?1410750508') no-repeat;
+    width: 167px;
+    height: 122px;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000390}}
+/* line 90, ../sass/_07-1-layout-header.scss */
 .site-title-container {
   border: 1px solid green;
   -webkit-box-flex: 1;
+  -moz-box-flex: 1;
   box-flex: 1;
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
   -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
   box-ordinal-group: 1;
   -webkit-order: 1;
   -moz-order: 1;
   order: 1;
-  -ms-flex-order: 1; }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\0000390}}
-    .site-title-container {
-      width: 75%;
-      -webkit-box-ordinal-group: 0;
-      box-ordinal-group: 0;
-      -webkit-order: 0;
-      -moz-order: 0;
-      order: 0;
-      -ms-flex-order: 0; } }
+  -ms-flex-order: 1;
+}
+@media (min-width: 900px) {
+  /* line 90, ../sass/_07-1-layout-header.scss */
+  .site-title-container {
+    width: 75%;
+    -webkit-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 0;
+    box-ordinal-group: 0;
+    -webkit-order: 0;
+    -moz-order: 0;
+    order: 0;
+    -ms-flex-order: 0;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003106}}
+/* line 106, ../sass/_07-1-layout-header.scss */
 .site-contact-container {
   border: 1px solid blue;
   -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
   box-ordinal-group: 2;
   -webkit-order: 2;
   -moz-order: 2;
   order: 2;
-  -ms-flex-order: 2; }
-  @media (min-width: 0px) and (max-width: 899px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003106}}
-    .site-contact-container {
-      width: 100%; } }
-  @media (min-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003106}}
-    .site-contact-container {
-      -webkit-box-ordinal-group: 1;
-      box-ordinal-group: 1;
-      -webkit-order: 1;
-      -moz-order: 1;
-      order: 1;
-      -ms-flex-order: 1;
-      width: 75%; } }
+  -ms-flex-order: 2;
+}
+@media (min-width: 0px) and (max-width: 899px) {
+  /* line 106, ../sass/_07-1-layout-header.scss */
+  .site-contact-container {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  /* line 106, ../sass/_07-1-layout-header.scss */
+  .site-contact-container {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    -webkit-order: 1;
+    -moz-order: 1;
+    order: 1;
+    -ms-flex-order: 1;
+    width: 75%;
+  }
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003124}}
+/* line 124, ../sass/_07-1-layout-header.scss */
 span.site-header-address:after {
   content: " ";
-  display: block; }
+  display: block;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003135}}
+/* line 135, ../sass/_07-1-layout-header.scss */
 span.site-header-phone:after {
-  content: " • "; }
+  content: " • ";
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003138}}
+/* line 138, ../sass/_07-1-layout-header.scss */
 .site-header-attorney-container {
   display: -webkit-box;
+  display: -moz-box;
   display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
   box-orient: horizontal;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
   -webkit-box-pack: center;
+  -moz-box-pack: center;
   box-pack: center;
   -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
@@ -648,6 +789,7 @@ span.site-header-phone:after {
   justify-content: space-around;
   -ms-flex-pack: center;
   -webkit-box-align: center;
+  -moz-box-align: center;
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -659,196 +801,331 @@ span.site-header-phone:after {
   -moz-box-lines: multiple;
   box-lines: multiple;
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003148}}
+/* line 148, ../sass/_07-1-layout-header.scss */
 .header-image-container {
   border: 1px solid violet;
   height: 183px;
   -webkit-align-self: center;
+  -moz-align-self: center;
   align-self: center;
   -ms-flex-item-align: center;
   -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
   box-ordinal-group: 2;
   -webkit-order: 2;
   -moz-order: 2;
   order: 2;
-  -ms-flex-order: 2; }
+  -ms-flex-order: 2;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_07-1-layout-header\.scss}line{font-family:\00003170}}
+/* line 170, ../sass/_07-1-layout-header.scss */
 .header-image {
   border: 1px solid chocolate;
   display: block;
-  background: url('/images/../images/header-image.png') no-repeat;
+  background: url('/images/header-image.png?1410750508') no-repeat;
   width: 201px;
   height: 183px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*--------------------------------------------------------------
 08.0 Links
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_08-0-links\.scss}line{font-family:\0000318}}
+/* line 18, ../sass/_08-0-links.scss */
 .site-header a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 09.0 Menus
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\000035}}
+/* line 5, ../sass/_09-0-menus.scss */
 .main-navigation {
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000311}}
-  .main-navigation ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000316}}
-    .main-navigation ul li {
-      margin-left: 2px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000321}}
-.main-navigation ul li a {
-  background: #E0E0E0;
-  background: rgba(224, 224, 224, 0.4);
-  border: 1px solid rgba(86, 167, 210, 0.4);
-  border-bottom: none;
-  padding: 0 12px;
-  margin: 0 auto;
-  position: relative;
-  display: block;
-  height: 27px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #303030;
-  line-height: 27px;
-  text-align: center;
-  border-radius: 8px 8px 0 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000338}}
-  .main-navigation ul li a:hover {
-    background: #BFDDEE;
-    border: 1px solid #25698D;
-    border-bottom: none;
-    color: #000000;
-    text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000345}}
-  .main-navigation ul li a.active {
-    background: #FEFEF1;
-    border: 1px solid #56A7D2;
-    border-bottom: none;
-    color: #000000; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000352}}
+  justify-content: center;
+}
+/* line 11, ../sass/_09-0-menus.scss */
 .main-navigation ul {
   list-style: none;
   margin: 0;
-  padding-left: 0; }
+  padding-left: 0;
+}
+/* line 16, ../sass/_09-0-menus.scss */
+.main-navigation ul li {
+  background: #E0E0E0;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  display: -webkit-flex;
+  display: flex;
+  border: 1px solid #A6A6A6;
+  padding: 0 10px;
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  min-height: 30px;
+  line-height: 30px;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  width: 100%;
+}
+/* line 25, ../sass/_09-0-menus.scss */
+.main-navigation ul li:hover {
+  background: #56A7D2;
+  background: -webkit-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  background: -moz-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  background: -o-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  background: -ms-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  -svg-background: linear-gradient(to bottom, #92c6e2 0%, #3696c9 77%, #2e81ad 100%) no-repeat;
+  background: linear-gradient(to bottom, #92c6e2 0%, #3696c9 77%, #2e81ad 100%) no-repeat;
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #737373;
+}
+/* line 29, ../sass/_09-0-menus.scss */
+.main-navigation ul li.current-menu-item {
+  background: #FEFEF1;
+  border: 1px solid #56A7D2;
+  border-bottom: none;
+}
+/* line 34, ../sass/_09-0-menus.scss */
+.main-navigation ul li.current-menu-item a {
+  color: #000000;
+}
+@media (min-width: 625px) {
+  /* line 16, ../sass/_09-0-menus.scss */
+  .main-navigation ul li {
+    background: #E0E0E0;
+    background: rgba(224, 224, 224, 0.4);
+    border: 1px solid rgba(86, 167, 210, 0.4);
+    border-bottom: none;
+    padding: 0 12px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    height: 27px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 27px;
+    text-align: center;
+    margin-left: 2px;
+    width: auto;
+    -moz-border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px 8px 0 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 58, ../sass/_09-0-menus.scss */
+  .main-navigation ul li:hover {
+    background: #BFDDEE;
+    border: 1px solid #25698D;
+    border-bottom: none;
+    text-decoration: none;
+  }
+}
+/* line 67, ../sass/_09-0-menus.scss */
+.main-navigation ul li a {
+  color: #303030;
+  font-size: 12px;
+}
+@media (min-width: 790px) {
+  /* line 67, ../sass/_09-0-menus.scss */
+  .main-navigation ul li a {
+    font-size: 17px;
+  }
+}
+/* line 74, ../sass/_09-0-menus.scss */
+.main-navigation ul li a:hover {
+  color: #000000;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000357}}
+/* line 81, ../sass/_09-0-menus.scss */
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 86, ../sass/_09-0-menus.scss */
 .main-navigation li {
   float: left;
-  position: relative; }
+  position: relative;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000361}}
+/* line 90, ../sass/_09-0-menus.scss */
 .main-navigation a {
   display: block;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000365}}
+/* line 94, ../sass/_09-0-menus.scss */
 .main-navigation ul ul {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
   top: 1.5em;
   left: -999em;
-  z-index: 99999; }
+  z-index: 99999;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000373}}
+/* line 102, ../sass/_09-0-menus.scss */
 .main-navigation ul ul ul {
   left: -999em;
-  top: 0; }
+  top: 0;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000377}}
+/* line 106, ../sass/_09-0-menus.scss */
 .main-navigation ul ul a {
-  width: 200px; }
+  width: 200px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000388}}
+/* line 117, ../sass/_09-0-menus.scss */
 .main-navigation ul li:hover > ul {
-  left: auto; }
+  left: auto;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000391}}
+/* line 120, ../sass/_09-0-menus.scss */
 .main-navigation ul ul li:hover > ul {
-  left: 100%; }
+  left: 100%;
+}
 
 /* Small menu */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\0000398}}
+/* line 127, ../sass/_09-0-menus.scss */
 .menu-toggle {
-  display: none; }
+  cursor: pointer;
+  padding: 0.5em;
+  width: 100%;
+  background: #E0E0E0;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  display: -webkit-flex;
+  display: flex;
+  border: 1px solid #A6A6A6;
+  padding: 0 10px;
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  min-height: 30px;
+  line-height: 30px;
+  -webkit-flex-flow: row wrap;
+  -webkit-align-items: center;
+  flex-flow: row wrap;
+  align-items: center;
+}
+/* line 137, ../sass/_09-0-menus.scss */
+.menu-toggle::before {
+  content: '';
+  background: url("images/menu-icon.png");
+  display: block;
+  float: left;
+  width: 22px;
+  height: 12px;
+  margin: 10px;
+}
+@media (min-width: 625px) {
+  /* line 127, ../sass/_09-0-menus.scss */
+  .menu-toggle {
+    display: none;
+  }
+}
 
-@media screen and (max-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\00003102}}
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block; }
+/* line 151, ../sass/_09-0-menus.scss */
+.main-navigation.toggled .menu-toggle {
+  background: #FEFEF1;
+  border-bottom: none;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\00003107}}
-  .main-navigation ul {
-    display: none; } }
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\00003111}}
+/* line 156, ../sass/_09-0-menus.scss */
+.main-navigation.toggled .nav-menu {
+  display: block;
+}
+
+/* line 159, ../sass/_09-0-menus.scss */
+.main-navigation .nav-menu {
+  display: none;
+}
+@media (min-width: 625px) {
+  /* line 159, ../sass/_09-0-menus.scss */
+  .main-navigation .nav-menu {
+    display: block;
+  }
+}
+
+/* line 167, ../sass/_09-0-menus.scss */
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
   margin: 0 0 1.5em;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\00003117}}
+/* line 173, ../sass/_09-0-menus.scss */
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
-  width: 50%; }
+  width: 50%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_09-0-menus\.scss}line{font-family:\00003123}}
+/* line 179, ../sass/_09-0-menus.scss */
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
   float: right;
   text-align: right;
-  width: 50%; }
+  width: 50%;
+}
 
 /*--------------------------------------------------------------
 10.0 Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_10-0-accessibility\.scss}line{font-family:\000035}}
+/* line 5, ../sass/_10-0-accessibility.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_10-0-accessibility\.scss}line{font-family:\0000313}}
+/* line 13, ../sass/_10-0-accessibility.scss */
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
@@ -863,33 +1140,37 @@ span.site-header-phone:after {
   top: 5px;
   width: auto;
   z-index: 100000;
-  /* Above WP toolbar */ }
+  /* Above WP toolbar */
+}
 
 /*--------------------------------------------------------------
 11.0 Alignments
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_11-0-alignments\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_11-0-alignments.scss */
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em; }
+  margin-right: 1.5em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_11-0-alignments\.scss}line{font-family:\000039}}
+/* line 9, ../sass/_11-0-alignments.scss */
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em; }
+  margin-left: 1.5em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_11-0-alignments\.scss}line{font-family:\0000314}}
+/* line 14, ../sass/_11-0-alignments.scss */
 .aligncenter {
   clear: both;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /*--------------------------------------------------------------
 12.0 Clearings
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_12-0-clearings\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_12-0-clearings.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -903,81 +1184,168 @@ span.site-header-phone:after {
 .site-footer:before,
 .site-footer:after {
   content: '';
-  display: table; }
+  display: table;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_12-0-clearings\.scss}line{font-family:\0000320}}
+/* line 20, ../sass/_12-0-clearings.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-  clear: both; }
+  clear: both;
+}
 
 /*--------------------------------------------------------------
 13.0 Widgets
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_13-0-widgets\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_13-0-widgets.scss */
 .widget {
-  margin: 0 0 1.5em; }
+  margin: 0 0 0.5em;
+}
 
 /* Make sure select elements fit in widgets */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_13-0-widgets\.scss}line{font-family:\000039}}
+/* line 9, ../sass/_13-0-widgets.scss */
 .widget select {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /* Search widget */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_13-0-widgets\.scss}line{font-family:\0000314}}
+/* line 14, ../sass/_13-0-widgets.scss */
 .widget_search .search-submit {
-  display: none; }
+  display: none;
+}
 
 /*--------------------------------------------------------------
 14.0 Content (Posts and Pages)
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_14-0-content\.scss}line{font-family:\0000327}}
+/* line 27, ../sass/_14-0-content.scss */
+#content {
+  max-width: 960px;
+  margin: 10px auto 0;
+}
+
+/* line 31, ../sass/_14-0-content.scss */
 #main .page {
   background: #EDEDED;
   background: rgba(237, 237, 237, 0.4);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   border: 1px solid rgba(199, 199, 199, 0.4);
-  padding: 5px;
-  margin-left: 5px; }
+  padding: 7px;
+  margin-left: 5px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_14-0-content\.scss}line{font-family:\0000335}}
+/* line 35, ../sass/_14-0-content.scss */
 .entry-header {
   border-bottom: 1px solid #C7C7C7;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 1px; }
+  padding: 1px;
+}
+
+/* line 42, ../sass/_14-0-content.scss */
+.edit-link {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+/* line 47, ../sass/_14-0-content.scss */
+.edit-link a {
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+  color: #474747;
+}
+/* line 53, ../sass/_14-0-content.scss */
+.edit-link a:hover {
+  text-decoration: underline;
+  color: #318AB9;
+}
+/* line 57, ../sass/_14-0-content.scss */
+.edit-link a::before {
+  content: url("images/postediticon.png");
+  margin-right: 6px;
+}
+
+/* line 63, ../sass/_14-0-content.scss */
+.entry-content a {
+  color: #A25039;
+}
+/* line 66, ../sass/_14-0-content.scss */
+.entry-content a:hover {
+  color: #2E81AD;
+}
+/* line 69, ../sass/_14-0-content.scss */
+.entry-content a:visited {
+  color: #A25039;
+}
+/* line 73, ../sass/_14-0-content.scss */
+.entry-content a::before {
+  content: url("images/postbullets.png");
+  margin-right: 6px;
+  bottom: 2px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* line 85, ../sass/_14-0-content.scss */
+.site-footer {
+  background: #C7C7C7;
+  color: #1A1A1A;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 91, ../sass/_14-0-content.scss */
+.site-info {
+  padding: 8px;
+}
 
 /*--------------------------------------------------------------
 15.0 Asides
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_15-0-asides\.scss}line{font-family:\000039}}
-#secondary .aside {
+/* line 9, ../sass/_15-0-asides.scss */
+#secondary aside {
   background: #EDEDED;
   background: rgba(237, 237, 237, 0.4);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   border: 1px solid rgba(199, 199, 199, 0.4);
-  padding: 7px; }
+  padding: 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_15-0-asides\.scss}line{font-family:\0000316}}
-.aside .widget-title {
+/* line 12, ../sass/_15-0-asides.scss */
+aside .widget-title {
   background: #BFDDEE;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 10px 0;
-  margin: 0 auto 7px; }
+  margin: 0 auto 7px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_15-0-asides\.scss}line{font-family:\0000319}}
+/* line 15, ../sass/_15-0-asides.scss */
 #menu-services a {
   background: #E0E0E0;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  display: -webkit-flex;
+  display: flex;
   border: 1px solid #A6A6A6;
   padding: 0 10px;
-  margin: 0 auto;
+  margin-bottom: 3px;
   font-size: 17px;
   font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   font-weight: normal;
@@ -985,7 +1353,161 @@ span.site-header-phone:after {
   text-decoration: none;
   color: #000000;
   min-height: 30px;
-  line-height: 30px; }
+  line-height: 30px;
+}
+/* line 18, ../sass/_15-0-asides.scss */
+#menu-services a:hover {
+  background: #56A7D2;
+  background: -webkit-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  background: -moz-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  background: -o-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  background: -ms-linear-gradient(top, #92C6E2 0, #3696C9 77%, #2E81AD 100%) no-repeat;
+  -svg-background: linear-gradient(to bottom, #92c6e2 0%, #3696c9 77%, #2e81ad 100%) no-repeat;
+  background: linear-gradient(to bottom, #92c6e2 0%, #3696c9 77%, #2e81ad 100%) no-repeat;
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #737373;
+}
+/* line 22, ../sass/_15-0-asides.scss */
+#menu-services a::before {
+  content: '';
+  display: block;
+  margin: auto 10px auto 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* This section is for adding icons to the Services menu */
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-13 a::before {
+  background: url("images/icons/real-property-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-12 a::before {
+  background: url("images/icons/will-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-17 a::before {
+  background: url("images/icons/estate-planning-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-20 a::before {
+  background: url("images/icons/estate-admin-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-23 a::before {
+  background: url("images/icons/elder-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-26 a::before {
+  background: url("images/icons/probate-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-29 a::before {
+  background: url("images/icons/matrimonial-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-33 a::before {
+  background: url("images/icons/family-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-36 a::before {
+  background: url("images/icons/title-insurance-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-39 a::before {
+  background: url("images/icons/business-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-43 a::before {
+  background: url("images/icons/vehicle-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/* line 32, ../sass/_15-0-asides.scss */
+#menu-services li.menu-item-46 a::before {
+  background: url("images/icons/injury-icon.png");
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+/**********************************************************/
+/* line 39, ../sass/_15-0-asides.scss */
+#menu-services li.current-menu-item a {
+  background: #82BEDE;
+}
+
+/* line 43, ../sass/_15-0-asides.scss */
+#synved_social_share-2 > div {
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+@media (min-width: 48em) {
+  /* line 43, ../sass/_15-0-asides.scss */
+  #synved_social_share-2 > div {
+    display: initial;
+  }
+}
 
 /*--------------------------------------------------------------
 16.0 Comments
@@ -994,100 +1516,117 @@ span.site-header-phone:after {
 17.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_17-0-scroll\.scss}line{font-family:\000035}}
+/* line 5, ../sass/_17-0-scroll.scss */
 .infinite-scroll .paging-navigation,
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
-  display: none; }
+  display: none;
+}
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_17-0-scroll\.scss}line{font-family:\0000310}}
+/* line 10, ../sass/_17-0-scroll.scss */
 .infinity-end.neverending .site-footer {
-  display: block; }
+  display: block;
+}
 
 /*--------------------------------------------------------------
 18.0 Media
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_18-0-media\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_18-0-media.scss */
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /* Make sure embeds and iframes fit their containers */
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_18-0-media\.scss}line{font-family:\0000313}}
+/* line 13, ../sass/_18-0-media.scss */
 embed,
 iframe,
 object {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /*--------------------------------------------------------------
 19.0 Captions
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_19-0-captions\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_19-0-captions.scss */
 .wp-caption {
   margin-bottom: 1.5em;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_19-0-captions\.scss}line{font-family:\000038}}
+/* line 8, ../sass/_19-0-captions.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_19-0-captions\.scss}line{font-family:\0000312}}
+/* line 12, ../sass/_19-0-captions.scss */
 .wp-caption-text {
-  text-align: center; }
+  text-align: center;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_19-0-captions\.scss}line{font-family:\0000315}}
+/* line 15, ../sass/_19-0-captions.scss */
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0; }
+  margin: 0.8075em 0;
+}
 
 /*--------------------------------------------------------------
 20.0 Galleries
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\000034}}
+/* line 4, ../sass/_20-0-galleries.scss */
 .gallery {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\000037}}
+/* line 7, ../sass/_20-0-galleries.scss */
 .gallery-item {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  width: 100%; }
+  width: 100%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000313}}
+/* line 13, ../sass/_20-0-galleries.scss */
 .gallery-columns-2 .gallery-item {
-  max-width: 50%; }
+  max-width: 50%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000316}}
+/* line 16, ../sass/_20-0-galleries.scss */
 .gallery-columns-3 .gallery-item {
-  max-width: 33.33%; }
+  max-width: 33.33%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000319}}
+/* line 19, ../sass/_20-0-galleries.scss */
 .gallery-columns-4 .gallery-item {
-  max-width: 25%; }
+  max-width: 25%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000322}}
+/* line 22, ../sass/_20-0-galleries.scss */
 .gallery-columns-5 .gallery-item {
-  max-width: 20%; }
+  max-width: 20%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000325}}
+/* line 25, ../sass/_20-0-galleries.scss */
 .gallery-columns-6 .gallery-item {
-  max-width: 16.66%; }
+  max-width: 16.66%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000328}}
+/* line 28, ../sass/_20-0-galleries.scss */
 .gallery-columns-7 .gallery-item {
-  max-width: 14.28%; }
+  max-width: 14.28%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000331}}
+/* line 31, ../sass/_20-0-galleries.scss */
 .gallery-columns-8 .gallery-item {
-  max-width: 12.5%; }
+  max-width: 12.5%;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/wamp\/www\/trlf\/wp-content\/themes\/trlf_s\/sass\/_20-0-galleries\.scss}line{font-family:\0000334}}
+/* line 34, ../sass/_20-0-galleries.scss */
 .gallery-columns-9 .gallery-item {
-  max-width: 11.11%; }
-/*# sourceMappingURL=style.css.map */
+  max-width: 11.11%;
+}

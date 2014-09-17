@@ -82,7 +82,7 @@
 						@include breakpoint($breakpoint-size) {
 							background: image-url($logo) no-repeat;
 							width: image-width($logo);
-							height: image-height($logo); 		
+							height: image-height($logo); 		 
 						}
 				  	}
 				}

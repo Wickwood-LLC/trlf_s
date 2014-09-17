@@ -59,3 +59,18 @@ $breakpoint580: (min-width 580px);
 $layout: null !default;  // Supported Values for $layout: null | content-sidebar | sidebar-content
 $vspacing: 1.5em;
 
+// Variable array for Services menu: menu-item-number | service name 
+$services: (
+	"13": "real-property",
+	"12": "will",
+	"17": "estate-planning",
+	"20": "estate-admin",
+	"23": "elder",
+	"26": "probate",
+	"29": "matrimonial",
+	"33": "family",
+	"36": "title-insurance",
+	"39": "business",
+	"43": "vehicle",
+	"46": "injury"
+);

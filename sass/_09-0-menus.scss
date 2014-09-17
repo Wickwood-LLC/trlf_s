@@ -14,27 +14,16 @@
 		padding-left: 0;
 
 		li {
-			background: #E0E0E0;
-			background: rgba(224, 224, 224, 0.4);
-			border: 1px solid rgba(86, 167, 210, 0.4);
-			border-bottom: none;
-			padding: 0 12px;
-			margin: 0 auto;
-			position: relative;
-			display: block;
-			height: 27px;
-			cursor: pointer;
-			text-decoration: none;
-			line-height: 27px;
-			text-align: center;
-			@include border-radius(8px 8px 0 0);
-			margin-left: 2px;
+			@include menu-button-styles;
+			@include flexbox ((
+				display: flex,
+				justify-content: center
+			));
+			margin-left: 0;
+			width: 100%;
 
-			&:hover {
-				background: #BFDDEE;
-				border: 1px solid #25698D;
-				border-bottom: none;
-				text-decoration: none;
+			&:hover{
+				@include menu-button-hover-styles;
 			}
 
 			&.current-menu-item {
@@ -47,10 +36,41 @@
 				}
 			}
 
+			@include breakpoint(625px){
+				background: #E0E0E0;
+				background: rgba(224, 224, 224, 0.4);
+				border: 1px solid rgba(86, 167, 210, 0.4);
+				border-bottom: none;
+				padding: 0 12px;
+				margin: 0 auto;
+				position: relative;
+				display: block;
+				height: 27px;
+				cursor: pointer;
+				text-decoration: none;
+				line-height: 27px;
+				text-align: center;
+				margin-left: 2px;
+				width: auto;
+				@include border-radius(8px 8px 0 0);
+				@include box-shadow(none);
+
+				&:hover {
+					background: #BFDDEE;
+					border: 1px solid #25698D;
+					border-bottom: none;
+					text-decoration: none;
+				}
+			}
+
+
 			a {
 				color: #303030;
-				font-size: 17px;
-				
+				font-size: 12px;
+				@include breakpoint(790px){
+					font-size: 17px;
+				}
+
 				&:hover{
 					color: #000000;
 				}
@@ -105,18 +125,45 @@
 }
 /* Small menu */
 .menu-toggle {
-	display: none;
-}
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
+	cursor: pointer;
+	padding: 0.5em;
+	width: 100%;
+	@include menu-button-styles;
+	@include flexbox((
+		flex-flow: row wrap,
+		align-items: center
+	));
+
+	&::before {
+		content: '';
+		background: url('images/menu-icon.png');
 		display: block;
+		float: left;
+		width: 22px;
+		height: 12px;
+		margin: 10px;
 	}
 
-	.main-navigation ul {
+	@include breakpoint(625px){
 		display: none;
 	}
 }
+.main-navigation.toggled .menu-toggle {
+	background: #FEFEF1;
+	//border: 1px solid #56A7D2;
+	border-bottom: none;
+}
+.main-navigation.toggled .nav-menu {
+	display: block;
+}
+.main-navigation .nav-menu {
+	display: none;
+
+	@include breakpoint(625px){
+		display: block;
+	}
+}
+
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
