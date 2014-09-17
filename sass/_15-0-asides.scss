@@ -12,24 +12,71 @@
 aside .widget-title{
 	@include widget-title-styles();
 }
-#menu-services a{
+#menu-services{
+	@include flexbox((
+		display: flex,
+	    justify-content: center,
+	    flex-flow: row wrap));
+}
+#menu-services li{
 	@include menu-button-styles;
+	display: block;
+	margin: 1%;
+	height: 85px;
+	width: 85px;
 
 	&:hover {
 		@include menu-button-hover-styles;
 	}
 
+	a {
+		@include flexbox((
+			display: flex,
+			justify-content: center,
+			align-items: center
+		));
+		text-decoration: none;
+		color: #000000;
+		font-size: x-small;
+		line-height: 1.5;
+		text-align: center;
+
+		@include breakpoint(768px){
+			font-size: 12px;
+		}
+		@include breakpoint(892px){
+			font-size: $base-font-size;
+		}
+	}
+
+	@include breakpoint(48em){
+		@include flexbox((
+			display: flex,
+		    justify-content: flex-start,
+		    flex-flow: row wrap
+		));
+		margin: 2px 0;
+		height: auto;
+		width: 100%;
+	}
+
 	&::before {
 		content: '';
-		display: block;
-		margin: auto 10px auto 0;
-		width: 20px;
-		height: 20px;
+		display: table;
+		margin: 3px auto 0;
+		width: 50px;
+		height: 50px;
+
+		@include breakpoint(48em){
+			margin: auto 10px auto 0;
+			width: 20px;
+			height: 20px;
+		}
 	}
 }
 /* This section is for adding icons to the Services menu */
 @each $item, $service in $services{
-	#menu-services li.menu-item-#{$item} a::before{
+	#menu-services li.menu-item-#{$item}::before{
 		background: url('images/icons/#{$service}-icon.png');
 		@include background-size(contain);
 	}
@@ -37,7 +84,7 @@ aside .widget-title{
 /**********************************************************/
 
 #menu-services li.current-menu-item a{
-	background: #82BEDE;
+	//background: #82BEDE;
 }
 
 #synved_social_share-2 > div {

@@ -78,9 +78,9 @@
 					// margin-left: auto;
 					// margin-right: auto;
 					@each $breakpoint-name, $breakpoint-size in $breakpoints {
-						$logo: "logos/logo#{$breakpoint-name}.png";
+						$logo: "images/logos/logo#{$breakpoint-name}.png";
 						@include breakpoint($breakpoint-size) {
-							background: image-url($logo) no-repeat;
+							background: url($logo) no-repeat;
 							width: image-width($logo);
 							height: image-height($logo); 		 
 						}
@@ -171,7 +171,7 @@
 	border: 1px solid chocolate;
 
 	display: block;
-	background: image-url($header-image) no-repeat;
+	background: url($header-image) no-repeat;
 	width:  image-width($header-image);
 	height: image-height($header-image);
 	margin-left: auto;
