@@ -36,7 +36,7 @@
 				}
 			}
 
-			@include breakpoint(625px){
+			@include breakpoint(670px){
 				background: #E0E0E0;
 				background: rgba(224, 224, 224, 0.4);
 				border: 1px solid rgba(86, 167, 210, 0.4);
@@ -66,8 +66,14 @@
 
 			a {
 				color: #303030;
-				font-size: 12px;
-				@include breakpoint(790px){
+				font-size: 14px;
+				@include breakpoint(660px){
+					font-size: 10px;
+				}
+				@include breakpoint(800px){
+					font-size: 13px;
+				}
+				@include breakpoint(980px){
 					font-size: 17px;
 				}
 
@@ -149,7 +155,7 @@
 		margin: 10px;
 	}
 
-	@include breakpoint(625px){
+	@include breakpoint(670px){
 		display: none;
 	}
 }
@@ -164,7 +170,7 @@
 .main-navigation .nav-menu {
 	display: none;
 
-	@include breakpoint(625px){
+	@include breakpoint(670px){
 		display: block;
 	}
 }
