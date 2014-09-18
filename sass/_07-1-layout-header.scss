@@ -17,8 +17,6 @@
 
 // Define Site Header Container Flexbox to contain .site-branding and .header-image-container
 .site-header-container {
-	border: 1px solid red;
-
 	// Flexbox container configuration using Bourbon Mixins
 	@include display(flex);
 	@include align-items(space-around);
@@ -37,9 +35,7 @@
 		@include align-self(center);
 	}
 		// Define Site Branding Container Flexbox to contain .logo-container, .site-title-container and site-contact-container
-		.site-branding-container {
-			border: 1px solid orange;
-			
+		.site-branding-container {			
 			// Flexbox container configuration using Bourbon Mixins
 			@include display(flex);								// Declare Flexbox Display
 			@include flex-direction(row);					// Horizontal Main Axis
@@ -57,16 +53,14 @@
 
 		}
 
-			.logo-container {
-				border: 1px solid yellow;
-				
+			.logo-container {				
 				// Flexbox item configuration using Bourbon Mixins
 				@include order(0);
-				margin: auto;
+				//margin: auto;
 				
 				@include breakpoint(900px) {
 					// Flexbox item configuration using Bourbon Mixins
-					margin: auto;												// This will center the logo in remaining space
+					//margin: auto;												// This will center the logo in remaining space
 					@include order(2);									// Since order is 0 based, this makes the logo-container item 3
 					height: image-height($header-image);
 				}
@@ -88,7 +82,6 @@
 				}
 
 			.site-title-container {
-				border: 1px solid green;
 				// background-color: #2EE;
 				
 				// Flexbox item configuration using Bourbon Mixins
@@ -104,7 +97,6 @@
 			}
 
 			.site-contact-container {
-				border: 1px solid blue;
 				// background-color: #3a3;
 				
 				// Flexbox item configuration using Bourbon Mixins
@@ -146,7 +138,6 @@
 
 
 	.header-image-container {
-		border: 1px solid violet;
 		// background-color: #4dd;
 		
 		// width: 100%;
@@ -168,8 +159,6 @@
 
 
 .header-image {
-	border: 1px solid chocolate;
-
 	display: block;
 	background: url($header-image) no-repeat;
 	width:  image-width($header-image);
