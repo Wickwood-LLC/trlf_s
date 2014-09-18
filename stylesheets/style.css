@@ -52,6 +52,21 @@ and Blueprint http://www.blueprintcss.org/
 00.0 Variables
 --------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+/*
+$services: (
+	"13": "real-property",
+	"12": "will",
+	"17": "estate-planning",
+	"20": "estate-admin",
+	"23": "elder",
+	"26": "probate",
+	"29": "matrimonial",
+	"33": "family",
+	"36": "title-insurance",
+	"39": "business",
+	"43": "vehicle",
+	"46": "injury"
+); */
 /*--------------------------------------------------------------
 01.0 - Reset
 --------------------------------------------------------------*/
@@ -961,27 +976,32 @@ span.site-header-phone:after {
 .main-navigation ul li a:hover {
   color: #000000;
 }
+/* line 78, ../sass/_09-0-menus.scss */
+.main-navigation ul li a img {
+  width: 1em;
+  height: auto;
+}
 
-/* line 81, ../sass/_09-0-menus.scss */
+/* line 86, ../sass/_09-0-menus.scss */
 .main-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-/* line 86, ../sass/_09-0-menus.scss */
+/* line 91, ../sass/_09-0-menus.scss */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 90, ../sass/_09-0-menus.scss */
+/* line 95, ../sass/_09-0-menus.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
 }
 
-/* line 94, ../sass/_09-0-menus.scss */
+/* line 99, ../sass/_09-0-menus.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -991,29 +1011,29 @@ span.site-header-phone:after {
   z-index: 99999;
 }
 
-/* line 102, ../sass/_09-0-menus.scss */
+/* line 107, ../sass/_09-0-menus.scss */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-/* line 106, ../sass/_09-0-menus.scss */
+/* line 111, ../sass/_09-0-menus.scss */
 .main-navigation ul ul a {
   width: 200px;
 }
 
-/* line 117, ../sass/_09-0-menus.scss */
+/* line 122, ../sass/_09-0-menus.scss */
 .main-navigation ul li:hover > ul {
   left: auto;
 }
 
-/* line 120, ../sass/_09-0-menus.scss */
+/* line 125, ../sass/_09-0-menus.scss */
 .main-navigation ul ul li:hover > ul {
   left: 100%;
 }
 
 /* Small menu */
-/* line 127, ../sass/_09-0-menus.scss */
+/* line 132, ../sass/_09-0-menus.scss */
 .menu-toggle {
   cursor: pointer;
   padding: 0.5em;
@@ -1043,7 +1063,7 @@ span.site-header-phone:after {
   flex-flow: row wrap;
   align-items: center;
 }
-/* line 137, ../sass/_09-0-menus.scss */
+/* line 142, ../sass/_09-0-menus.scss */
 .menu-toggle::before {
   content: '';
   background: url("images/menu-icon.png");
@@ -1054,35 +1074,35 @@ span.site-header-phone:after {
   margin: 10px;
 }
 @media (min-width: 625px) {
-  /* line 127, ../sass/_09-0-menus.scss */
+  /* line 132, ../sass/_09-0-menus.scss */
   .menu-toggle {
     display: none;
   }
 }
 
-/* line 151, ../sass/_09-0-menus.scss */
+/* line 156, ../sass/_09-0-menus.scss */
 .main-navigation.toggled .menu-toggle {
   background: #FEFEF1;
   border-bottom: none;
 }
 
-/* line 156, ../sass/_09-0-menus.scss */
+/* line 161, ../sass/_09-0-menus.scss */
 .main-navigation.toggled .nav-menu {
   display: block;
 }
 
-/* line 159, ../sass/_09-0-menus.scss */
+/* line 164, ../sass/_09-0-menus.scss */
 .main-navigation .nav-menu {
   display: none;
 }
 @media (min-width: 625px) {
-  /* line 159, ../sass/_09-0-menus.scss */
+  /* line 164, ../sass/_09-0-menus.scss */
   .main-navigation .nav-menu {
     display: block;
   }
 }
 
-/* line 167, ../sass/_09-0-menus.scss */
+/* line 172, ../sass/_09-0-menus.scss */
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -1090,7 +1110,7 @@ span.site-header-phone:after {
   overflow: hidden;
 }
 
-/* line 173, ../sass/_09-0-menus.scss */
+/* line 178, ../sass/_09-0-menus.scss */
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -1098,7 +1118,7 @@ span.site-header-phone:after {
   width: 50%;
 }
 
-/* line 179, ../sass/_09-0-menus.scss */
+/* line 184, ../sass/_09-0-menus.scss */
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
@@ -1368,6 +1388,16 @@ aside .widget-title {
   margin: 1%;
   height: 85px;
   width: 85px;
+  /*@include breakpoint(48em){
+  	@include flexbox((
+  		display: flex,
+  	    justify-content: flex-start,
+  	    flex-flow: row wrap
+  	));
+  	margin: 2px 0;
+  	height: auto;
+  	width: 100%;
+  }*/
 }
 /* line 28, ../sass/_15-0-asides.scss */
 #menu-services li:hover {
@@ -1385,172 +1415,34 @@ aside .widget-title {
 }
 /* line 32, ../sass/_15-0-asides.scss */
 #menu-services li a {
-  display: -webkit-flex;
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: table;
   text-decoration: none;
   color: #000000;
   font-size: x-small;
   line-height: 1.5;
   text-align: center;
-}
-@media (min-width: 768px) {
-  /* line 32, ../sass/_15-0-asides.scss */
-  #menu-services li a {
-    font-size: 12px;
+  /*@include breakpoint(768px){
+  	font-size: 12px;
   }
+  @include breakpoint(892px){
+  	font-size: $base-font-size;
+  }*/
 }
-@media (min-width: 892px) {
-  /* line 32, ../sass/_15-0-asides.scss */
-  #menu-services li a {
-    font-size: 16px;
-  }
-}
-@media (min-width: 48em) {
-  /* line 21, ../sass/_15-0-asides.scss */
-  #menu-services li {
-    display: -webkit-flex;
-    -webkit-justify-content: flex-start;
-    -webkit-flex-flow: row wrap;
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: row wrap;
-    margin: 2px 0;
-    height: auto;
-    width: 100%;
-  }
-}
-/* line 63, ../sass/_15-0-asides.scss */
-#menu-services li::before {
-  content: '';
+/* line 47, ../sass/_15-0-asides.scss */
+#menu-services li a img {
   display: table;
   margin: 3px auto 0;
   width: 50px;
   height: 50px;
-}
-@media (min-width: 48em) {
-  /* line 63, ../sass/_15-0-asides.scss */
-  #menu-services li::before {
-    margin: auto 10px auto 0;
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* This section is for adding icons to the Services menu */
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-13::before {
-  background: url("images/icons/real-property-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-12::before {
-  background: url("images/icons/will-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-17::before {
-  background: url("images/icons/estate-planning-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-20::before {
-  background: url("images/icons/estate-admin-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-23::before {
-  background: url("images/icons/elder-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-26::before {
-  background: url("images/icons/probate-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-29::before {
-  background: url("images/icons/matrimonial-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-33::before {
-  background: url("images/icons/family-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-36::before {
-  background: url("images/icons/title-insurance-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-39::before {
-  background: url("images/icons/business-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-43::before {
-  background: url("images/icons/vehicle-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-/* line 79, ../sass/_15-0-asides.scss */
-#menu-services li.menu-item-46::before {
-  background: url("images/icons/injury-icon.png");
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
+  /*	@include breakpoint(48em){
+  		margin: auto 10px auto 0;
+  		width: 20px;
+  		height: 20px;
+  	}*/
 }
 
 /**********************************************************/
-/* line 90, ../sass/_15-0-asides.scss */
+/* line 78, ../sass/_15-0-asides.scss */
 #synved_social_share-2 > div {
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
@@ -1560,7 +1452,7 @@ aside .widget-title {
   justify-content: center;
 }
 @media (min-width: 48em) {
-  /* line 90, ../sass/_15-0-asides.scss */
+  /* line 78, ../sass/_15-0-asides.scss */
   #synved_social_share-2 > div {
     display: initial;
   }

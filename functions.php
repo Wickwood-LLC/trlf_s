@@ -128,3 +128,54 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/* Add Theme Options
+function theme_include_lib($name) {
+    locate_template(array('library/' . $name), true);
+}
+if (is_admin()) {
+    theme_include_lib('options.php');
+    theme_include_lib('admins.php');
+
+    function theme_add_option_page() {
+        add_theme_page(__('Theme Options', THEME_NS), __('Theme Options', THEME_NS), 'edit_theme_options', basename(__FILE__), 'theme_print_options');
+    }
+
+    add_action('admin_menu', 'theme_add_option_page');
+    add_action('sidebar_admin_setup', 'theme_widget_process_control');
+    add_filter('widget_update_callback', 'theme_update_widget_additional');
+    add_action('add_meta_boxes', 'theme_add_meta_boxes');
+    add_action('save_post', 'theme_save_post');
+    add_filter( 'wp_default_editor', 'theme_wp_default_editor' );
+    add_filter( 'admin_footer', 'theme_admin_footer', 99);
+
+    function theme_wp_default_editor($content){
+        if(isset($_GET['post']) && !theme_get_meta_option($_GET['post'], 'theme_use_wpautop')){
+            return 'html';
+        }
+        return $content;
+    }
+
+    function theme_admin_footer(){
+		 if(isset($_GET['post']) && !theme_get_meta_option($_GET['post'], 'theme_use_wpautop')){
+            echo '	<script type="text/javascript">
+					
+                    jQuery(function($){
+						$(\'#content-tmce\').click(function(){
+							if (!$(\'#theme_use_wpautop\')[0].checked) {
+								if ($(\'#save-alert\').length < 1) {
+									$(\'#titlediv\').after(\'<div id="save-alert" class="updated below-h2"><p><strong>Warning:</strong> Saving after switching to Visual mode can break the page layout (<a href="http://codex.wordpress.org/Function_Reference/wpautop">wpautop</a> enabled).</p></div>\');
+								}
+								$(\'#theme_use_wpautop\')[0].checked = true;
+							}
+						});
+                    });
+                    </script>';
+        }
+    }
+    
+    if (file_exists(TEMPLATEPATH . '/content/content-importer.php')) {
+        include(TEMPLATEPATH . '/content/content-importer.php');
+    }
+    return;
+}*/
