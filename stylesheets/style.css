@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 15, ../sass/_04-0-typography.scss */
 html {
   font-family: Tahoma, Arial, Helvetica, Sans-Serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 120%;
 }
 
@@ -241,68 +241,68 @@ html {
 
 /* line 41, ../sass/_04-0-typography.scss */
 .site-title-line1 {
-  font-size: 1.25em;
+  font-size: 1.17647em;
   line-height: 1.2em;
 }
 @media (min-width: 430px) {
   /* line 41, ../sass/_04-0-typography.scss */
   .site-title-line1 {
-    font-size: 1.875em;
+    font-size: 1.76471em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 840px) {
   /* line 41, ../sass/_04-0-typography.scss */
   .site-title-line1 {
-    font-size: 2.125em;
+    font-size: 2em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 900px) {
   /* line 41, ../sass/_04-0-typography.scss */
   .site-title-line1 {
-    font-size: 2.5em;
+    font-size: 2.35294em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 960px) {
   /* line 41, ../sass/_04-0-typography.scss */
   .site-title-line1 {
-    font-size: 3.125em;
+    font-size: 2.94118em;
     line-height: 1.2em;
   }
 }
 
 /* line 57, ../sass/_04-0-typography.scss */
 .site-title-line2 {
-  font-size: 1.375em;
+  font-size: 1.29412em;
   line-height: 1.2em;
 }
 @media (min-width: 430px) {
   /* line 57, ../sass/_04-0-typography.scss */
   .site-title-line2 {
-    font-size: 2.25em;
+    font-size: 2.11765em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 840px) {
   /* line 57, ../sass/_04-0-typography.scss */
   .site-title-line2 {
-    font-size: 2.5em;
+    font-size: 2.35294em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 900px) {
   /* line 57, ../sass/_04-0-typography.scss */
   .site-title-line2 {
-    font-size: 3.125em;
+    font-size: 2.94118em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 960px) {
   /* line 57, ../sass/_04-0-typography.scss */
   .site-title-line2 {
-    font-size: 3.75em;
+    font-size: 3.52941em;
     line-height: 1.2em;
   }
 }
@@ -318,7 +318,7 @@ html {
 .site-header-phone,
 .site-header-fax {
   font-variant: small-caps;
-  font-size: 0.75em;
+  font-size: 0.70588em;
   line-height: 1.44em;
 }
 @media (min-width: 430px) {
@@ -327,7 +327,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 0.8125em;
+    font-size: 0.76471em;
     line-height: 1.2em;
   }
 }
@@ -337,7 +337,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 0.75em;
+    font-size: 0.70588em;
     line-height: 1.2em;
   }
 }
@@ -347,7 +347,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 0.8125em;
+    font-size: 0.76471em;
     line-height: 1.2em;
   }
 }
@@ -357,7 +357,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 1em;
+    font-size: 0.94118em;
     line-height: 1.2em;
   }
 }
@@ -365,14 +365,14 @@ html {
 @media (min-width: 960px) {
   /* line 98, ../sass/_04-0-typography.scss */
   .site-description {
-    font-size: 0.875em;
+    font-size: 0.82353em;
     line-height: 1.44em;
   }
 }
 @media (min-width: 1000px) {
   /* line 98, ../sass/_04-0-typography.scss */
   .site-description {
-    font-size: 1em;
+    font-size: 0.94118em;
     line-height: 1.44em;
   }
 }
@@ -382,7 +382,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 0.875em;
+    font-size: 0.82353em;
     line-height: 1.2em;
   }
 }
@@ -391,7 +391,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 1em;
+    font-size: 0.94118em;
     line-height: 1.2em;
   }
 }
@@ -400,7 +400,7 @@ html {
   .site-header-address,
   .site-header-phone,
   .site-header-fax {
-    font-size: 1.125em;
+    font-size: 1.05882em;
     line-height: 1.2em;
   }
 }
@@ -408,27 +408,27 @@ html {
 /* line 121, ../sass/_04-0-typography.scss */
 .site-header-attorney {
   font-variant: small-caps;
-  font-size: 0.9375em;
+  font-size: 0.88235em;
   line-height: 1.44em;
 }
 @media (min-width: 430px) {
   /* line 121, ../sass/_04-0-typography.scss */
   .site-header-attorney {
-    font-size: 1em;
+    font-size: 0.94118em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 530px) {
   /* line 121, ../sass/_04-0-typography.scss */
   .site-header-attorney {
-    font-size: 1.125em;
+    font-size: 1.05882em;
     line-height: 1.2em;
   }
 }
 @media (min-width: 840px) {
   /* line 121, ../sass/_04-0-typography.scss */
   .site-header-attorney {
-    font-size: 1.375em;
+    font-size: 1.29412em;
     line-height: 1.2em;
   }
 }
@@ -448,7 +448,7 @@ b, strong {
   color: #19455D;
   margin: 5px 0;
   font-size: 31px;
-  font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+  font-family: "Droid Serif", Arial, "Arial Unicode MS", Helvetica, Sans-Serif;
   font-weight: normal;
   font-style: normal;
   font-variant: small-caps;

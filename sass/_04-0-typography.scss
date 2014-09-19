@@ -204,10 +204,10 @@ b, strong {
 // 	font-size: 125%;
 // }
 .entry-title {
-	color: #19455D;
+	color: $title-color;
 	margin: 5px 0;
-	font-size: 31px;
-	font-family: 'Droid Serif', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+	font-size: $entry-title-font-size;
+	font-family: $header-font;
 	font-weight: normal;
 	font-style: normal;
 	font-variant: small-caps;

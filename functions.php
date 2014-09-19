@@ -129,7 +129,9 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-/* Add Theme Options
+/**
+ * Add theme options.
+ */
 function theme_include_lib($name) {
     locate_template(array('library/' . $name), true);
 }
@@ -178,4 +180,4 @@ if (is_admin()) {
         include(TEMPLATEPATH . '/content/content-importer.php');
     }
     return;
-}*/
+}
