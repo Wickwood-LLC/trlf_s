@@ -1580,7 +1580,15 @@ aside .widget-title {
   color: #000000;
   min-height: 30px;
   line-height: 30px;
-  display: block;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
   margin: 1%;
   height: 85px;
   width: 85px;
@@ -1607,6 +1615,7 @@ aside .widget-title {
   font-size: x-small;
   line-height: 1.5;
   text-align: center;
+  margin: auto;
   /*@include breakpoint(768px){
   	font-size: 12px;
   }
@@ -1614,7 +1623,7 @@ aside .widget-title {
   	font-size: $base-font-size;
   }*/
 }
-/* line 47, ../sass/_15-0-asides.scss */
+/* line 48, ../sass/_15-0-asides.scss */
 #menu-services li a img {
   display: table;
   margin: 3px auto 0;
@@ -1634,7 +1643,7 @@ aside .widget-title {
 }
 
 /**********************************************************/
-/* line 71, ../sass/_15-0-asides.scss */
+/* line 72, ../sass/_15-0-asides.scss */
 #synved_social_share-2 > div {
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
@@ -1644,7 +1653,7 @@ aside .widget-title {
   justify-content: center;
 }
 @media (min-width: 48em) {
-  /* line 71, ../sass/_15-0-asides.scss */
+  /* line 72, ../sass/_15-0-asides.scss */
   #synved_social_share-2 > div {
     display: initial;
   }
