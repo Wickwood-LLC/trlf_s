@@ -494,7 +494,7 @@ html, body {
   -webkit-order: 0;
   order: 0;
 }
-@media (min-width: 48em) {
+@media (min-width: 53.75em) {
   /* line 15, ../sass/_07-0-layout.scss */
   #primary {
     -webkit-flex: 9 0px;
@@ -512,7 +512,7 @@ html, body {
   flex: 1 100%;
   order: 1;
 }
-@media (min-width: 48em) {
+@media (min-width: 53.75em) {
   /* line 26, ../sass/_07-0-layout.scss */
   #secondary {
     -webkit-flex: 3 0px;
@@ -1584,16 +1584,6 @@ aside .widget-title {
   margin: 1%;
   height: 85px;
   width: 85px;
-  /*@include breakpoint(48em){
-  	@include flexbox((
-  		display: flex,
-  	    justify-content: flex-start,
-  	    flex-flow: row wrap
-  	));
-  	margin: 2px 0;
-  	height: auto;
-  	width: 100%;
-  }*/
 }
 /* line 28, ../sass/_15-0-asides.scss */
 #menu-services li:hover {
@@ -1636,9 +1626,15 @@ aside .widget-title {
   		height: 20px;
   	}*/
 }
+@media (min-width: 53.75em) {
+  /* line 21, ../sass/_15-0-asides.scss */
+  #menu-services li {
+    margin: 3%;
+  }
+}
 
 /**********************************************************/
-/* line 78, ../sass/_15-0-asides.scss */
+/* line 71, ../sass/_15-0-asides.scss */
 #synved_social_share-2 > div {
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
@@ -1648,7 +1644,7 @@ aside .widget-title {
   justify-content: center;
 }
 @media (min-width: 48em) {
-  /* line 78, ../sass/_15-0-asides.scss */
+  /* line 71, ../sass/_15-0-asides.scss */
   #synved_social_share-2 > div {
     display: initial;
   }

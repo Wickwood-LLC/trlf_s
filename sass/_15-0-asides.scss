@@ -58,16 +58,9 @@ aside .widget-title{
 		}
 	}
 
-	/*@include breakpoint(48em){
-		@include flexbox((
-			display: flex,
-		    justify-content: flex-start,
-		    flex-flow: row wrap
-		));
-		margin: 2px 0;
-		height: auto;
-		width: 100%;
-	}*/
+	@include breakpoint(53.750em){
+		margin: 3%;
+	}
 }
 /**********************************************************/
 

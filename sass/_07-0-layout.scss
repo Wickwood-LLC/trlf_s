@@ -17,7 +17,7 @@ html, body
 	@include flexbox((
 		order: 0));
 
-	@include breakpoint(48em){
+	@include breakpoint(53.750em){
 		@include flexbox((
 		flex: 9 0px,
 		order: 1));
@@ -29,7 +29,7 @@ html, body
 		flex: 1 100%,
 		order: 1));
 
-	@include breakpoint(48em){
+	@include breakpoint(53.750em){
 		@include flexbox((
 			flex: 3 0px,
 			order: 0));
