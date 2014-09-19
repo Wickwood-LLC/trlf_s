@@ -18,20 +18,23 @@ html{
 	line-height: $base-line-height;
 }
 
+.site-branding-container{
+	color: $header-text-color;
+}
+
 .site-title-line1,
 .site-title-line2 {
 	// text-shadow: 1.4px 1.4px 3px ;
-	@include single-text-shadow(rgba(23, 23, 23, 0.5), 1px, 1px, .5px);
+	@include text-shadow(1px 1px 0.5px rgba(23, 23, 23, 0.5));
 
 	@include breakpoint(430px) {
-		@include single-text-shadow(rgba(23, 23, 23, 0.5), 1.4px, 1.4px, 3px)
+		@include text-shadow(1.4px 1.4px 3px rgba(23, 23, 23, 0.5));
 	}
 	
 	a {
 		@include link-colors($text-color);
 		@include unstyled-link();
 	}
-
 }
 
 
@@ -68,25 +71,49 @@ html{
 	}
 }
 
+.site-description, .site-contact-container {
+	@include text-shadow(0px 1px 0px rgba(23, 23, 23, 0.5));
+}
 .site-description,
 .site-header-address,
 .site-header-phone,
 .site-header-fax {
 	// font-style: bold;
 	font-variant: small-caps;
-	@include adjust-font-size-to(13px, 1.2);
+	@include adjust-font-size-to(12px, 1.2);
 
 	@include breakpoint(430px) {
-		@include adjust-font-size-to(14px, 1);
+		@include adjust-font-size-to(13px, 1);
 	}
 	@include breakpoint(530px) {
+		@include adjust-font-size-to(12px, 1);
+	}
+	@include breakpoint(660px) {
+		@include adjust-font-size-to(13px, 1);
+	}
+	@include breakpoint(760px) {
 		@include adjust-font-size-to(16px, 1);
+	}
+}
+.site-description {
+	// Font adjustments for these screen sizes
+	@include breakpoint(960px){
+		@include adjust-font-size-to(14px, 1.2);
+	}
+	@include breakpoint(1000px){
+		@include adjust-font-size-to(16px, 1.2);
 	}
 }
 .site-header-address,
 .site-header-phone,
 .site-header-fax {
 	@include breakpoint(840px) {
+		@include adjust-font-size-to(14px, 1);
+	}
+	@include breakpoint(935px) {
+		@include adjust-font-size-to(16px, 1);
+	}
+	@include breakpoint(1020px) {
 		@include adjust-font-size-to(18px, 1);
 	}
 }

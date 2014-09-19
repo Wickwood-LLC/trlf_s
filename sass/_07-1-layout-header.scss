@@ -35,7 +35,7 @@
 		@include align-self(center);
 	}
 		// Define Site Branding Container Flexbox to contain .logo-container, .site-title-container and site-contact-container
-		.site-branding-container {			
+		.site-branding-container {
 			// Flexbox container configuration using Bourbon Mixins
 			@include display(flex);								// Declare Flexbox Display
 			@include flex-direction(row);					// Horizontal Main Axis
@@ -56,12 +56,18 @@
 			.logo-container {				
 				// Flexbox item configuration using Bourbon Mixins
 				@include order(0);
+				@include flex(1 100%);
 				//margin: auto;
 				
+				@include breakpoint(300px) {
+					@include flex(1 35%);
+				}
 				@include breakpoint(900px) {
 					// Flexbox item configuration using Bourbon Mixins
-					//margin: auto;												// This will center the logo in remaining space
-					@include order(2);									// Since order is 0 based, this makes the logo-container item 3
+					//margin: auto;	
+					@include display-flex(flex);											// This will center the logo in remaining space
+					@include order(2);											// Since order is 0 based, this makes the logo-container item 3
+					//@include flex(0);
 					height: image-height($header-image);
 				}
 			}
@@ -85,15 +91,16 @@
 				// background-color: #2EE;
 				
 				// Flexbox item configuration using Bourbon Mixins
-				@include flex(1);
+				//@include flex(0 auto);
+				@include flex(1 65%);
 				@include order(1);
 
 				@include breakpoint(900px) {
-					width:75%;												
+					margin-bottom: 1em;
+					width:75%;											
 					@include order(0);								// Since order is 0 based, this makes the logo-container item 1
-					
+					@include flex(1 50%);
 				}
-				
 			}
 
 			.site-contact-container {
@@ -108,23 +115,63 @@
 				@include breakpoint(900px) {
 					// Flexbox item configuration using Bourbon Mixins
 					@include order(1);								// Since order is 0 based, this makes the logo-container item 2
+					@include flex(1 20%);
 					width:75%;
+				}
+
+				& > h3 {
+					font-size: 14px;
+					@include flexbox((
+						display: flex,
+						flex-flow: row wrap,
+						justify-content: center));
+
+					@include breakpoint(450px){
+						@include flex-flow(row nowrap);
+					}
 				}
 			}
 
 				span.site-header-address {
-				  &:after { 
-						content: " ";
-						display: block;
-						// @include breakpoint(580px) {
-					 //    content: " • ";
-						// 	display: inline;
-					 //  }
+					@include flex(2 100%);
+
+					&:after { 
+						content: " •\00a0";
+						display: none;
+					}
+
+					@include breakpoint(450px) {
+						@include flex(0 auto);
+						
+						&:after {
+							display: inline;
+						}
 					}
 				}
 
 				span.site-header-phone {
-					&:after { content: " • ";}
+					@include flex(1 50%);
+
+					&:after {
+						content: " •\00a0";
+						display: none;
+					}
+						
+					@include breakpoint(450px) {
+						@include flex(0 auto);
+
+						&:after {
+							display: inline;
+						}
+					}
+				}
+
+				span.site-header-fax {
+					@include flex(1 50%);
+
+					@include breakpoint(450px) {
+						@include flex(0 auto);
+					}
 				}
 
 				.site-header-attorney-container {
