@@ -23,6 +23,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trlf_s' ); ?></a>
 
 	<header id="masthead" class="masthead" role="banner">
+
+		<?php if ( dynamic_sidebar('header_widget_area') ) : else : endif; ?>
+
 		<div class="masthead-inner">
 			<div class="site-header-container">
 				<div class="site-branding">
@@ -48,6 +51,9 @@
 					<div class="header-image"></div>
 				</div>
 			</div>
+
+			<?php if ( dynamic_sidebar('first_navigation_widget_area') ) : else : endif; ?>
+			<?php if ( dynamic_sidebar('second_navigation_widget_area') ) : else : endif; ?>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'trlf_s' ); ?></button>

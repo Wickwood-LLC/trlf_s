@@ -15,6 +15,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<?php if ( dynamic_sidebar('first_top_widget_area') ) : else : endif; ?>
+			<?php if ( dynamic_sidebar('second_top_widget_area') ) : else : endif; ?>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
@@ -27,6 +30,9 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; // end of the loop. ?>
+
+			<?php if ( dynamic_sidebar('first_bottom_widget_area') ) : else : endif; ?>
+			<?php if ( dynamic_sidebar('second_bottom_widget_area') ) : else : endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

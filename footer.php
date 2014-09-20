@@ -27,6 +27,10 @@
 
 </div>
 
+<?php if ( dynamic_sidebar('first_footer_widget_area') ) : else : endif; ?>
+<?php if ( dynamic_sidebar('second_footer_widget_area') ) : else : endif; ?>
+<?php if ( dynamic_sidebar('third_footer_widget_area') ) : else : endif; ?>
+<?php if ( dynamic_sidebar('fourth_footer_widget_area') ) : else : endif; ?>
 
 <div id="wp-footer">
 	<?php wp_footer(); ?>
