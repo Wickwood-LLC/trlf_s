@@ -57,41 +57,47 @@
 				// Flexbox item configuration using Bourbon Mixins
 				@include order(0);
 				@include flex(1 100%);
-				//margin: auto;
 				
 				@include breakpoint(300px) {
 					@include flex(1 35%);
 				}
 				@include breakpoint(900px) {
 					// Flexbox item configuration using Bourbon Mixins
-					//margin: auto;	
-					@include display-flex(flex);											// This will center the logo in remaining space
+					@include display-flex(flex);								// This will center the logo in remaining space
 					@include order(2);											// Since order is 0 based, this makes the logo-container item 3
-					//@include flex(0);
-					height: image-height($header-image);
+					//height: image-height($header-image);
 				}
 			}
 
 				.logo {
-					// border: 1px solid red;
 					margin: auto;
-					// margin-left: auto;
-					// margin-right: auto;
 					@each $breakpoint-name, $breakpoint-size in $breakpoints {
 						$logo: "images/logos/logo#{$breakpoint-name}.png";
 						@include breakpoint($breakpoint-size) {
 							background: url($logo) no-repeat;
-							width: image-width($logo);
-							height: image-height($logo); 		 
+							//width: image-width($logo);
+							//height: image-height($logo);
+							background-position: center;
+							@include background-size(contain);
 						}
+				  	}
+				  	height: 80px;
+					width: 100%;
+
+				  	@include breakpoint(430px){
+				  		height: 120px;
+				  	}
+				  	@include breakpoint(900px){
+				  		height: 130px;
+				  		width: 200px;
+				  	}
+				  	@include breakpoint(1000px){
+				  		height: 150px;
 				  	}
 				}
 
-			.site-title-container {
-				// background-color: #2EE;
-				
+			.site-title-container {				
 				// Flexbox item configuration using Bourbon Mixins
-				//@include flex(0 auto);
 				@include flex(1 65%);
 				@include order(1);
 
@@ -104,8 +110,6 @@
 			}
 
 			.site-contact-container {
-				// background-color: #3a3;
-				
 				// Flexbox item configuration using Bourbon Mixins
 				@include order(2);
 				
@@ -120,13 +124,19 @@
 				}
 
 				& > h3 {
-					font-size: 14px;
+					//font-size: 16px;
 					@include flexbox((
 						display: flex,
 						flex-flow: row wrap,
 						justify-content: center));
 
-					@include breakpoint(450px){
+					/*@include breakpoint(500px){
+						@include flex-flow(row nowrap);
+					}
+					@include breakpoint(630px){
+						@include flex-flow(row wrap);
+					}*/
+					@include breakpoint(1000px){
 						@include flex-flow(row nowrap);
 					}
 				}
@@ -140,7 +150,21 @@
 						display: none;
 					}
 
-					@include breakpoint(450px) {
+					/*@include breakpoint(500px) {
+						@include flex(0 auto);
+						
+						&:after {
+							display: inline;
+						}
+					}
+					@include breakpoint(630px){
+						@include flex(2 100%);
+
+						&:after {
+							display: none;
+						}
+					}*/
+					@include breakpoint(1000px) {
 						@include flex(0 auto);
 						
 						&:after {
@@ -150,16 +174,30 @@
 				}
 
 				span.site-header-phone {
-					@include flex(1 50%);
+					@include flex(0 auto);
 
 					&:after {
 						content: " •\00a0";
-						display: none;
+						//display: none;
 					}
 						
-					@include breakpoint(450px) {
+					/*@include breakpoint(450px) {
 						@include flex(0 auto);
 
+						&:after {
+							display: inline;
+						}
+					}*/
+					@include breakpoint(630px){
+						@include flex(1 50%);
+
+						&:after {
+							display: none;
+						}
+					}
+					@include breakpoint(1000px) {
+						@include flex(0 auto);
+						
 						&:after {
 							display: inline;
 						}
@@ -167,9 +205,15 @@
 				}
 
 				span.site-header-fax {
-					@include flex(1 50%);
+					@include flex(0 auto);
 
-					@include breakpoint(450px) {
+					/*@include breakpoint(450px) {
+						@include flex(0 auto);
+					}*/
+					@include breakpoint(630px){
+						@include flex(1 50%);
+					}
+					@include breakpoint(1000px) {
 						@include flex(0 auto);
 					}
 				}
@@ -181,24 +225,18 @@
 					@include justify-content(space-around);			// Alignment along Main Axis
 					@include align-items(center);					// Alignment along Cross Axis
 					@include flex-wrap(wrap);							// Wrap to new row when items don't fit container width
+					margin-top: 0;
+
+					@include breakpoint(900px){
+						margin-top: 0.5em;
+					}
 				}
 
 
 	.header-image-container {
-		// background-color: #4dd;
-		
-		// width: 100%;
 		height: image-height($header-image);
 		@include align-self(center);
 		@include order(2);
-		// @include breakpoint(471px) {
-		// 	height: image-height($header-image);
-		// }
-		// @include breakpoint(531px 580px) {
-		// 	@include order(3);
-		// 	@include flex(.5);
-		// 	@include flex-shrink(1);
-		// }
 	}
 
 
@@ -212,73 +250,4 @@
 	height: image-height($header-image);
 	margin-left: auto;
 	margin-right: auto;
-
-	// $header-images: sprite-map("header-images/*.png");
- //  @each $breakpoint-name, $breakpoint-size in $breakpoints {
- //  	$header-image: header-image#{$breakpoint-name};
- //  	@include breakpoint($breakpoint-size) {
- //  		background: sprite($header-images, $header-image) no-repeat;
-	// 		@include sprite-dimensions($header-images, $header-image);
-	// 		margin-left: auto;
-	// 		margin-right: auto;  		
-	// 	}
- //  }
 }
-
-// .logo {
-// 	// width: 82px;
-// 	// height: 100px;
-// 	display: block;
-// 	border: 1px solid red;
-// 	
-// 	// @extend .breakpoint580-images-logo;
-// 	@include breakpoint($breakpoint580) {
-// 		border: 1px solid green;
-// 		// @extend .desktop-images-logo;
-// 		// & {      
-//     //@include desktop-images-sprite("logo");
-//   //   }
-// 	}
-// }
-
-// @include breakpoint($breakpoint580) {
-//   .logo {
-//      // background-image: inline-sprite($desktop-images-sprites)
-//      // @include desktop-images-sprites(logo);
-//   }
-// }
-
-// .site-title-line1,
-// .site-title-line2,
-// .site-description {
-// 	// @include grid-span(2,2)
-
-// }
-// .header-image,
-// .site-contact-info,
-// .site-header-attorney {
-// 	// display: block;
-// 	// @include grid-span(3,1);
-// 	// clear: both;
-// }
-
-
-
-
-// .header-image {
-// 	// @extend .desktop-images-logo;
-//   width: 201px;
-// 	height: 183px;
-// 	margin-left: auto;
-//   margin-right: auto;
-//   border: 1px solid green;
-// }
-// .breakpoint580-images-randalls,
-// .desktop-images-randalls { 
-// // 	display: block;
-// 	width: 201px;
-// 	height: 183px;
-// 	margin-left: auto;
-//   margin-right: auto;
-// //   clear: both;
-// }
