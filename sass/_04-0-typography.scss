@@ -152,3 +152,20 @@ html{
 .entry-content {
 	text-align: justify;
 }
+
+footer p {
+	margin: 0;
+}
+footer a {
+	color: #215D7D;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: underline;
+	}
+
+	&:visited {
+		color: #4F4F4F;
+	}
+}

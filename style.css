@@ -461,6 +461,26 @@ html {
   text-align: justify;
 }
 
+/* line 156, ../sass/_04-0-typography.scss */
+footer p {
+  margin: 0;
+}
+
+/* line 159, ../sass/_04-0-typography.scss */
+footer a {
+  color: #215D7D;
+  text-decoration: none;
+}
+/* line 163, ../sass/_04-0-typography.scss */
+footer a:hover {
+  color: #2E81AD;
+  text-decoration: underline;
+}
+/* line 168, ../sass/_04-0-typography.scss */
+footer a:visited {
+  color: #4F4F4F;
+}
+
 /*--------------------------------------------------------------
 05.0 Elements
 --------------------------------------------------------------*/
@@ -1716,6 +1736,18 @@ span.site-header-fax {
 /* line 91, ../sass/_14-0-content.scss */
 .site-info {
   padding: 8px;
+}
+
+/* line 95, ../sass/_14-0-content.scss */
+.rss-tag-icon {
+  background: url("images/footerrssicon.png") no-repeat scroll;
+  margin: 0 auto;
+  min-height: 32px;
+  min-width: 32px;
+  display: inline-block;
+  text-indent: 35px;
+  background-position: left center;
+  vertical-align: middle;
 }
 
 /*--------------------------------------------------------------

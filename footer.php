@@ -12,13 +12,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<p><a href="[rss_url]" class="art-rss-tag-icon" title="[rss_title]" style="float: left; line-height: 0px;"></a></p>
+			<p><a href="http://dev.randalllawfirm.com/feed/" class="rss-tag-icon" title="Randall Law Firm RSS Feed" style="float: left; line-height: 0px;"></a></p>
 			<p><a href="http://legalformsgenerator.com/?f=102&u=746d8756-f047-11e3-bbbe-fa163ec505ba&d=4" target="_blank">Legal & Policies</a> | <a href="http://legalformsgenerator.com/?f=100&u=746d8756-f047-11e3-bbbe-fa163ec505ba&d=4" target="_blank">Privacy</a></p>
-			<p>Copyright © [year]. All Rights Reserved.</p>
-			
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'trlf_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'trlf_s' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'trlf_s' ), 'TRLF_s Custom Theme', '<a href="http://www.wickwoodmarketing.com/wp/themes/trlf_s" rel="designer">Wickwood Marketing</a>' ); ?>
+			<p>Copyright © 2014. All Rights Reserved.</p>
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
