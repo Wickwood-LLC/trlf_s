@@ -238,54 +238,195 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Add theme options.
- 
-function theme_include_lib($name) {
-    locate_template(array('library/' . $name), true);
+**/
+$options = array(
+    array("name" => "Header",
+            "type" => "sub-section-3",
+            "category" => "header-styles",
+    ),
+    array('type' => 'checkbox',
+				'field_title' => 'Show headline',
+				'field_id' => 'show_headline',
+				'description' => 'Yes',
+				'default_value' => true,
+				'text' => 'Yes',
+            ),
+/*    array("name" => "Body Background Settings",
+            "type" => "sub-section-3",
+            "category" => "body-styles",
+    ),
+    array("name" => "Body Background Color",
+            "desc" => "Set the color of the background on which the page is. ",
+            "id" => $shortname."_body_background_color",
+            "type" => "color-picker",
+            "parent" => "body-styles",
+            "std" => "444444"),
+    array("name" => "Sidebar Setup",
+            "type" => "sub-section-3",
+            "category" => "sidebar-setup",
+    ),
+    array("name" => "Sidebar Position",
+            "id" => $shortname."_sidebar_alignment",
+            "type" => "radio",
+            "desc" => "Which side would you like your sidebar?",
+            "options" => array("left" => "Left", "right" => "Right"),
+            "parent" => "sidebar-setup",
+            "std" => "right"),
+    array("name" => "Navigation Bar Setup",
+            "type" => "sub-section-3",
+            "category" => "nav-setup",
+    ),
+    array("name" => "Pages to show in Navigation Bar",
+            "desc" => "Select the pages you want to include. All pages are excluded by default",
+            "id" => $shortname."_nav_pages",
+            "type" => "multi-select",
+            "options" => mnt_get_formatted_page_array($shortname."_nav_pages"),
+            "parent" => "nav-setup",
+            "std" => "none"),
+    array("name" => "Analytics",
+            "type" => "sub-section-3",
+            "category" => "analytics-setup",
+    ),
+    array("name" => "Custom Google Analytics Tracking Code",
+            "desc" => "Enter your tracking code here for Google Analytics",
+            "id" => $shortname."_custom_analytics_code",
+            "type" => "textarea",
+            "parent" => "analytics-setup",
+            "std" => ""),*/
+    );
+
+function create_suf_header_3($value) {
+    echo '<h3 class="suf-header-3">'.$value['name']."</h3>";
 }
-if (is_admin()) {
-    theme_include_lib('options.php');
-    theme_include_lib('admins.php');
-
-    function theme_add_option_page() {
-        add_theme_page(__('Theme Options', THEME_NS), __('Theme Options', THEME_NS), 'edit_theme_options', basename(__FILE__), 'theme_print_options');
-    }
-
-    add_action('admin_menu', 'theme_add_option_page');
-    add_action('sidebar_admin_setup', 'theme_widget_process_control');
-    add_filter('widget_update_callback', 'theme_update_widget_additional');
-    add_action('add_meta_boxes', 'theme_add_meta_boxes');
-    add_action('save_post', 'theme_save_post');
-    add_filter( 'wp_default_editor', 'theme_wp_default_editor' );
-    add_filter( 'admin_footer', 'theme_admin_footer', 99);
-
-    function theme_wp_default_editor($content){
-        if(isset($_GET['post']) && !theme_get_meta_option($_GET['post'], 'theme_use_wpautop')){
-            return 'html';
-        }
-        return $content;
-    }
-
-    function theme_admin_footer(){
-		 if(isset($_GET['post']) && !theme_get_meta_option($_GET['post'], 'theme_use_wpautop')){
-            echo '	<script type="text/javascript">
-					
-                    jQuery(function($){
-						$(\'#content-tmce\').click(function(){
-							if (!$(\'#theme_use_wpautop\')[0].checked) {
-								if ($(\'#save-alert\').length < 1) {
-									$(\'#titlediv\').after(\'<div id="save-alert" class="updated below-h2"><p><strong>Warning:</strong> Saving after switching to Visual mode can break the page layout (<a href="http://codex.wordpress.org/Function_Reference/wpautop">wpautop</a> enabled).</p></div>\');
-								}
-								$(\'#theme_use_wpautop\')[0].checked = true;
-							}
-						});
-                    });
-                    </script>';
-        }
-    }
+function create_section_for_checkbox($value) {
     
-    if (file_exists(TEMPLATEPATH . '/content/content-importer.php')) {
-        include(TEMPLATEPATH . '/content/content-importer.php');
+    echo '<span>';
+    echo $value['field_title'];
+    echo '</span>';
+    echo '<input type="checkbox" name="'.$value['id'].'">'."n";
+    if ( get_option( $value['id'] ) != "") {
+        echo get_option( $value['id'] );
     }
-    return;
+    else {
+        echo $value['std'];
+    }
+    echo '</input>'; 
 }
-*/
+function create_section_for_text($value) {
+    create_opening_tag($value);
+    $text = "";
+    if (get_option($value['id']) === FALSE) {
+        $text = $value['std'];
+    }
+    else {
+        $text = get_option($value['id']);
+    }
+ 
+    echo '<input type="text" id="'.$value['id'].'" name="'.$value['id'].'" value="'.$text.'" />'."n";
+    create_closing_tag();
+}
+
+function create_form($options) {
+    echo '<form method="post" name="form">n';
+    foreach ($options as $value) {
+        switch ( $value['type'] ) {
+            case "sub-section-3":
+                create_suf_header_3($value);
+                break;
+
+            case "checkbox";
+                create_section_for_checkbox($value);
+                break;
+ 
+            case "text";
+                create_section_for_text($value);
+                break;
+ 
+            case "textarea":
+                create_section_for_textarea($value);
+                break;
+ 
+            case "multi-select":
+                create_section_for_multi_select($value);
+                break;
+ 
+            case "radio":
+                create_section_for_radio($value);
+                break;
+ 
+            case "color-picker":
+                create_section_for_color_picker($value);
+                break;
+        }
+    }
+/*    echo '<input name="save" type="button" value="Save" class="button" onclick="submit_form(this, document.forms['form'])" />n';
+    echo '<input name="reset_all" type="button" value="Reset to default values" class="button" onclick="submit_form(this, document.forms['form'])" />n';
+    echo '<input type="hidden" name="formaction" value="default" />n';
+    echo '</form>n';*/
+}
+function trlf_s_add_admin() {
+    global $themename, $shortname, $options, $spawned_options;
+ 
+    if ( $_GET['page'] == basename(__FILE__) ) {
+        if ( 'save' == $_REQUEST['formaction'] ) {
+            foreach ($options as $value) {
+                if( isset( $_REQUEST[ $value['id'] ] ) ) {
+                    update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
+                }
+                else {
+                    delete_option( $value['id'] );
+                }
+            }
+ 
+            foreach ($spawned_options as $value) {
+                if( isset( $_REQUEST[ $value['id'] ] ) ) {
+                    update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
+                }
+                else {
+                    delete_option( $value['id'] );
+                }
+            }
+ 
+            header("Location: themes.php?page=functions.php&saved=true");
+            die;
+        }
+        else if('reset_all' == $_REQUEST['formaction']) {
+            foreach ($options as $value) {
+                delete_option( $value['id'] );
+            }
+ 
+            foreach ($spawned_options as $value) {
+                delete_option( $value['id'] );
+            }
+ 
+            header("Location: themes.php?page=functions.php&".$_REQUEST['formaction']."=true");
+            die;
+        }
+    }
+    add_theme_page($themename." Theme Options", "".$themename." Theme Options", 
+        'edit_themes', basename(__FILE__), 'trlf_s_admin');
+}
+
+add_action('admin_menu', 'trlf_s_add_admin');
+
+function trlf_s_admin() {
+    global $themename, $shortname, $options, $spawned_options, $theme_name;
+ 
+    if ($_REQUEST['saved']) {
+        echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved for this page.</strong></p></div>';
+    }
+    if ($_REQUEST['reset_all']) {
+        echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
+    }
+    ?>
+<div class="wrap">
+    <h2>Settings for <?php echo $themename; ?></h2>
+    <div class="mnt-options">
+<?php
+    create_form($options);
+?>
+    </div><!-- mnt-options -->
+</div><!-- wrap -->
+<?php
+} // end function trlf_s_admin()
+?>
