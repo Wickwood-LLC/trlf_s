@@ -87,6 +87,9 @@
 				  	@include breakpoint(430px){
 				  		height: 120px;
 				  	}
+				  	@include breakpoint(840px){
+				  		height: 150px;
+				  	}
 				  	@include breakpoint(900px){
 				  		height: 130px;
 				  		width: 200px;
@@ -129,6 +132,7 @@
 						display: flex,
 						flex-flow: row wrap,
 						justify-content: center));
+					margin: 5px 0;
 
 					/*@include breakpoint(500px){
 						@include flex-flow(row nowrap);
@@ -164,6 +168,21 @@
 							display: none;
 						}
 					}*/
+					@include breakpoint(840px) {
+						@include flex(0 auto);
+						
+						&:after {
+							display: inline;
+						}
+					}
+					@include breakpoint(900px) {
+						@include flex(2 100%);
+
+						&:after { 
+							content: " •\00a0";
+							display: none;
+						}
+					}
 					@include breakpoint(1000px) {
 						@include flex(0 auto);
 						
@@ -195,6 +214,20 @@
 							display: none;
 						}
 					}
+					@include breakpoint(840px) {
+						@include flex(0 auto);
+						
+						&:after {
+							display: inline;
+						}
+					}
+					@include breakpoint(900px){
+						@include flex(1 50%);
+
+						&:after {
+							display: none;
+						}
+					}
 					@include breakpoint(1000px) {
 						@include flex(0 auto);
 						
@@ -211,6 +244,12 @@
 						@include flex(0 auto);
 					}*/
 					@include breakpoint(630px){
+						@include flex(1 50%);
+					}
+					@include breakpoint(840px) {
+						@include flex(0 auto);
+					}
+					@include breakpoint(900px){
 						@include flex(1 50%);
 					}
 					@include breakpoint(1000px) {

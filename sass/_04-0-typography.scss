@@ -125,13 +125,13 @@ html{
 
 .site-header-attorney {
 	font-variant: small-caps;
-	@include adjust-font-size-to(15px, 1.2);
+	@include adjust-font-size-to(16px, 1.2);
 
 	@include breakpoint(430px) {
-		@include adjust-font-size-to(16px, 1);
+		@include adjust-font-size-to(18px, 1);
 	}
 	@include breakpoint(530px) {
-		@include adjust-font-size-to(18px, 1);
+		@include adjust-font-size-to(20px, 1);
 	}
 	@include breakpoint(840px) {
 		@include adjust-font-size-to(22px, 1);
