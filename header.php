@@ -52,18 +52,6 @@
 				</div>
 			</div>
 
-			<?php
-			global $options;
-			foreach ($options as $value) {
-			    if (get_option($value['id']) === FALSE) {
-			        $$value['id'] = $value['std'];
-			    }
-			    else {
-			        $$value['id'] = get_option( $value['id'] );
-			    }
-			}
-			?>
-
 			<?php if ( dynamic_sidebar('first_navigation_widget_area') ) : else : endif; ?>
 			<?php if ( dynamic_sidebar('second_navigation_widget_area') ) : else : endif; ?>
 
