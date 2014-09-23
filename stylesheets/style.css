@@ -1750,6 +1750,31 @@ span.site-header-fax {
   vertical-align: middle;
 }
 
+/* line 10, c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
+#colophon {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -56px;
+}
+/* line 18, c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
+#colophon #root_footer {
+  height: 56px;
+}
+
+/* line 20, c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 56px;
+}
+
 /*--------------------------------------------------------------
 15.0 Asides
 --------------------------------------------------------------*/

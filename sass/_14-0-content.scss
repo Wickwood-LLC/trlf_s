@@ -102,3 +102,5 @@
 	background-position: left center;
 	vertical-align: middle;
 }
+
+@include sticky-footer(56px, "#colophon");		// For sticky footer

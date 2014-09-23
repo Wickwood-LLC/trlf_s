@@ -240,94 +240,297 @@ require get_template_directory() . '/inc/jetpack.php';
  * Add theme options.
 **/
 $options = array(
-    array("name" => "Header",
+    array("name" => "Navigation Menu",
             "type" => "sub-section-3",
             "category" => "header-styles",
     ),
     array('type' => 'checkbox',
-				'field_title' => 'Show headline',
-				'field_id' => 'show_headline',
-				'description' => 'Yes',
-				'default_value' => true,
+				'name' => 'Trim long menu items',
+				'id' => 'trim_long_menu_items',
+				'std' => Yes,
 				'text' => 'Yes',
             ),
-/*    array("name" => "Body Background Settings",
+    array('type' => 'numeric',
+				'name' => 'Limit each item to [N] characters',
+				'id' => 'limit_menu_title',
+				'text' => '(characters). Used when "Trim long menu items" is enabled',
+				'std' => '45',
+				'depend' => 'trim_long_menu_items'
+            ),
+    array('type' => 'numeric',
+				'name' => 'Limit each subitem to [N] characters',
+				'id' => 'limit_sub_menu_title',
+				'text' => '(characters). Used when "Trim long menu items" is enabled',
+				'std' => '40',
+				'depend' => 'trim_long_menu_items'
+            ),
+    array('type' => 'select',
+				'name' => 'Default menu source',
+				'id' => 'default_menu_src',
+				'text' => 'Displayed when Appearance > Menu > Primary menu is not set',
+				'values' => array(
+					1 => 'Pages',
+					2 => 'Categories'),
+            ),
+
+   array('type' => 'checkbox',
+				'name' => 'Use not stylized menu',
+				'id' => 'use_default_menu',
+				'std' => Yes,
+				'text' => 'Use standard <a href="http://codex.wordpress.org/Function_Reference/wp_nav_menu">wp_nav_menu</a>, when option is enabled (need for some third-party plugins).',
+            ),
+
+   array("name" => "Posts",
             "type" => "sub-section-3",
-            "category" => "body-styles",
+            "category" => "post-styles",
     ),
-    array("name" => "Body Background Color",
-            "desc" => "Set the color of the background on which the page is. ",
-            "id" => $shortname."_body_background_color",
-            "type" => "color-picker",
-            "parent" => "body-styles",
-            "std" => "444444"),
-    array("name" => "Sidebar Setup",
+   array('type' => 'checkbox',
+				'name' => 'Show navigation links at the top of front posts page',
+				'id' => 'home_top_posts_navigation',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'checkbox',
+				'name' => 'Show navigation links at the top of posts page',
+				'id' => 'top_posts_navigation',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'checkbox',
+				'name' => 'Show navigation links at the bottom of posts page',
+				'id' => 'bottom_posts_navigation',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'checkbox',
+				'name' => 'Show top navigation links in single post view',
+				'id' => 'top_single_navigation',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'checkbox',
+				'name' => 'Show bottom navigation links in single post view',
+				'id' => 'bottom_single_navigation',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'checkbox',
+				'name' => 'Trim long navigation links in single post view',
+				'id' => 'single_navigation_trim_title',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'numeric',
+				'name' => 'Limit each link to [N] characters',
+				'id' => 'single_navigation_trim_len',
+				'text' => '(characters). Used when "Trim long menu items" is enabled',
+				'std' => '40',
+				'depend' => 'single_navigation_trim_title'
+            ),
+
+   array("name" => "Excerpt",
             "type" => "sub-section-3",
-            "category" => "sidebar-setup",
+            "category" => "excerpt-styles",
     ),
-    array("name" => "Sidebar Position",
-            "id" => $shortname."_sidebar_alignment",
-            "type" => "radio",
-            "desc" => "Which side would you like your sidebar?",
-            "options" => array("left" => "Left", "right" => "Right"),
-            "parent" => "sidebar-setup",
-            "std" => "right"),
-    array("name" => "Navigation Bar Setup",
+   array('type' => 'checkbox',
+				'name' => 'Use auto excerpts',
+				'id' => 'metadata_excerpt_auto',
+				'std' => Yes,
+				'text' => 'Generate post excerpts automatically (When neither more-tag nor post excerpt is used)',
+            ),
+   array('type' => 'numeric',
+				'name' => 'Excerpt length',
+				'id' => 'metadata_excerpt_words',
+				'text' => '(words). Used when "Use auto excerpts" is enabled',
+				'std' => '40',
+				'depend' => 'metadata_excerpt_auto'
+            ),
+   array('type' => 'numeric',
+				'name' => 'Excerpt balance',
+				'id' => 'metadata_excerpt_min_remainder',
+				'text' => '(words). Used when "Use auto excerpts" is enabled',
+				'std' => '5',
+				'depend' => 'metadata_excerpt_auto'
+            ),
+
+   array("name" => "Comments",
             "type" => "sub-section-3",
-            "category" => "nav-setup",
+            "category" => "comment-styles",
     ),
-    array("name" => "Pages to show in Navigation Bar",
-            "desc" => "Select the pages you want to include. All pages are excluded by default",
-            "id" => $shortname."_nav_pages",
-            "type" => "multi-select",
-            "options" => mnt_get_formatted_page_array($shortname."_nav_pages"),
-            "parent" => "nav-setup",
-            "std" => "none"),
-    array("name" => "Analytics",
+   array('type' => 'checkbox',
+				'name' => 'Allow comments',
+				'id' => 'allow_comments',
+				'std' => Yes,
+				'text' => 'Yes',
+            ),
+   array('type' => 'checkbox',
+				'name' => 'Use smilies in comments',
+				'id' => 'comment_use_smilies',
+				'std' => Yes,
+				'text' => 'Yes. Used when "Allow Comments" is enabled',
+				'depend' => 'allow_comments',
+            ),
+
+   array("name" => "Sidebars",
             "type" => "sub-section-3",
-            "category" => "analytics-setup",
+            "category" => "sidebar-styles",
+            'text' => 'Default widgets style'
     ),
-    array("name" => "Custom Google Analytics Tracking Code",
-            "desc" => "Enter your tracking code here for Google Analytics",
-            "id" => $shortname."_custom_analytics_code",
-            "type" => "textarea",
-            "parent" => "analytics-setup",
-            "std" => ""),*/
+   array('type' => 'select',
+				'name' => 'Primary sidebar',
+				'id' => 'sidebars_style_default',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+   array('type' => 'select',
+				'name' => 'Secondary sidebar',
+				'id' => 'sidebars_style_secondary',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+   array('type' => 'select',
+				'name' => 'Nav sidebars',
+				'id' => 'sidebars_style_nav',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+   array('type' => 'select',
+				'name' => 'Top sidebars',
+				'id' => 'sidebars_style_top',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+   array('type' => 'select',
+				'name' => 'Bottom sidebars',
+				'id' => 'sidebars_style_bottom',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+   array('type' => 'select',
+				'name' => 'Header sidebars',
+				'id' => 'sidebars_style_header',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+   array('type' => 'select',
+				'name' => 'Footer sidebars',
+				'id' => 'sidebars_style_footer',
+				'values' => array(
+					1 => 'Block style',
+					2 => 'Post style',
+					3 => 'Simple text'),
+            ),
+
+   array("name" => "Footer",
+            "type" => "sub-section-3",
+            "category" => "sidebar-styles",
+    ),
+   array('type' => 'checkbox',
+				'name' => 'Override default theme footer content',
+				'id' => 'override_default_footer_content',
+				'text' => 'Yes',
+            ),
+   array('type' => 'textarea',
+				'name' => 'Footer content',
+				'id' => 'footer_content',
+				'text' => sprintf(__('<strong>XHTML:</strong> You can use these tags: <code>%s</code>'), 'a, abbr, acronym, em, b, i, strike, strong, span') . '<br />'
+		. sprintf(__('<strong>ShortTags:</strong><code>%s</code>'), '[year], [top], [rss], [login_link], [blog_title], [xhtml], [css], [rss_url], [rss_title]') . '<br />'
+		. __('Used when "Override default theme footer content" is enabled'),
+				'depend' => 'override_default_footer_content'
+            ),
     );
+
+function create_opening_tag($value) {
+	echo '<div id="'.$value['id'].'">';
+    echo '<span>';
+    echo $value['name'];
+    echo '</span>';
+}
+function create_closing_tag($value) { 
+    echo '<span>';
+    echo $value['text'];
+    echo '</span><br /></div>';
+}
 
 function create_suf_header_3($value) {
     echo '<h3 class="suf-header-3">'.$value['name']."</h3>";
+    echo '<p class="description">'.$value['text']."</p>";
 }
-function create_section_for_checkbox($value) {
-    
-    echo '<span>';
-    echo $value['field_title'];
-    echo '</span>';
-    echo '<input type="checkbox" name="'.$value['id'].'">'."n";
-    if ( get_option( $value['id'] ) != "") {
+function create_section_for_checkbox($value) {    
+    create_opening_tag($value);
+    if ( get_option( $value['id'] ) != 'Yes') {
         echo get_option( $value['id'] );
     }
     else {
         echo $value['std'];
     }
-    echo '</input>'; 
+    echo '<input type="'.$value['type'].'" id="'.$value['id'].'" name="'.$value['name'].'" />';
+    create_closing_tag($value);
 }
 function create_section_for_text($value) {
-    create_opening_tag($value);
-    $text = "";
+	create_opening_tag($value);
     if (get_option($value['id']) === FALSE) {
         $text = $value['std'];
     }
     else {
         $text = get_option($value['id']);
+    } 
+    echo '<input type="'.$value['type'].'" id="'.$value['id'].'" name="'.$value['id'].'" value="'.$text.'" />';
+	create_closing_tag($value);
+}
+function create_section_for_textarea($value) {
+	create_opening_tag($value);
+	echo '<textarea name="'.$value['id'].'" type="textarea" cols="" rows="">';
+	if ( get_option( $value['id'] ) != "") {
+		echo get_option( $value['id'] );
+	}
+	else {
+		echo $value['std'];
+	}
+	echo '</textarea>';
+	create_closing_tag($value);
+}
+function create_section_for_numeric($value) {
+	create_opening_tag($value);
+    if (get_option($value['id']) === FALSE) {
+        $text = $value['std'];
     }
- 
-    echo '<input type="text" id="'.$value['id'].'" name="'.$value['id'].'" value="'.$text.'" />'."n";
-    create_closing_tag();
+    else {
+        $text = get_option($value['id']);
+    } 
+    echo '<input type="'.$value['type'].'" id="'.$value['id'].'" name="'.$value['id'].'" value="'.$text.'" />';
+	create_closing_tag($value);
+}
+function create_section_for_select($value) {
+	create_opening_tag($value);
+    if (get_option($value['id']) === FALSE) {
+        $text = $value['std'];
+    }
+    else {
+        $text = get_option($value['id']);
+    } 
+    echo '<select id="'.$value['id'].'" name="'.$value['id'].'">';
+    foreach ($value['values'] as $option => $source) {
+    	print '<option value="'.$source.'"> '.$source.' </option>';
+    }
+    echo '</select>';
+	create_closing_tag($value);
 }
 
 function create_form($options) {
-    echo '<form method="post" name="form">n';
+    echo '<form method="post" name="form">';
     foreach ($options as $value) {
         switch ( $value['type'] ) {
             case "sub-section-3":
@@ -346,23 +549,23 @@ function create_form($options) {
                 create_section_for_textarea($value);
                 break;
  
-            case "multi-select":
-                create_section_for_multi_select($value);
+            case "select":
+                create_section_for_select($value);
                 break;
  
             case "radio":
                 create_section_for_radio($value);
                 break;
  
-            case "color-picker":
-                create_section_for_color_picker($value);
+            case "numeric":
+                create_section_for_numeric($value);
                 break;
         }
     }
-/*    echo '<input name="save" type="button" value="Save" class="button" onclick="submit_form(this, document.forms['form'])" />n';
-    echo '<input name="reset_all" type="button" value="Reset to default values" class="button" onclick="submit_form(this, document.forms['form'])" />n';
-    echo '<input type="hidden" name="formaction" value="default" />n';
-    echo '</form>n';*/
+    echo '<input name="save" type="button" value="Save" class="button" onclick="submit_form(this, document.forms[\'form\'])" />';
+	echo '<input name="reset_all" type="button" value="Reset to default values" class="button" onclick="submit_form(this, document.forms[\'form\'])" />';
+	echo '<input type="hidden" name="formaction" value="default" />';
+	echo '</form>';
 }
 function trlf_s_add_admin() {
     global $themename, $shortname, $options, $spawned_options;
@@ -406,7 +609,6 @@ function trlf_s_add_admin() {
     add_theme_page($themename." Theme Options", "".$themename." Theme Options", 
         'edit_themes', basename(__FILE__), 'trlf_s_admin');
 }
-
 add_action('admin_menu', 'trlf_s_add_admin');
 
 function trlf_s_admin() {
