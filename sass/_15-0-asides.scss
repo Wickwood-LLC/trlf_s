@@ -2,10 +2,6 @@
 15.0 Asides
 --------------------------------------------------------------*/
 
-// .blog .format-aside .entry-title,
-// .archive .format-aside .entry-title {
-// 	display: none;
-// }
 #secondary aside{
 	@include region-box-styles;
 }
@@ -38,24 +34,12 @@ aside .widget-title{
 		text-align: center;
 		margin: auto;				// For centering the icons vertically and horizontally
 
-		/*@include breakpoint(768px){
-			font-size: 12px;
-		}
-		@include breakpoint(892px){
-			font-size: $base-font-size;
-		}*/
-
 		img {
 			display: table;
 			margin: 3px auto 0;
 			width: 50px;
 			height: 50px;
 
-		/*	@include breakpoint(48em){
-				margin: auto 10px auto 0;
-				width: 20px;
-				height: 20px;
-			}*/
 		}
 	}
 

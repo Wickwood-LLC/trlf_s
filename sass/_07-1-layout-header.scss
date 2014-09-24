@@ -154,20 +154,6 @@
 						display: none;
 					}
 
-					/*@include breakpoint(500px) {
-						@include flex(0 auto);
-						
-						&:after {
-							display: inline;
-						}
-					}
-					@include breakpoint(630px){
-						@include flex(2 100%);
-
-						&:after {
-							display: none;
-						}
-					}*/
 					@include breakpoint(840px) {
 						@include flex(0 auto);
 						
@@ -200,13 +186,6 @@
 						//display: none;
 					}
 						
-					/*@include breakpoint(450px) {
-						@include flex(0 auto);
-
-						&:after {
-							display: inline;
-						}
-					}*/
 					@include breakpoint(630px){
 						@include flex(1 50%);
 
@@ -240,9 +219,6 @@
 				span.site-header-fax {
 					@include flex(0 auto);
 
-					/*@include breakpoint(450px) {
-						@include flex(0 auto);
-					}*/
 					@include breakpoint(630px){
 						@include flex(1 50%);
 					}
@@ -277,10 +253,6 @@
 		@include align-self(center);
 		@include order(2);
 	}
-
-
-
-
 
 .header-image {
 	display: block;

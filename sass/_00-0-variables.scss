@@ -31,50 +31,9 @@ $breakpoints: (
   "700"  : (700px 899px),
   "900"  : (900px)
 );
-// $breakpoints: (
-//   "breakpoint430"  : (min-width 430px),
-//   "breakpoint530"  : (min-width 530px),
-//   "breakpoint580"  : (min-width 430px),
-//   "breakpoint900"  : (min-width 430px)
-// );
+
 $breakpoint430: (min-width 430px);
 $breakpoint580: (min-width 580px);
-// $mobile_medium_width: (min-width 321px);
-// $mobile_large_width: (min-width 641px);
-// $mobile_xlarge_width: (min-width 961px);
-// $desktop_small_width: (min-width 1281px);
-// $desktop_medium_width:(min-width 1601px);
-// $desktop_large_width: (min-width 1921px);
-// $mobile_small_width: (max-width 320px);
-// $mobile_medium_width: (min-width 321px);
-// $mobile_large_width: (min-width 641px);
-// $mobile_xlarge_width: (min-width 961px);
-// $desktop_small_width: (min-width 1281px);
-// $desktop_medium_width:(min-width 1601px);
-// $desktop_large_width: (min-width 1921px);
-
-// Layout Variables
-// Singlularity Grid (Gutters only between columns)
-// @include add-grid(3);
-// @include add-gutter(1/9);
-// @include sgs-change('output', 'float');
 
 $layout: null !default;  // Supported Values for $layout: null | content-sidebar | sidebar-content
 $vspacing: 1.5em;
-
-// Variable array for Services menu: menu-item-number | service name
-/*
-$services: (
-	"13": "real-property",
-	"12": "will",
-	"17": "estate-planning",
-	"20": "estate-admin",
-	"23": "elder",
-	"26": "probate",
-	"29": "matrimonial",
-	"33": "family",
-	"36": "title-insurance",
-	"39": "business",
-	"43": "vehicle",
-	"46": "injury"
-); */
