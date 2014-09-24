@@ -360,14 +360,14 @@ html {
 @media (min-width: 960px) {
   /* line 103, ../sass/_04-0-typography.scss */
   .site-description {
-    font-size: 0.82353em;
+    font-size: 0.76471em;
     line-height: 1.44em;
   }
 }
 @media (min-width: 1000px) {
   /* line 103, ../sass/_04-0-typography.scss */
   .site-description {
-    font-size: 0.94118em;
+    font-size: 0.82353em;
     line-height: 1.44em;
   }
 }

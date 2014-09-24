@@ -103,10 +103,10 @@ html{
 .site-description {
 	// Font adjustments for these screen sizes
 	@include breakpoint(960px){
-		@include adjust-font-size-to(14px, 1.2);
+		@include adjust-font-size-to(13px, 1.2);
 	}
 	@include breakpoint(1000px){
-		@include adjust-font-size-to(16px, 1.2);
+		@include adjust-font-size-to(14px, 1.2);
 	}
 }
 .site-header-address,
