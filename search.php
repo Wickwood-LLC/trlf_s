@@ -1,45 +1,42 @@
 <?php
+
 /**
- * The template for displaying search results pages.
  *
- * @package TRLF_s Custom Theme
+ * search.php
+ *
+ * The search results template. Used when a search is performed.
+ *
  */
-
-get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'trlf_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php trlf_s_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+get_header();
+?>
+			<?php get_sidebar('top'); ?>
+			<?php
+			if (have_posts()) {
+				theme_post_wrapper(
+						array('content' => '<h4 class="box-title">' . sprintf(__('Search Results for: %s', THEME_NS), '<span class="search-query-string">' . get_search_query() . '</span>') . '</h4>'
+						)
+				);
+				/* Display navigation to next/previous pages when applicable */
+				if (theme_get_option('theme_top_posts_navigation')) {
+					theme_page_navigation();
+				}
+				/* Start the Loop */
+				while (have_posts()) {
+					the_post();
+					get_template_part('content', 'search');
+				}
+				/* Display navigation to next/previous pages when applicable */
+				if (theme_get_option('theme_bottom_posts_navigation')) {
+					theme_page_navigation();
+				}
+			} else {
+				theme_404_content(
+						array(
+							'error_title' => __('Nothing Found', THEME_NS),
+							'error_message' => __('Sorry, but nothing matched your search criteria. Please try again with some different keywords.', THEME_NS)
+						)
+				);
+			}
+			?>
+			<?php get_sidebar('bottom'); ?>
 <?php get_footer(); ?>

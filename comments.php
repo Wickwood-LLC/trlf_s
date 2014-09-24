@@ -1,69 +1,62 @@
 <?php
 /**
- * The template for displaying comments.
  *
- * The area of the page that contains both current comments
- * and the comment form.
+ * comments.php
  *
- * @package TRLF_s Custom Theme
+ * The comments template. Used to display post or page comments and comment form.
+ * 
+ * Additional settings are available under the Appearance -> Theme Options -> Comments.
+ *
  */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
+if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+	die('Please do not load this page directly. Thanks!');
+	
+if (post_password_required()) {
+?>
+    <div class="art-comments">
+        <h2 class="art-postheader nocomments"><?php _e('This post is password protected. Enter the password to view any comments.', THEME_NS) ?></h2>
+    </div>
+<?php
 	return;
 }
+if (have_comments()) {
 ?>
+    <div class="art-comments">
+        <h2 class="art-postheader comments"><?php printf(
+            _n('One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), THEME_NS),
+            number_format_i18n(get_comments_number()),  
+            get_the_title()
+        ); ?></h2>
+<?php	
+    theme_ob_start();
+    paginate_comments_links();
+    $pagination = theme_stylize_pagination(theme_ob_get_clean());
+    echo $pagination;		
+?>
+        <ul id="comments-list">
+            <?php wp_list_comments('type=all&callback=theme_comment'); ?>
+        </ul>
+<?php echo $pagination; ?>
+    </div>
+<?php
+}
+if (!comments_open()) {
+    return;
+}
+/* comment form */
+theme_ob_start();
+$args = array();
+if (theme_get_option('theme_comment_use_smilies')) {
 
-<div id="comments" class="comments-area">
+	function theme_comment_form_field_comment($form_field) {
+		theme_include_lib('smiley.php');
+		return theme_get_smilies_js() . '<p class="smilies">' . theme_get_smilies() . '</p>' . $form_field;
+	}
 
-	<?php // You can start editing here -- including this comment! ?>
-
-	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'trlf_s' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'trlf_s' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'trlf_s' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'trlf_s' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'trlf_s' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'trlf_s' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'trlf_s' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
-
-	<?php endif; // have_comments() ?>
-
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'trlf_s' ); ?></p>
-	<?php endif; ?>
-
-	<?php comment_form(); ?>
-
-</div><!-- #comments -->
+	add_filter('comment_form_field_comment', 'theme_comment_form_field_comment');
+}
+comment_form();
+echo str_replace(
+    array('id="respond"', '<h3', 'id="reply-title"', '</h3>', 'logged-in-as', 'type="submit"'), 
+    array('id="respond" class="art-commentsform"', '<h2', 'id="reply-title" class="art-postheader"', '</h2>', 'art-postcontent logged-in-as', 'class="art-button" type="submit"'), 
+    theme_ob_get_clean());

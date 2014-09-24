@@ -1,105 +1,65 @@
 <?php
 /**
- * The template for displaying archive pages.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * archive.php
  *
- * @package TRLF_s Custom Theme
+ * The archive template. Used when a category, author, or date is queried.
+ * Note that this template will be overridden by category.php, author.php, and date.php for their respective query types. 
+ *
+ * More detailed information about template’s hierarchy: http://codex.wordpress.org/Template_Hierarchy
+ *
  */
-
 get_header(); ?>
+			<?php get_sidebar('top'); ?>
+			<?php
+			if (have_posts()) {
+				global $posts;
+				$post = $posts[0];
+				theme_ob_start();
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+				if (is_category()) {
+					echo '<h4>' . single_cat_title('', false) . '</h4>';
+					echo category_description();
+				} elseif (is_tag()) {
+					echo '<h4>' . single_tag_title('', false) . '</h4>';
+				} elseif (is_day()) {
+					echo '<h4>' . sprintf(__('Daily Archives: <span>%s</span>', THEME_NS), get_the_date()) . '</h4>';
+				} elseif (is_month()) {
+					echo '<h4>' . sprintf(__('Monthly Archives: <span>%s</span>', THEME_NS), get_the_date('F Y')) . '</h4>';
+				} elseif (is_year()) {
+					echo '<h4>' . sprintf(__('Yearly Archives: <span>%s</span>', THEME_NS), get_the_date('Y')) . '</h4>';
+				} elseif (is_author()) {
+					the_post();
+					echo theme_get_avatar(array('id' => get_the_author_meta('user_email')));
+					echo '<h4>' . get_the_author() . '</h4>';
+					$desc = get_the_author_meta('description');
+					if ($desc) {
+						echo '<div class="author-description">' . $desc . '</div>';
+					}
+					rewind_posts();
+				} elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
+					echo '<h4>' . __('Blog Archives', THEME_NS) . '</h4>';
+				}
+				theme_post_wrapper(array('content' => theme_ob_get_clean(), 'class' => 'breadcrumbs'));
 
-		<?php if ( have_posts() ) : ?>
+				/* Display navigation to next/previous pages when applicable */
+				if (theme_get_option('theme_top_posts_navigation')) {
+					theme_page_navigation();
+				}
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_category() ) :
-							single_cat_title();
+				/* Start the Loop */
+				while (have_posts()) {
+					the_post();
+					get_template_part('content', get_post_format());
+				}
 
-						elseif ( is_tag() ) :
-							single_tag_title();
-
-						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'trlf_s' ), '<span class="vcard">' . get_the_author() . '</span>' );
-
-						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'trlf_s' ), '<span>' . get_the_date() . '</span>' );
-
-						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'trlf_s' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'trlf_s' ) ) . '</span>' );
-
-						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'trlf_s' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'trlf_s' ) ) . '</span>' );
-
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'trlf_s' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'trlf_s' );
-
-						else :
-							_e( 'Archives', 'trlf_s' );
-
-						endif;
-					?>
-				</h1>
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php trlf_s_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+				/* Display navigation to next/previous pages when applicable */
+				if (theme_get_option('theme_bottom_posts_navigation')) {
+					theme_page_navigation();
+				}
+			} else {
+				theme_404_content();
+			}
+			?>
+			<?php get_sidebar('bottom'); ?>
+<?php get_footer();

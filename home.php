@@ -6,11 +6,13 @@
 				if (theme_get_option('theme_' . (theme_is_home() ? 'home_' : '') . 'top_posts_navigation')) {
 					theme_page_navigation();
 				}
-				/* Start the Loop */
-				while (have_posts()) {
-					the_post();
-					get_template_part('content', get_post_format());
-				}
+				?>
+<?php
+for ($i = 0; $i < $wp_query->post_count; $i++) {
+	theme_get_next_post();
+}
+?>
+				<?php
 				/* Display navigation to next/previous pages when applicable */
 				if (theme_get_option('theme_bottom_posts_navigation')) {
 					theme_page_navigation();

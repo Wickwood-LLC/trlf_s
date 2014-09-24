@@ -1,65 +1,45 @@
-<?php
-/**
- * The header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package TRLF_s Custom Theme
- */
-?><!DOCTYPE html>
+<?php global $wp_locale;
+if (isset($wp_locale)) {
+	$wp_locale->text_direction = 'ltr';
+} ?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="<?php bloginfo('charset') ?>" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!-- Created by Artisteer v4.2.0.60623 -->
+<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width" />
+<!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<?php wp_head(); ?>
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" media="screen" />
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<?php
+remove_action('wp_head', 'wp_generator');
+if (is_singular() && get_option('thread_comments')) {
+	wp_enqueue_script('comment-reply');
+}
+wp_head();
+?>
 </head>
-
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trlf_s' ); ?></a>
 
-	<header id="masthead" class="masthead" role="banner">
+<div id="page">
 
-		<?php if ( dynamic_sidebar('header_widget_area') ) : else : endif; ?>
-
-		<div class="masthead-inner">
-			<div class="site-header-container">
-				<div class="site-branding">
-					<div class="site-branding-container">
-						<a class="logo-container" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<div class="logo"></div>
-						</a>
-						<div class="site-title-container">
-							<h1 class="site-title-line1"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">The</a></h1>
-							<h1 class="site-title-line2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Randall Law Firm</a></h1>
-							<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-						</div>
-						<div class="site-contact-container">
-							<h3><span class="site-header-address">1777 Western Ave. Albany, NY 12203</span><span class="site-header-phone">Phone: 518-869-1205</span><span class="site-header-fax">Fax: 518-452-2145</span></h3>
-							<div class="site-header-attorney-container">
-								<h3 class="site-header-attorney">Denise McCarthy Randall</h3> 
-								<h3 class="site-header-attorney">Robert G. Randall</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header-image-container">
-					<div class="header-image"></div>
-				</div>
-			</div>
-
-			<?php if ( dynamic_sidebar('first_navigation_widget_area') ) : else : endif; ?>
-			<?php if ( dynamic_sidebar('second_navigation_widget_area') ) : else : endif; ?>
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'trlf_s' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #site-navigation -->
+<?php if(theme_has_layout_part("header")) : ?>
+<header class="masthead<?php echo (theme_get_option('theme_header_clickable') ? ' clickable' : ''); ?>">
+	<div class="masthead-inner">
+		<div class="site-header-container">
+			<?php get_sidebar('header'); ?>
 		</div>
-	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+		<?php if (theme_get_option('theme_use_default_menu')) { wp_nav_menu( array('theme_location' => 'primary-menu') );} else { ?><nav id="site-navigation" class="main-navigation" role="navigation">
+		    <button class="menu-toggle"><?php _e( 'Primary Menu', 'trlf_s' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+		    <?php
+				get_sidebar('nav'); 
+			?> 
+		</nav><?php } ?>
+	</div>
+</header>
+<?php endif; ?>

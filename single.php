@@ -1,32 +1,42 @@
 <?php
+
 /**
- * The template for displaying all single posts.
  *
- * @package TRLF_s Custom Theme
+ * single.php
+ *
+ * The single post template. Used when a single post is queried.
+ * 
  */
-
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php trlf_s_post_nav(); ?>
-
+get_header();
+?>
+			<?php get_sidebar('top'); ?>
 			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
+			if (have_posts()) {
+				/* Display navigation to next/previous posts when applicable */
+				if (theme_get_option('theme_top_single_navigation')) {
+					theme_post_navigation(
+							array(
+								'prev_link' => theme_get_previous_post_link('&laquo; %link'),
+								'next_link' => theme_get_next_post_link('%link &raquo;')
+							)
+					);
+				}
+				while (have_posts()) {
+					the_post();
+					get_template_part('content', 'single');
+				}
+				/* Display navigation to next/previous posts when applicable */
+				if (theme_get_option('theme_bottom_single_navigation')) {
+					theme_post_navigation(
+							array(
+								'prev_link' => theme_get_previous_post_link('&laquo; %link'),
+								'next_link' => theme_get_next_post_link('%link &raquo;')
+							)
+					);
+				}
+			} else {
+				theme_404_content();
+			}
 			?>
-
-		<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+			<?php get_sidebar('bottom'); ?>
 <?php get_footer(); ?>
