@@ -2,7 +2,9 @@
 13.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 0.5em;
+	//margin: 0 0 0.5em;
+	margin: 5px;
+	@include region-box-styles();
 }
 
 /* Make sure select elements fit in widgets */
@@ -13,4 +15,8 @@
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+.widget-title{
+	@include widget-title-styles();
 }
