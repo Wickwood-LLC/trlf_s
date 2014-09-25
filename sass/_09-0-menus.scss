@@ -142,7 +142,8 @@
 	@include menu-button-styles;
 	@include flexbox((
 		flex-flow: row wrap,
-		align-items: center
+		align-items: center,
+		justify-content: center
 	));
 
 	&::before {
