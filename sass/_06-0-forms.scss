@@ -109,6 +109,9 @@ div#mc-indicates-required {
 	width: 48%;
 	margin: 0 auto;
 }
+.mc_required{
+	color: red;
+}
 
 div.mc_merge_var {
 	width: 60%;
@@ -174,4 +177,16 @@ input#mc_signup_submit {
 	@include border-radius(3px);
 	@include box-sizing(border-box);
 	@include text-shadow(none);
+
+	&:hover, &:focus {
+		background: #1e8cbe;
+		@include box-shadow(inset 0 1px 0 rgba(120,200,230,.6));
+	}
+
+	&:active {
+		background: #1b7aa6;
+		border-color: #005684;
+		color: rgba(255,255,255,.95);
+		@include box-shadow(inset 0 1px 0 rgba(0,0,0,.1));
+	}
 }

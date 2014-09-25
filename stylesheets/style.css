@@ -654,14 +654,19 @@ div#mc-indicates-required {
   margin: 0 auto;
 }
 
-/* line 113, ../sass/_06-0-forms.scss */
+/* line 112, ../sass/_06-0-forms.scss */
+.mc_required {
+  color: red;
+}
+
+/* line 116, ../sass/_06-0-forms.scss */
 div.mc_merge_var {
   width: 60%;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 118, ../sass/_06-0-forms.scss */
+/* line 121, ../sass/_06-0-forms.scss */
 .mc_interests_header {
   margin-top: 1.0em;
   margin-bottom: 0.5em;
@@ -671,7 +676,7 @@ div.mc_merge_var {
   margin-left: auto;
 }
 
-/* line 126, ../sass/_06-0-forms.scss */
+/* line 129, ../sass/_06-0-forms.scss */
 #mc_signup_form div.mc_form_inside div.mc_interest {
   width: 30%;
   margin-right: auto;
@@ -680,7 +685,7 @@ div.mc_merge_var {
   clear: both;
 }
 
-/* line 133, ../sass/_06-0-forms.scss */
+/* line 136, ../sass/_06-0-forms.scss */
 div.mergeRow {
   clear: both;
   width: 60%;
@@ -688,7 +693,7 @@ div.mergeRow {
   margin-left: auto;
 }
 
-/* line 139, ../sass/_06-0-forms.scss */
+/* line 142, ../sass/_06-0-forms.scss */
 label.mc_email_format {
   margin-top: .5em;
   margin-bottom: .5em;
@@ -696,7 +701,7 @@ label.mc_email_format {
   float: left;
 }
 
-/* line 145, ../sass/_06-0-forms.scss */
+/* line 148, ../sass/_06-0-forms.scss */
 .mc_email_options ul.mc_list li {
   display: inline-block;
   float: left;
@@ -706,12 +711,12 @@ label.mc_email_format {
   padding: 0;
 }
 
-/* line 153, ../sass/_06-0-forms.scss */
+/* line 156, ../sass/_06-0-forms.scss */
 .mc_signup_submit {
   clear: both;
 }
 
-/* line 156, ../sass/_06-0-forms.scss */
+/* line 159, ../sass/_06-0-forms.scss */
 input#mc_signup_submit {
   background: #2ea2cc;
   border-color: #0074a2;
@@ -739,6 +744,22 @@ input#mc_signup_submit {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: none;
+}
+/* line 181, ../sass/_06-0-forms.scss */
+input#mc_signup_submit:hover, input#mc_signup_submit:focus {
+  background: #1e8cbe;
+  -moz-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
+  -webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
+  box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
+}
+/* line 186, ../sass/_06-0-forms.scss */
+input#mc_signup_submit:active {
+  background: #1b7aa6;
+  border-color: #005684;
+  color: rgba(255, 255, 255, 0.95);
+  -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------

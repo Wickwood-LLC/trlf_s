@@ -43,7 +43,7 @@
 	@include breakpoint(53.750em){
 		margin: 3%;
 		@-moz-document url-prefix() { 
-			margin: 5px;				// Firefox-specific margin because Firefox don't know percentage values for top and bottom margins		
+			margin: 5px;			// Firefox-specific margin because Firefox don't know percentage values for top and bottom margins		
 		}
 	}
 }
