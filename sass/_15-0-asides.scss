@@ -3,10 +3,10 @@
 --------------------------------------------------------------*/
 
 #menu-services{
-	@include flexbox((
-		display: flex,
-	    justify-content: center,
-	    flex-flow: row wrap));
+	@include display(flex);
+	@include justify-content(center);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
 }
 #menu-services li{
 	@include menu-button-styles;
@@ -53,14 +53,13 @@
 	//background: #82BEDE;
 }
 
-#synved_social_share-2 > div {
-	@include flexbox((
-		display: flex,
-		flex-flow: row wrap,
-		justify-content: center,
-	));
+#synved_social_share-2 .widget-content > div {
+	@include display(flex);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(center);
 
 	@include breakpoint(53.750em){
-		display: initial;
+		display: block;
 	}
 }

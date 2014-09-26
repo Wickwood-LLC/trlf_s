@@ -1,7 +1,7 @@
 <?php
 
 function theme_get_menu($args = '') {
-	$args = wp_parse_args($args, array('source' => 'Pages', 'depth' => 0, 'menu' => null, 'class' => ''));
+	$args = wp_parse_args($args, array('source' => 'Pages', 'depth' => 0, 'menu' => null, 'class' => 'nav-menu'));
 	$source = &$args['source'];
 	$menu = &$args['menu'];
 	$class = &$args['class'];

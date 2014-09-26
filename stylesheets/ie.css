@@ -3,7 +3,13 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
-/* line 7, ../sass/ie.scss */
+/* line 12, ../sass/ie.scss */
 .masthead {
   display: table;
+}
+
+/* line 15, ../sass/ie.scss */
+.site-branding-container {
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
 }

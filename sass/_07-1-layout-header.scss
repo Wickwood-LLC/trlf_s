@@ -8,22 +8,25 @@
 	padding: 5px 2%;
 	padding-bottom: 0px;
 	@include linear-gradient(to bottom, $top-gradient-color, $bottom-gradient-color);
+	@include display(flex);
 }
 
 .masthead-inner {
 	max-width: 960px;
 	margin: auto;
+	width: 100%;
 }
 
 // Define Site Header Container Flexbox to contain .site-branding and .header-image-container
 .site-header-container {
 	// Flexbox container configuration using Bourbon Mixins
-	@include display(flex);
+	display: block;
 	@include align-items(space-around);
 	@include justify-content(center);
 	@include flex-direction(column);
 	
 	@include breakpoint(630px) {
+		@include display(flex);
 		@include flex-direction(row);
 	}
 
@@ -55,15 +58,17 @@
 
 			.logo-container {				
 				// Flexbox item configuration using Bourbon Mixins
+				@include display(flex);
 				@include order(0);
 				@include flex(1 100%);
 				
 				@include breakpoint(300px) {
+					@include display(flex);
 					@include flex(1 35%);
 				}
 				@include breakpoint(900px) {
 					// Flexbox item configuration using Bourbon Mixins
-					@include display-flex(flex);								// This will center the logo in remaining space
+					@include display(flex);								// This will center the logo in remaining space
 					@include order(2);											// Since order is 0 based, this makes the logo-container item 3
 					//height: image-height($header-image);
 				}
@@ -127,21 +132,19 @@
 				}
 
 				& > h3 {
-					//font-size: 16px;
-					@include flexbox((
-						display: flex,
-						flex-flow: row wrap,
-						justify-content: center));
+					@include display(flex);
+					@include flex-direction(row);
+					@include flex-wrap(wrap);
+					@include justify-content(center);
 					margin: 5px 0;
 
-					/*@include breakpoint(500px){
-						@include flex-flow(row nowrap);
-					}
-					@include breakpoint(630px){
-						@include flex-flow(row wrap);
-					}*/
 					@include breakpoint(1000px){
-						@include flex-flow(row nowrap);
+						@include flex-direction(row);
+						@include flex-wrap(nowrap);
+					}
+
+					span {
+						display: block;
 					}
 				}
 			}
@@ -149,7 +152,7 @@
 				span.site-header-address {
 					@include flex(2 100%);
 
-					&:after { 
+					&::after { 
 						content: " •\00a0";
 						display: none;
 					}
@@ -157,14 +160,14 @@
 					@include breakpoint(840px) {
 						@include flex(0 auto);
 						
-						&:after {
+						&::after {
 							display: inline;
 						}
 					}
 					@include breakpoint(900px) {
 						@include flex(2 100%);
 
-						&:after { 
+						&::after { 
 							content: " •\00a0";
 							display: none;
 						}
@@ -172,7 +175,7 @@
 					@include breakpoint(1000px) {
 						@include flex(0 auto);
 						
-						&:after {
+						&::after {
 							display: inline;
 						}
 					}
@@ -181,7 +184,7 @@
 				span.site-header-phone {
 					@include flex(0 auto);
 
-					&:after {
+					&::after {
 						content: " •\00a0";
 						//display: none;
 					}
@@ -189,28 +192,28 @@
 					@include breakpoint(630px){
 						@include flex(1 50%);
 
-						&:after {
+						&::after {
 							display: none;
 						}
 					}
 					@include breakpoint(840px) {
 						@include flex(0 auto);
 						
-						&:after {
+						&::after {
 							display: inline;
 						}
 					}
 					@include breakpoint(900px){
 						@include flex(1 50%);
 
-						&:after {
+						&::after {
 							display: none;
 						}
 					}
 					@include breakpoint(1000px) {
 						@include flex(0 auto);
 						
-						&:after {
+						&::after {
 							display: inline;
 						}
 					}

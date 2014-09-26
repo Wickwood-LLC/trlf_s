@@ -10,6 +10,7 @@ if (isset($wp_locale)) {
 <!-- Created by Artisteer v4.2.0.60623 -->
 <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width" />
 <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="ie"> <!--<![endif]-->
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -36,9 +37,7 @@ wp_head();
 		    <button class="menu-toggle"><?php _e( 'Primary Menu', 'trlf_s' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-		    <?php
-				get_sidebar('nav'); 
-			?> 
+		    <?php get_sidebar('nav'); ?> 
 		</nav><?php } ?>
 	</div>
 </header>

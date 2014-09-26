@@ -3,10 +3,10 @@
 --------------------------------------------------------------*/
 
 .main-navigation {
-	@include flexbox((
-		display: flex,
-		flex-flow: row wrap,
-		justify-content: center));
+	@include display(flex);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(center);
 
 	ul {
 		list-style: none;
@@ -15,10 +15,8 @@
 
 		li {
 			@include menu-button-styles;
-			@include flexbox ((
-				display: flex,
-				justify-content: center
-			));
+			@include display(flex);
+			@include justify-content(center);
 			margin-left: 0;
 			width: 100%;
 
@@ -140,11 +138,9 @@
 	padding: 0.5em;
 	width: 100%;
 	@include menu-button-styles;
-	@include flexbox((
-		flex-flow: row wrap,
-		align-items: center,
-		justify-content: center
-	));
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(center);
 
 	&::before {
 		content: '';
