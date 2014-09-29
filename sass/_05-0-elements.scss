@@ -4,3 +4,13 @@
 body {
 	background: $background-color; 
 }
+
+table {
+	border-collapse: collapse;
+}
+#wpgmaps_directions_editbox_1 td{
+	padding: 2px;
+	border: solid 1px #B5B5B5;
+	vertical-align: top;
+	text-align: left;
+}

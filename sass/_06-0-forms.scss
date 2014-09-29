@@ -8,6 +8,17 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
  	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+ 	padding: 4px 0;
+}
+input,
+select,
+textarea {
+	color: #113040;
+	font-size: 14px;
+	font-family: $base-font;
+	font-weight: bold;
+	font-style: normal;
+	text-shadow: none;
 }
 button,
 input[type="button"],
@@ -61,6 +72,7 @@ input[type="search"],
 textarea {
 	color: #666;
 	border: 0;
+	width: 100%;
 	@include border-radius(3px);
 	@include box-shadow(0 0 2px 1px rgba(0, 0, 0, 0.2));
 
@@ -157,6 +169,7 @@ label.mc_email_format {
 	clear: both;
 }
 input#mc_signup_submit,
+input.wpgmaps_get_directions,
 input.wpgmza_sl_search_button {
 	background: #2ea2cc;
 	border-color: #0074a2;
@@ -164,6 +177,7 @@ input.wpgmza_sl_search_button {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 13px;
+	font-weight: normal;
 	line-height: 26px;
 	height: 28px;
 	margin: 0;

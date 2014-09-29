@@ -27,3 +27,13 @@
 		line-height: 0;
 	}
 }
+
+#wpgmaps_directions_edit_1 a {
+	display: none;
+	text-decoration: none;
+
+	&::before,
+	a#marker2::before {
+		content: '';
+	}
+}
