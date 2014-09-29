@@ -429,7 +429,7 @@ html {
 }
 
 /* line 141, ../sass/_04-0-typography.scss */
-.entry-title {
+.entry-title, .entry-content h2 {
   color: #19455D;
   margin: 5px 0;
   font-size: 31px;
@@ -445,28 +445,42 @@ html {
 .entry-content {
   text-align: justify;
 }
+/* line 155, ../sass/_04-0-typography.scss */
+.entry-content h2 {
+  color: #3E9ACC;
+  margin: 10px 0 0;
+  font-size: 29px;
+}
 
-/* line 156, ../sass/_04-0-typography.scss */
+/* line 162, ../sass/_04-0-typography.scss */
+.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  padding: 0 4px 5px;
+  margin: 0;
+}
+
+/* line 169, ../sass/_04-0-typography.scss */
 footer p {
   margin: 0;
 }
 
-/* line 159, ../sass/_04-0-typography.scss */
+/* line 172, ../sass/_04-0-typography.scss */
 footer a {
   color: #215D7D;
   text-decoration: none;
 }
-/* line 163, ../sass/_04-0-typography.scss */
+/* line 176, ../sass/_04-0-typography.scss */
 footer a:hover {
   color: #2E81AD;
   text-decoration: underline;
 }
-/* line 168, ../sass/_04-0-typography.scss */
+/* line 181, ../sass/_04-0-typography.scss */
 footer a:visited {
   color: #4F4F4F;
 }
 
-/* line 173, ../sass/_04-0-typography.scss */
+/* line 186, ../sass/_04-0-typography.scss */
 .site-footer {
   color: #1A1A1A;
   font-size: 14px;
@@ -717,7 +731,8 @@ label.mc_email_format {
 }
 
 /* line 159, ../sass/_06-0-forms.scss */
-input#mc_signup_submit {
+input#mc_signup_submit,
+input.wpgmza_sl_search_button {
   background: #2ea2cc;
   border-color: #0074a2;
   color: #fff;
@@ -745,21 +760,30 @@ input#mc_signup_submit {
   box-sizing: border-box;
   text-shadow: none;
 }
-/* line 181, ../sass/_06-0-forms.scss */
-input#mc_signup_submit:hover, input#mc_signup_submit:focus {
+/* line 182, ../sass/_06-0-forms.scss */
+input#mc_signup_submit:hover, input#mc_signup_submit:focus,
+input.wpgmza_sl_search_button:hover,
+input.wpgmza_sl_search_button:focus {
   background: #1e8cbe;
   -moz-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
   -webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
   box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
 }
-/* line 186, ../sass/_06-0-forms.scss */
-input#mc_signup_submit:active {
+/* line 187, ../sass/_06-0-forms.scss */
+input#mc_signup_submit:active,
+input.wpgmza_sl_search_button:active {
   background: #1b7aa6;
   border-color: #005684;
   color: rgba(255, 255, 255, 0.95);
   -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 194, ../sass/_06-0-forms.scss */
+input.wpgmza_sl_search_button {
+  margin: 0 auto;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -2427,6 +2451,18 @@ object {
   max-width: 100%;
 }
 
+/* line 19, ../sass/_18-0-media.scss */
+.wp-caption {
+  border: 1px solid #ddd;
+  background-color: #f3f3f3;
+  padding-top: 4px;
+  margin: 10px;
+}
+/* line 25, ../sass/_18-0-media.scss */
+.wp-caption, .wp-caption p {
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 19.0 Captions
 --------------------------------------------------------------*/
@@ -2507,45 +2543,3 @@ object {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
-
-/* Welcome to Compass. Use this file to write IE specific override styles.
- * Import this file using the following HTML or equivalent:
- * <!--[if IE]>
- *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- * <![endif]--> */
-/*html.ie .masthead {
-	// display: table;
-}
-html.ie .site-branding-container {
-	@include flex-wrap(wrap);
-}
-html.ie #content {
-	@include display(flex);
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
-}
-html.ie #primary {
-	margin-top: 10px;
-	width: 100%;
-	-ms-flex-order: 0; 
-
-	@include breakpoint(53.750em){
-		-ms-flex-order: 1; 
-		-ms-flex-positive: 9; 
-		-ms-flex-negative: 0; 
-		-ms-flex-preferred-size: 0px;
-	}
-}
-html.ie #secondary {
-	margin-top: 10px;
-	width: 100%;
-	-ms-flex-order: 1; 
-	-ms-flex-positive: 0;
-	-ms-flex-preferred-size: 60%;
-
-	@include breakpoint(53.750em){
-		-ms-flex-order: 0; 
-		-ms-flex-positive: 3;
-		-ms-flex-preferred-size: 0;
-	}
-}*/

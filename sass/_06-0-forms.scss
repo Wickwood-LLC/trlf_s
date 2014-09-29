@@ -156,7 +156,8 @@ label.mc_email_format {
 .mc_signup_submit {
 	clear: both;
 }
-input#mc_signup_submit {
+input#mc_signup_submit,
+input.wpgmza_sl_search_button {
 	background: #2ea2cc;
 	border-color: #0074a2;
 	color: #fff;
@@ -189,4 +190,8 @@ input#mc_signup_submit {
 		color: rgba(255,255,255,.95);
 		@include box-shadow(inset 0 1px 0 rgba(0,0,0,.1));
 	}
+}
+input.wpgmza_sl_search_button {
+	margin: 0 auto;
+	display: block;
 }

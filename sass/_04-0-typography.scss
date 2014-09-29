@@ -151,6 +151,19 @@ html{
 }
 .entry-content {
 	text-align: justify;
+
+	h2 {
+		@extend .entry-title;
+		color: $content-h2-color;
+		margin: 10px 0 0;
+		font-size: 29px;
+	}
+}
+.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
 }
 
 footer p {
