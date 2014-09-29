@@ -245,6 +245,10 @@
 					@include flex-wrap(wrap);							// Wrap to new row when items don't fit container width
 					margin-top: 0;
 
+					& > h3 {
+						@include flex(1 auto);
+					}
+
 					@include breakpoint(900px){
 						margin-top: 0.5em;
 					}

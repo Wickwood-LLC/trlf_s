@@ -1023,15 +1023,15 @@ html, body {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     -ms-justify-content: space-around;
     -o-justify-content: space-around;
     justify-content: space-around;
-    -ms-flex-pack: center;
+    -ms-flex-pack: justify;
     -webkit-box-align: center;
     -moz-box-align: center;
     box-align: center;
@@ -1553,15 +1553,15 @@ span.site-header-fax {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
   -webkit-justify-content: space-around;
   -moz-justify-content: space-around;
   -ms-justify-content: space-around;
   -o-justify-content: space-around;
   justify-content: space-around;
-  -ms-flex-pack: center;
+  -ms-flex-pack: justify;
   -webkit-box-align: center;
   -moz-box-align: center;
   box-align: center;
@@ -1580,6 +1580,16 @@ span.site-header-fax {
   flex-wrap: wrap;
   margin-top: 0;
 }
+/* line 248, ../sass/_07-1-layout-header.scss */
+.site-header-attorney-container > h3 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 auto;
+  -moz-flex: 1 auto;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+}
 @media (min-width: 900px) {
   /* line 239, ../sass/_07-1-layout-header.scss */
   .site-header-attorney-container {
@@ -1587,7 +1597,7 @@ span.site-header-fax {
   }
 }
 
-/* line 254, ../sass/_07-1-layout-header.scss */
+/* line 258, ../sass/_07-1-layout-header.scss */
 .header-image-container {
   height: 183px;
   -webkit-align-self: center;
@@ -1603,7 +1613,7 @@ span.site-header-fax {
   -ms-flex-order: 2;
 }
 
-/* line 260, ../sass/_07-1-layout-header.scss */
+/* line 264, ../sass/_07-1-layout-header.scss */
 .header-image {
   display: block;
   background: url("images/header-image.png") no-repeat;
