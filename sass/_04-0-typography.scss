@@ -158,6 +158,13 @@ html{
 		margin: 10px 0 0;
 		font-size: 29px;
 	}
+
+	h3 {
+		@extend .entry-title;
+		color: $content-h2-color;
+		margin: 10px 0 0;
+		font-size: 23px;
+	}
 }
 .wp-caption-text {
 	font-size: 11px;

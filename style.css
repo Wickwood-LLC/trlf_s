@@ -429,7 +429,7 @@ html {
 }
 
 /* line 141, ../sass/_04-0-typography.scss */
-.entry-title, .entry-content h2 {
+.entry-title, .entry-content h2, .entry-content h3 {
   color: #19455D;
   margin: 5px 0;
   font-size: 31px;
@@ -451,8 +451,14 @@ html {
   margin: 10px 0 0;
   font-size: 29px;
 }
-
 /* line 162, ../sass/_04-0-typography.scss */
+.entry-content h3 {
+  color: #3E9ACC;
+  margin: 10px 0 0;
+  font-size: 23px;
+}
+
+/* line 169, ../sass/_04-0-typography.scss */
 .wp-caption-text {
   font-size: 11px;
   line-height: 17px;
@@ -460,27 +466,27 @@ html {
   margin: 0;
 }
 
-/* line 169, ../sass/_04-0-typography.scss */
+/* line 176, ../sass/_04-0-typography.scss */
 footer p {
   margin: 0;
 }
 
-/* line 172, ../sass/_04-0-typography.scss */
+/* line 179, ../sass/_04-0-typography.scss */
 footer a {
   color: #215D7D;
   text-decoration: none;
 }
-/* line 176, ../sass/_04-0-typography.scss */
+/* line 183, ../sass/_04-0-typography.scss */
 footer a:hover {
   color: #2E81AD;
   text-decoration: underline;
 }
-/* line 181, ../sass/_04-0-typography.scss */
+/* line 188, ../sass/_04-0-typography.scss */
 footer a:visited {
   color: #4F4F4F;
 }
 
-/* line 186, ../sass/_04-0-typography.scss */
+/* line 193, ../sass/_04-0-typography.scss */
 .site-footer {
   color: #1A1A1A;
   font-size: 14px;
