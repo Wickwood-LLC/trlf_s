@@ -14,3 +14,18 @@ table {
 	vertical-align: top;
 	text-align: left;
 }
+#wpgmaps_directions_edit_1{
+	padding-top: 0;
+}
+#wpgmaps_directions_editbox_1 {
+	width: auto;
+	display: table;
+	margin: 0 auto;
+	width: 58%;
+}
+#wpgmaps_directions_edit_1 ~ a::before {
+	content: '';
+}
+#wpgmza_sl_search_button {
+	margin: 10px auto;
+}

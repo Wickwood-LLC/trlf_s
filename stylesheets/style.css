@@ -508,6 +508,29 @@ table {
   text-align: left;
 }
 
+/* line 17, ../sass/_05-0-elements.scss */
+#wpgmaps_directions_edit_1 {
+  padding-top: 0;
+}
+
+/* line 20, ../sass/_05-0-elements.scss */
+#wpgmaps_directions_editbox_1 {
+  width: auto;
+  display: table;
+  margin: 0 auto;
+  width: 58%;
+}
+
+/* line 26, ../sass/_05-0-elements.scss */
+#wpgmaps_directions_edit_1 ~ a::before {
+  content: '';
+}
+
+/* line 29, ../sass/_05-0-elements.scss */
+#wpgmza_sl_search_button {
+  margin: 10px auto;
+}
+
 /*--------------------------------------------------------------
 06.0 Forms
 --------------------------------------------------------------*/
