@@ -19,10 +19,22 @@ object {
 .wp-caption {
 	border: 1px solid #ddd;
 	background-color: #f3f3f3;
-	padding-top: 4px;
-	margin: 10px;
+	padding: 4px;
+	margin: 1%;
+	width: 100% !important;
+	display: table;
+	float: none;
 
-	&, & p {
+	@include breakpoint(600px) {
+		float: left;
+		width: 48% !important;
+	}
+
+	img[class*="wp-image-"],
+	.wp-caption-text {
+		display: block;
 		text-align: center;
+		width: 100%;
+		height: auto;
 	}
 }

@@ -2527,12 +2527,26 @@ object {
 .wp-caption {
   border: 1px solid #ddd;
   background-color: #f3f3f3;
-  padding-top: 4px;
-  margin: 10px;
+  padding: 4px;
+  margin: 1%;
+  width: 100% !important;
+  display: table;
+  float: none;
 }
-/* line 25, ../sass/_18-0-media.scss */
-.wp-caption, .wp-caption p {
+@media (min-width: 600px) {
+  /* line 19, ../sass/_18-0-media.scss */
+  .wp-caption {
+    float: left;
+    width: 48% !important;
+  }
+}
+/* line 33, ../sass/_18-0-media.scss */
+.wp-caption img[class*="wp-image-"],
+.wp-caption .wp-caption-text {
+  display: block;
   text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 /*--------------------------------------------------------------
