@@ -15,8 +15,9 @@
 	&:visited{
 		color: #A25039;
 	}
+}
 
-	&::before{
+.entry-content ul li::before {
 		content: url('images/postbullets.png');
 		margin-right: 6px;
 		bottom: 2px;
@@ -25,7 +26,6 @@
 		vertical-align: middle;
 		font-size: 0;
 		line-height: 0;
-	}
 }
 
 #wpgmaps_directions_edit_1 a {
