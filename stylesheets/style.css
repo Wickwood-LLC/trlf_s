@@ -1730,6 +1730,10 @@ span.site-header-fax {
 }
 
 /* line 20, ../sass/_08-0-links.scss */
+.entry-content ul li {
+  margin: 0 7%;
+}
+/* line 23, ../sass/_08-0-links.scss */
 .entry-content ul li::before {
   content: url("images/postbullets.png");
   margin-right: 6px;
@@ -1741,12 +1745,12 @@ span.site-header-fax {
   line-height: 0;
 }
 
-/* line 31, ../sass/_08-0-links.scss */
+/* line 35, ../sass/_08-0-links.scss */
 #wpgmaps_directions_edit_1 a {
   display: none;
   text-decoration: none;
 }
-/* line 35, ../sass/_08-0-links.scss */
+/* line 39, ../sass/_08-0-links.scss */
 #wpgmaps_directions_edit_1 a::before,
 #wpgmaps_directions_edit_1 a a#marker2::before {
   content: '';
