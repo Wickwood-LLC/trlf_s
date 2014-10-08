@@ -2230,7 +2230,7 @@ span.site-header-fax {
 }
 
 /* line 9, ../sass/_14-0-content.scss */
-#main .page {
+#main {
   background: #EDEDED;
   background: rgba(237, 237, 237, 0.4);
   -moz-border-radius: 6px;
