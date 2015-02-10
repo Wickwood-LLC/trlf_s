@@ -1,0 +1,77 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.switch {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  font-size: 0;
+  width: 100px;
+  cursor: pointer; }
+  .switch.is-disabled {
+    opacity: 0.5; }
+  .switch.round .switch-toggle {
+    border-radius: 0.18rem; }
+  .switch input {
+    display: none; }
+    .switch input:checked + .switch-bar .switch-toggle {
+      left: 50%; }
+    .switch input:checked + .switch-bar:before {
+      opacity: 1; }
+    .switch input:checked + .switch-bar:after {
+      opacity: 0; }
+  .switch.small {
+    width: 70px; }
+    .switch.small .switch-bar {
+      font-size: 0.7rem; }
+      .switch.small .switch-bar:before, .switch.small .switch-bar:after {
+        padding: 0.5rem; }
+    .switch.small .switch-toggle {
+      padding: 0.5rem; }
+  .switch.large {
+    width: 130px; }
+    .switch.large .switch-bar {
+      font-size: 1.3rem; }
+      .switch.large .switch-bar:before, .switch.large .switch-bar:after {
+        padding: 1rem; }
+    .switch.large .switch-toggle {
+      padding: 1rem; }
+
+.switch-bar {
+  display: block;
+  position: relative;
+  font-size: 1rem;
+  transition: background 0.3s; }
+  .switch-bar:before, .switch-bar:after {
+    position: absolute;
+    padding: 0.75rem;
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.3s; }
+  .switch-bar:before {
+    left: 0;
+    opacity: 0;
+    content: attr(data-switch-on); }
+  .switch-bar:after {
+    right: 0;
+    content: attr(data-switch-off); }
+
+.switch-toggle {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 0.75rem;
+  width: 50%;
+  z-index: 2;
+  left: 0;
+  user-select: none;
+  transition: left 0.3s; }
+  .switch-toggle:before {
+    content: "\00A0"; }
+
+.switch--stacked .switch-bar:before, .switch--stacked .switch-bar:after {
+  z-index: 3;
+  opacity: 1 !important; }

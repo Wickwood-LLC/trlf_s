@@ -1,0 +1,8 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.lazy-load {
+  background-image: none !important;
+  transition: background-image 0.3s; }

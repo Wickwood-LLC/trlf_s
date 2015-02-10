@@ -434,7 +434,7 @@ function theme_get_metadata_icons($icons = '', $class = '') {
                                 )
                             ) . '</span>';
             break;
-            case 'author':
+            /*case 'author':
                 $result[] = '<span class="art-postauthoricon">' . sprintf(__('<span class="%1$s">By</span> %2$s', THEME_NS),
                                 'author',
                                 sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
@@ -443,7 +443,7 @@ function theme_get_metadata_icons($icons = '', $class = '') {
                                     get_the_author()
                                 )
                         ) . '</span>';
-                break;
+                break;*/
             case 'category':
                 $categories = get_the_category_list(', ');
                 if (theme_strlen($categories) == 0)
@@ -472,7 +472,7 @@ function theme_get_metadata_icons($icons = '', $class = '') {
                 break;
         }
     }
-    $result = implode(theme_get_option('theme_metadata_separator'), $result);
+    $result = implode(/*theme_get_option('theme_metadata_separator'),*/ $result);
     if (theme_is_empty_html($result))
         return;
     return "<div class=\"art-post{$class}icons art-metadata-icons\">{$result}</div>";

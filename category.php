@@ -9,9 +9,12 @@
 
 			if (have_posts()) {
 				/* Start the Loop */
-				while (have_posts()) {
-					the_post();
-					get_template_part('content', 'page');
+				while (have_posts()) { ?>
+					<div class="post-container">
+					  <?php the_post();
+					  get_template_part('content', 'page'); ?>
+					  <span class="post_tags"><?php the_tags(); ?></span>
+		  			</div> <?php
 				}
 			} else {
 				theme_404_content();

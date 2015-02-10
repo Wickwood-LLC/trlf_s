@@ -2,6 +2,10 @@
 14.0 Content (Posts and Pages)
 --------------------------------------------------------------*/
 
+.post-container {
+	@include region-box-styles;
+	margin: 5px;
+}
 #content{
 	max-width: 960px;
 	margin: 10px auto 0;
@@ -17,6 +21,15 @@
 	position: relative;
 	z-index: 1;
 	padding: 1px;
+}
+.art-postdateicon {
+	display: table;
+	margin: 0 auto 5px;
+	font-size: 0.75em;
+
+	.date {
+		margin-right: 5px;
+	}
 }
 .edit-link {
 	font-size: 14px;

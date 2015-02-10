@@ -1,0 +1,1 @@
+[16-Dec-2014 09:56:25 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home6/randalll/public_html/dev/wp-content/themes/trlf_s/index.php on line 1

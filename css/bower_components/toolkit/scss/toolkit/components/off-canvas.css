@@ -1,0 +1,76 @@
+/**
+ * @copyright   2010-2014, The Titon Project
+ * @license     http://opensource.org/licenses/BSD-3-Clause
+ * @link        http://titon.io
+ */
+.off-canvas, .off-canvas--left, .off-canvas--right {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s, opacity 0.5s, visibility 0.5s;
+  -webkit-overflow-scrolling: touch; }
+
+.on-canvas {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  z-index: 2;
+  transition: transform 0.5s, padding 0.5s; }
+
+.canvas {
+  position: relative;
+  overflow-x: hidden; }
+
+.off-canvas--left {
+  left: 0;
+  width: 20%;
+  transform: translate3d(-100%, 0, 0); }
+  .off-canvas--left.show {
+    transform: translate3d(0, 0, 0) !important; }
+
+.off-canvas--right {
+  right: 0;
+  width: 20%;
+  transform: translate3d(100%, 0, 0); }
+  .off-canvas--right.show {
+    transform: translate3d(0, 0, 0) !important; }
+
+.canvas.on-top .off-canvas, .canvas.on-top .off-canvas--left, .canvas.on-top .off-canvas--right, .canvas.squish .off-canvas, .canvas.squish .off-canvas--left, .canvas.squish .off-canvas--right {
+  z-index: 3; }
+.canvas.push-reveal .off-canvas--left {
+  transform: translate3d(-50%, 0, 0); }
+.canvas.push-reveal .off-canvas--right {
+  transform: translate3d(50%, 0, 0); }
+.canvas.reverse-push .off-canvas--left {
+  transform: translate3d(100%, 0, 0); }
+.canvas.reverse-push .off-canvas--right {
+  transform: translate3d(-100%, 0, 0); }
+.canvas.reveal .off-canvas, .canvas.reveal .off-canvas--left, .canvas.reveal .off-canvas--right {
+  transform: translate3d(0, 0, 0); }
+.canvas.push-down .off-canvas--left,
+.canvas.push-down .off-canvas--right {
+  transform: translate3d(0, -100%, 0); }
+.canvas.push.move-left .on-canvas, .canvas.push-reveal.move-left .on-canvas, .canvas.push-down.move-left .on-canvas, .canvas.reverse-push.move-left .on-canvas, .canvas.reveal.move-left .on-canvas {
+  transform: translate3d(-20%, 0, 0); }
+.canvas.push.move-right .on-canvas, .canvas.push-reveal.move-right .on-canvas, .canvas.push-down.move-right .on-canvas, .canvas.reverse-push.move-right .on-canvas, .canvas.reveal.move-right .on-canvas {
+  transform: translate3d(20%, 0, 0); }
+.canvas.squish.move-left .on-canvas {
+  padding-right: 20%; }
+.canvas.squish.move-right .on-canvas {
+  padding-left: 20%; }
+
+@media only screen and (max-width: 640px) {
+  .off-canvas--left {
+    width: 90%; }
+
+  .off-canvas--right {
+    width: 90%; }
+
+  .canvas.push.move-left .on-canvas, .canvas.push-reveal.move-left .on-canvas, .canvas.push-down.move-left .on-canvas, .canvas.reverse-push.move-left .on-canvas, .canvas.reveal.move-left .on-canvas {
+    transform: translate3d(-90%, 0, 0); }
+  .canvas.push.move-right .on-canvas, .canvas.push-reveal.move-right .on-canvas, .canvas.push-down.move-right .on-canvas, .canvas.reverse-push.move-right .on-canvas, .canvas.reveal.move-right .on-canvas {
+    transform: translate3d(90%, 0, 0); } }

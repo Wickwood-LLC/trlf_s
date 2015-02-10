@@ -95,6 +95,43 @@ textarea {
 }
 
 /***** MailChimp styles *****/
+.yks-require-description {
+	font-size: 0.75em;
+}
+.yks-mailchimpFormDiv {
+	width: 80%;
+	margin: 0 auto;
+}
+.yks-mailchimpFormDivRowField {
+	width: 70%;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	float: left;
+}
+.yks-mc-input-field-row-message {
+	clear: both;
+	width: 100%;
+}
+.yks_mc_interest_group_text {
+	clear: both;
+}
+.yks-mailchimpFormDivRow .yks_mc_interest_group_holder {
+	display: table;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: .5em;
+
+	@include breakpoint(620px) {
+		width: 40%;
+	}
+
+	label.yks_mc_interest_group_label {
+		text-align: left;
+		width: 100%;
+		margin: 5px 0;
+	}
+}
+
 input#mc_mv_EMAIL, 
 input#mc_mv_FNAME, 
 input#mc_mv_LNAME {
@@ -107,7 +144,7 @@ input#mc_mv_MMERGE4 {
 	margin-top: .5em;
 	margin-bottom: .5em;
 }
-label.mc_var_label {
+label.yks-mailchimpFormDivRowLabel {
 	float: left;
 	clear: both;
 	margin-top: .5em;
@@ -168,7 +205,10 @@ label.mc_email_format {
 .mc_signup_submit {
 	clear: both;
 }
-input#mc_signup_submit,
+.yks-mailchimpFormDivSubmit p {
+	text-align: center;
+}
+input.ykfmc-submit,
 input.wpgmaps_get_directions,
 input.wpgmza_sl_search_button {
 	background: #2ea2cc;
@@ -179,14 +219,14 @@ input.wpgmza_sl_search_button {
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 26px;
-	height: 28px;
+	height: auto;
 	margin: 0;
 	padding: 0 10px 1px;
 	cursor: pointer;
 	border-width: 1px;
 	border-style: solid;
 	-webkit-appearance: none;
-	white-space: nowrap;
+	white-space: normal;
 	width: auto;
 	@include box-shadow(inset 0 1px 0 rgba(120,200,230,.5),0 1px 0 rgba(0,0,0,.15));
 	@include border-radius(3px);

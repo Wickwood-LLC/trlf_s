@@ -148,6 +148,15 @@ html{
 	font-variant: small-caps;
 	line-height: 1.2;
 	text-align: center;
+
+	a {
+		color: $title-color;
+		text-decoration: none;
+
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
 }
 .entry-content {
 	text-align: justify;
@@ -165,6 +174,9 @@ html{
 		margin: 10px 0 0;
 		font-size: 23px;
 	}
+}
+.post_tags {
+	font-size: 0.75em;
 }
 .wp-caption-text {
 	font-size: 11px;
@@ -194,4 +206,9 @@ footer a {
 	color: #1A1A1A;
 	font-size: 14px;
 	text-align: center;
+}
+
+/*****	Tag Map  *****/
+.tagindex ul li {
+	font-size: 0.75em;
 }
