@@ -1812,20 +1812,14 @@ span.site-header-fax {
   border-radius: 6px;
   border: 1px solid rgba(199, 199, 199, 0.4);
   padding: 7px;
-  margin: 5px; }
+  margin: 5px;
+  padding: 15px; }
 
 #content {
   max-width: 960px;
   margin: 10px auto 0; }
 
 #main {
-  background: #EDEDED;
-  background: rgba(237, 237, 237, 0.4);
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid rgba(199, 199, 199, 0.4);
-  padding: 7px;
   margin-left: 5px;
   margin-bottom: 5px; }
 
