@@ -321,6 +321,11 @@ html {
   font-variant: small-caps;
   line-height: 1.2;
   text-align: center; }
+  .entry-title a, .entry-content h2 a, .entry-content h3 a {
+    color: #19455D;
+    text-decoration: none; }
+    .entry-title a:hover, .entry-content h2 a:hover, .entry-content h3 a:hover {
+      color: #2E81AD; }
 
 .entry-content {
   text-align: justify; }
@@ -332,6 +337,9 @@ html {
     color: #3E9ACC;
     margin: 10px 0 0;
     font-size: 23px; }
+
+.post_tags {
+  font-size: 0.75em; }
 
 .wp-caption-text {
   font-size: 11px;
@@ -355,6 +363,10 @@ footer a {
   color: #1A1A1A;
   font-size: 14px;
   text-align: center; }
+
+/*****	Tag Map  *****/
+.tagindex ul li {
+  font-size: 0.75em; }
 
 /*--------------------------------------------------------------
 05.0 Elements
@@ -513,15 +525,43 @@ textarea {
   width: 100%; }
 
 /***** MailChimp styles *****/
+.yks-require-description {
+  font-size: 0.75em !important;
+  float: right; }
+
 .yks-mailchimpFormDiv {
   width: 80%;
   margin: 0 auto; }
 
 .yks-mailchimpFormDivRowField {
-  width: 60%;
+  width: 70%;
   margin-top: .5em;
   margin-bottom: .5em;
   float: left; }
+
+.yks-mc-input-field-row-message {
+  clear: both;
+  width: 100%; }
+
+.yks_mc_interest_group_text {
+  clear: both; }
+
+.yks-mailchimpFormDivRow .yks_mc_interest_group_holder {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: .5em; }
+  @media (min-width: 620px) {
+    .yks-mailchimpFormDivRow .yks_mc_interest_group_holder {
+      width: 40%; } }
+  .yks-mailchimpFormDivRow .yks_mc_interest_group_holder label.yks_mc_interest_group_label {
+    text-align: left;
+    width: 100%;
+    margin: 5px 0; }
+
+.g-recaptcha > div > div {
+  display: table;
+  margin: 0 auto; }
 
 input#mc_mv_EMAIL,
 input#mc_mv_FNAME,
@@ -595,7 +635,10 @@ label.mc_email_format {
 .mc_signup_submit {
   clear: both; }
 
-input#mc_signup_submit,
+.yks-mailchimpFormDivSubmit p {
+  text-align: center; }
+
+input.ykfmc-submit,
 input.wpgmaps_get_directions,
 input.wpgmza_sl_search_button {
   background: #2ea2cc;
@@ -606,14 +649,14 @@ input.wpgmza_sl_search_button {
   font-size: 13px;
   font-weight: normal;
   line-height: 26px;
-  height: 28px;
+  height: auto;
   margin: 0;
   padding: 0 10px 1px;
   cursor: pointer;
   border-width: 1px;
   border-style: solid;
   -webkit-appearance: none;
-  white-space: nowrap;
+  white-space: normal;
   width: auto;
   -moz-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.5), 0 1px 0 rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.5), 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -625,7 +668,7 @@ input.wpgmza_sl_search_button {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: none; }
-  input#mc_signup_submit:hover, input#mc_signup_submit:focus,
+  input.ykfmc-submit:hover, input.ykfmc-submit:focus,
   input.wpgmaps_get_directions:hover,
   input.wpgmaps_get_directions:focus,
   input.wpgmza_sl_search_button:hover,
@@ -634,7 +677,7 @@ input.wpgmza_sl_search_button {
     -moz-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
     -webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
     box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6); }
-  input#mc_signup_submit:active,
+  input.ykfmc-submit:active,
   input.wpgmaps_get_directions:active,
   input.wpgmza_sl_search_button:active {
     background: #1b7aa6;
@@ -1360,11 +1403,16 @@ span.site-header-fax {
 .site-header a {
   text-decoration: none; }
 
-.entry-content a {
-  color: #A25039; }
-  .entry-content a:hover {
-    color: #2E81AD; }
-  .entry-content a:visited {
+.entry-content a,
+.post_tags a {
+  color: #A25039;
+  text-decoration: none; }
+  .entry-content a:hover,
+  .post_tags a:hover {
+    color: #2E81AD;
+    text-decoration: underline; }
+  .entry-content a:visited,
+  .post_tags a:visited {
     color: #A25039; }
 
 .entry-content ul li {
@@ -1761,11 +1809,7 @@ span.site-header-fax {
 /*--------------------------------------------------------------
 14.0 Content (Posts and Pages)
 --------------------------------------------------------------*/
-#content {
-  max-width: 960px;
-  margin: 10px auto 0; }
-
-#main {
+.post-container {
   background: #EDEDED;
   background: rgba(237, 237, 237, 0.4);
   -moz-border-radius: 6px;
@@ -1773,6 +1817,14 @@ span.site-header-fax {
   border-radius: 6px;
   border: 1px solid rgba(199, 199, 199, 0.4);
   padding: 7px;
+  margin: 5px;
+  padding: 15px; }
+
+#content {
+  max-width: 960px;
+  margin: 10px auto 0; }
+
+#main {
   margin-left: 5px;
   margin-bottom: 5px; }
 
@@ -1782,6 +1834,13 @@ span.site-header-fax {
   position: relative;
   z-index: 1;
   padding: 1px; }
+
+.art-postdateicon {
+  display: table;
+  margin: 0 auto 5px;
+  font-size: 0.75em; }
+  .art-postdateicon .date {
+    margin-right: 5px; }
 
 .edit-link {
   font-size: 14px;
