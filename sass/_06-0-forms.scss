@@ -96,7 +96,8 @@ textarea {
 
 /***** MailChimp styles *****/
 .yks-require-description {
-	font-size: 0.75em;
+	font-size: 0.75em !important;
+	float: right;
 }
 .yks-mailchimpFormDiv {
 	width: 80%;
@@ -130,6 +131,10 @@ textarea {
 		width: 100%;
 		margin: 5px 0;
 	}
+}
+.g-recaptcha>div>div{
+	display: table;
+	margin: 0 auto;
 }
 
 input#mc_mv_EMAIL, 
