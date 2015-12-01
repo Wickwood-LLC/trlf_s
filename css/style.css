@@ -700,7 +700,8 @@ form#randall-law-firm-contact-form-1 label[class="9901-label"] span {
   margin: 1em 0; }
 
 form#randall-law-firm-contact-form-1 label[class="9901-label"] label {
-  width: 50%; }
+  width: 50%;
+  padding-left: 12%; }
 
 form#randall-law-firm-contact-form-1 label[class="9901-label"] label input {
   width: auto;
