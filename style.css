@@ -683,7 +683,8 @@ input.wpgmza_sl_search_button {
 
 .wpcf7-form label {
   text-align: left;
-  font-weight: bold; }
+  font-weight: bold;
+  display: inline-block; }
 .wpcf7-form .categories-checkbox {
   -webkit-column-width: 200px;
           column-width: 200px;
