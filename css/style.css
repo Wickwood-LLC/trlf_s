@@ -1301,14 +1301,14 @@ span.site-header-fax {
   margin: 0 7% 0.5em; }
   .entry-content ul li::before {
     content: url("images/postbullets.png");
-    margin-right: 6px;
+    margin-right: 0;
     bottom: 2px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
     line-height: 0;
-    text-indent: -7px; }
+    text-indent: -14px; }
 
 #wpgmaps_directions_edit_1 a {
   display: none;

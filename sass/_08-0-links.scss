@@ -17,14 +17,14 @@
 
 		&::before {
 			content: url('images/postbullets.png');
-			margin-right: 6px;
+			margin-right: 0;
 			bottom: 2px;
 			position: relative;
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 0;
 			line-height: 0;
-			text-indent: -7px;
+			text-indent: -14px;
 		}
 	}
 }
