@@ -11,18 +11,13 @@
 	@include content-link-styles;
 }
 
-.entry-content ul li {
-	margin: 0 7%;
+.entry-content ul {
+	list-style: disc;
+	list-style-image: url(images/postbullets.png);
 
-	&::before {
-		content: url('images/postbullets.png');
-		margin-right: 6px;
-		bottom: 2px;
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 0;
-		line-height: 0;
+	li {
+		margin: 0 7% 0.5em;
+		text-indent: -7px;
 	}
 }
 

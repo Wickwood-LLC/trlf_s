@@ -1297,17 +1297,12 @@ span.site-header-fax {
   .post_tags a:visited {
     color: #A25039; }
 
-.entry-content ul li {
-  margin: 0 7%; }
-  .entry-content ul li::before {
-    content: url("images/postbullets.png");
-    margin-right: 6px;
-    bottom: 2px;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 0;
-    line-height: 0; }
+.entry-content ul {
+  list-style: disc;
+  list-style-image: url(images/postbullets.png); }
+  .entry-content ul li {
+    margin: 0 7% 0.5em;
+    text-indent: -7px; }
 
 #wpgmaps_directions_edit_1 a {
   display: none;
