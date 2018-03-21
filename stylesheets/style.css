@@ -424,7 +424,7 @@ textarea {
   color: #113040;
   font-size: 14px;
   font-family: Tahoma, Arial, Helvetica, Sans-Serif;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   text-shadow: none; }
 
@@ -680,6 +680,43 @@ input.wpgmza_sl_search_button {
 input.wpgmza_sl_search_button {
   margin: 0 auto;
   display: block; }
+
+.wpcf7-form label {
+  text-align: left;
+  font-weight: bold; }
+.wpcf7-form .categories-checkbox {
+  -webkit-column-width: 200px;
+          column-width: 200px;
+  display: block; }
+.wpcf7-form span.wpcf7-list-item {
+  display: block; }
+.wpcf7-form .wpcf7-recaptcha {
+  margin: auto;
+  display: table; }
+.wpcf7-form .wpcf7-submit {
+  text-align: center;
+  text-decoration: none;
+  padding: .75em 1em;
+  color: #fff;
+  display: block;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  background-color: #09c;
+  background-image: -moz-linear-gradient(#009fd4, #09c, #0086b2);
+  border-radius: 4px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  border: 1px solid #0086b2;
+  cursor: pointer;
+  margin: auto; }
+  .wpcf7-form .wpcf7-submit:hover {
+    background-color: #09c;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0099cc), to(#0086b2));
+    background-image: linear-gradient(#0099cc, #0086b2); }
+
+.required {
+  color: red; }
 
 /*--------------------------------------------------------------
 07.0 Layout
