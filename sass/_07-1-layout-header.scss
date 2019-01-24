@@ -188,6 +188,13 @@
 						content: " •\00a0";
 						//display: none;
 					}
+
+					a {
+					   color: black;
+					   font-weight: inherit;
+					   font-style: normal;
+					   text-decoration-line: none
+					}
 						
 					@include breakpoint(630px){
 						@include flex(1 50%);
