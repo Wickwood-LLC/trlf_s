@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="site-contact-container">
-			<h3><span class="site-header-address">1777 Western Ave. Albany, NY 12203</span><span class="site-header-phone">Phone: 518-869-1205</span><span class="site-header-fax">Fax: 518-452-2145</span></h3>
+			<h3><span class="site-header-address">1777 Western Ave. Albany, NY 12203</span><span class="site-header-phone">Phone: <a href="tel:5188691205">518-869-1205</a></span><span class="site-header-fax">Fax: 518-452-2145</span></h3>
 			<div class="site-header-attorney-container">
 				<h3 class="site-header-attorney">Denise McCarthy Randall</h3> 
 				<h3 class="site-header-attorney">Robert G. Randall</h3>
