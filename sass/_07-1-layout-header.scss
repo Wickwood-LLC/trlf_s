@@ -7,6 +7,7 @@
 	width: 100%;
 	padding: 5px 2%;
 	padding-bottom: 0px;
+	margin-top:-16px;
 	@include linear-gradient(to bottom, $top-gradient-color, $bottom-gradient-color);
 	@include display(flex);
 }
