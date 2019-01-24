@@ -394,7 +394,7 @@ html {
   text-decoration: none;
 }
 .entry-title a:hover, .entry-content h2 a:hover, .entry-content h3 a:hover {
-  color: #2E81AD;
+  color: #085ac7;
 }
 
 .entry-content {
@@ -431,7 +431,7 @@ footer a {
   text-decoration: none;
 }
 footer a:hover {
-  color: #2E81AD;
+  color: #085ac7;
   text-decoration: underline;
 }
 footer a:visited {
