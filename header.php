@@ -19,6 +19,7 @@ remove_action('wp_head', 'wp_generator');
 if (is_singular() && get_option('thread_comments')) {
 	wp_enqueue_script('comment-reply');
 }
+wp_enqueue_script(“jquery”);
 wp_head();
 ?>
 </head>
