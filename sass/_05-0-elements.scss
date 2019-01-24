@@ -8,6 +8,21 @@ body {
 table {
 	border-collapse: collapse;
 }
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1em;
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-weight:bold;
+}
+
 #wpgmaps_directions_editbox_1 td{
 	padding: 2px;
 	border: solid 1px #B5B5B5;
