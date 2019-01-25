@@ -112,8 +112,21 @@ section {
   display: block;
 }
 
-ol, ul {
+ul {
   list-style: none;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2.5em;
+}
+ol li {
+  margin-bottom: 0.5em;
 }
 
 table {
