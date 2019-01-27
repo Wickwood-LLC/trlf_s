@@ -425,8 +425,8 @@ function theme_get_metadata_icons($icons = '', $class = '') {
     for ($i = 0; $i < count($icons); $i++) {
         $icon = $icons[$i];
         switch ($icon) {
-            case 'date':
-            /*$result[] = '<span class="art-postdateicon">' . sprintf(__('<span class="%1$s">Published</span> %2$s', THEME_NS),
+            /*case 'date':
+            $result[] = '<span class="art-postdateicon">' . sprintf(__('<span class="%1$s">Published</span> %2$s', THEME_NS),
                                 'date',
                                 sprintf( '<span class="entry-date updated" title="%1$s">%2$s</span>',
                                     esc_attr( get_the_time() ),
