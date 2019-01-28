@@ -20,3 +20,8 @@
 .widget-title{
 	@include widget-title-styles();
 }
+
+/* Tags */
+.wp-tag-cloud {
+	column-width: 200px;
+}
