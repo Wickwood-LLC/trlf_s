@@ -41,7 +41,7 @@ if (WP_VERSION < 3.0) {
         <div id='theme-warning' class='error fade'><p><strong><?php _e('Current theme requires WordPress 3.0 or higher.', THEME_NS); ?></strong>
         <?php
         echo sprintf(__('Please <a href="%s">upgrade WordPress</a>, or <a href="%s">use an earlier version of Artisteer (2.6 - 3.1)</a> to create themes for WordPress 2.6-2.9.', THEME_NS),
-            'http://codex.wordpress.org/Upgrading_WordPress', 'http://www.artisteer.com/Default.aspx?p=license_info');
+            'https://codex.wordpress.org/Upgrading_WordPress', 'https://www.artisteer.com/Default.aspx?p=license_info');
         ?>
         </p></div>
         <?php
@@ -53,7 +53,7 @@ if (WP_VERSION < 3.0) {
         <strong><?php _e('Current theme requires WordPress 3.0 or higher.', THEME_NS); ?></strong>
         <?php
         echo sprintf(__('Please <a href="%s">upgrade WordPress</a>, or <a href="%s">use an earlier version of Artisteer (2.6 - 3.1)</a> to create themes for WordPress 2.6-2.9.', THEME_NS),
-            'http://codex.wordpress.org/Upgrading_WordPress', 'http://www.artisteer.com/Default.aspx?p=license_info');
+            'https://codex.wordpress.org/Upgrading_WordPress', 'https://www.artisteer.com/Default.aspx?p=license_info');
         ?>
         </body>
         </html>
@@ -213,7 +213,7 @@ if (is_admin()) {
 						$(\'#content-tmce\').click(function(){
 							if (!$(\'#theme_use_wpautop\')[0].checked) {
 								if ($(\'#save-alert\').length < 1) {
-									$(\'#titlediv\').after(\'<div id="save-alert" class="updated below-h2"><p><strong>Warning:</strong> Saving after switching to Visual mode can break the page layout (<a href="http://codex.wordpress.org/Function_Reference/wpautop">wpautop</a> enabled).</p></div>\');
+									$(\'#titlediv\').after(\'<div id="save-alert" class="updated below-h2"><p><strong>Warning:</strong> Saving after switching to Visual mode can break the page layout (<a href="https://codex.wordpress.org/Function_Reference/wpautop">wpautop</a> enabled).</p></div>\');
 								}
 								$(\'#theme_use_wpautop\')[0].checked = true;
 							}
@@ -259,7 +259,7 @@ function theme_update_styles() {
 	$wp_styles->add_data("style.ie7.css", "conditional", "lte IE 7");
 	wp_register_style("style.responsive.css", get_bloginfo('template_url', 'display') . '/style.responsive.css', array(), false, "all");
 	wp_enqueue_style("style.responsive.css");
-	wp_register_style("css", 'http://fonts.googleapis.com/css?family=Droid+Serif&subset=latin', array(), false, "all");
+	wp_register_style("css", 'https://fonts.googleapis.com/css?family=Droid+Serif&subset=latin', array(), false, "all");
 	wp_enqueue_style("css");
 
 }
