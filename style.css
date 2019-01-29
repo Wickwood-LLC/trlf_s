@@ -1183,6 +1183,7 @@ html, body {
 }
 
 .site-contact-container {
+  font-size: 14px;
   box-ordinal-group: 2;
   -moz-order: 2;
   order: 2;
