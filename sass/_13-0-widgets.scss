@@ -25,4 +25,8 @@
 .wp-tag-cloud {
 	column-width: 200px;
 	margin-top: 1em;
+
+	li {
+		text-align: left;
+	}
 }
