@@ -234,7 +234,7 @@ function theme_update_scripts() {
     wp_register_script('jquery_migrate', get_bloginfo('template_url', 'display') . '/jquery-migrate-1.1.1.js', array('jquery'));
     wp_enqueue_script('jquery_migrate');
 	wp_register_script("script.js", get_bloginfo('template_url', 'display') . '/script.js', array('jquery'));
-	wp_enqueue_script("script.js");
+	// wp_enqueue_script("script.js");
 	wp_register_script("script.responsive.js", get_bloginfo('template_url', 'display') . '/script.responsive.js', array('jquery'));
 	wp_enqueue_script("script.responsive.js");
 
