@@ -1851,6 +1851,9 @@ span.site-header-fax {
           column-width: 200px;
   margin-top: 1em;
 }
+.wp-tag-cloud li {
+  text-align: left;
+}
 
 /*--------------------------------------------------------------
 14.0 Content (Posts and Pages)
