@@ -1170,7 +1170,6 @@ html, body {
 }
 @media (min-width: 900px) {
   .site-title-container {
-    margin-bottom: 1em;
     width: 75%;
     box-ordinal-group: 0;
     -moz-order: 0;
@@ -1183,7 +1182,6 @@ html, body {
 }
 
 .site-contact-container {
-  font-size: 14px;
   box-ordinal-group: 2;
   -moz-order: 2;
   order: 2;
